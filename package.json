@@ -4,7 +4,7 @@
     "description": "Generator for crapsAIMLData",
     "main": "generateTrainingData.js",
     "scripts": {
-        "test": "echo Tests here"
+        "test": "node ./node_modules/.bin/mocha --recursive"
     },
     "repository": {
         "type": "git",
@@ -16,4 +16,7 @@
         "url": "https://github.com/lando2319/crapsAIMLData/issues"
     },
     "homepage": "https://github.com/lando2319/crapsAIMLData#readme",
+    "devDependencies": {
+        "mocha": "^10.3.0"
+    }
 }
