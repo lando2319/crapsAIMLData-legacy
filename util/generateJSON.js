@@ -19,20 +19,15 @@ function generate(gameElements, loggit) {
             gameElements.diceRolls.forEach(diceRollPkg => {
                 logThis("Dice Roll " + diceRollPkg.name);
 
-                // GET THIS WORKING AGAIN
-                // var allName = diceRollPkg.aliases;
-                // allName.push(diceRollPkg.name);
+                var allNames = JSON.parse(JSON.stringify(diceRollPkg.aliases));
+                allNames.push(diceRollPkg.name);
 
-                var allName = [diceRollPkg.name];
-
-                allName.forEach(diceRollName => {
+                allNames.forEach(diceRollName => {
 
                     var formattedPhrase = lineFormatter.formatLine(betPhrase, betNamePkg, diceRollName);
 
                     var formattedAmount = amount.replace("$", "");
 
-                    console.log("ADDING THIS LINE");
-                    console.log(formattedPhrase);
                     jsonToGo.push({
                         "text": formattedPhrase,
                         "label": betNamePkg.slug + "_" + formattedAmount + "_" + diceRollPkg.number

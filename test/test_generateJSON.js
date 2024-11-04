@@ -53,4 +53,44 @@ describe("Testing generateJSON", function () {
 
         assert.deepEqual(jsonReturned, expectation);
     })
+
+    it('With a Dice Roll having an alias, should produce 2 elements', function () {
+        var betPhrases = [
+            "What happens to a _betName_ when _roll_ rolls?",
+        ];
+
+        var betNames = [
+            {
+                slug: "fieldBet",
+                name: "Field Bet",
+                nickname: "The Field",
+                betType: "oneTimeBet"
+            }
+        ];
+
+        var diceRolls = [
+            {
+                name: "Aces",
+                number: 2,
+                aliases: [
+                    "Two"
+                ]
+            }
+        ];
+
+        var jsonReturned = generateJSON.generate({betPhrases, betNames, diceRolls}, "")
+
+        var expectation = [
+            {
+                text: 'What happens to a Field Bet when Two rolls?',
+                label: 'fieldBet__2'
+            },
+            {
+                text: 'What happens to a Field Bet when Aces rolls?',
+                label: 'fieldBet__2'
+            }
+        ];
+
+        assert.deepEqual(jsonReturned, expectation);
+    })
 })
