@@ -2,12 +2,26 @@
 const fs = require("fs");
 
 var generateJSON = require("./util/generateJSON.js");
+var gameElements = require('./util/gameElements.js');
 
-console.log("Generating Training Data");
+(async () => {
+    var loggit = "generateJSON"
+    try {
 
-var jsonToGo = generateJSON.generate();
+        console.log("Generating Training Data");
 
-console.log("FINAL JSON");
-console.log(jsonToGo);
+        var jsonToGo = generateJSON.generate(gameElements, loggit);
 
-process.exit(0);
+        // console.log("HERE IS FINAL");
+        // console.log(jsonToGo);
+        console.log("Generating File trainingData.json")
+        await fs.promises.writeFile("./trainingData/trainingData.json", JSON.stringify(jsonToGo, null, 2));
+
+        console.log("Successfully Generated File trainingData.json")
+
+        process.exit(0);
+    } catch (err) {
+        console.log("ERROR", err);
+        process.exit(1);
+    };
+})();
