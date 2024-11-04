@@ -1,0 +1,19 @@
+{
+    "name": "crapsai-training-data-generator",
+    "version": "1.0.00",
+    "description": "Generator for crapsAIMLData",
+    "main": "generateTrainingData.js",
+    "scripts": {
+        "test": "echo Tests here"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lando2319/crapsAIMLData.git"
+    },
+    "author": "Mike Land under Craps Education LLC",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lando2319/crapsAIMLData/issues"
+    },
+    "homepage": "https://github.com/lando2319/crapsAIMLData#readme",
+}
