@@ -1,0 +1,18 @@
+[
+    {
+        "text": "If I have $5 in the Field and a Six rolls, what happens",
+        "label": "fieldBet_5_6"
+    },
+    {
+        "text": "What does a Field Bet pay if Eight rolls",
+        "label": "fieldBet__8"
+    },
+    {
+        "text": "Does a Field Bet win on Four",
+        "label": "fieldBet__4"
+    },
+    {
+        "text": "How much does a $5 Field Bet pay if Eight Rolls",
+        "label": "fieldBet_5_8"
+    }
+]
