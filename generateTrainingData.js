@@ -8,20 +8,20 @@ var gameElements = require('./util/gameElements.js');
     var loggit = "generateJSON"
     try {
 
-        console.log("Generating Training Data");
+        console.log(loggit, "Generating Training Data");
 
         var jsonToGo = generateJSON.generate(gameElements, loggit);
 
         // console.log("HERE IS FINAL");
         // console.log(jsonToGo);
-        console.log("Generating File trainingData.json")
+        console.log(loggit, "Generating File trainingData.json")
         await fs.promises.writeFile("./trainingData/trainingData.json", JSON.stringify(jsonToGo, null, 2));
 
-        console.log("Successfully Generated File trainingData.json")
+        console.log(loggit, "Successfully Generated File trainingData.json")
 
         process.exit(0);
     } catch (err) {
-        console.log("ERROR", err);
+        console.log(loggit, "ERROR", err);
         process.exit(1);
     };
 })();
