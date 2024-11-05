@@ -1,5 +1,65 @@
 [
   {
+    "text": "What happens to my $5 Field Bet if Two rolls?",
+    "label": "fieldBet_5_2"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Aces rolls?",
+    "label": "fieldBet_5_2"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Three rolls?",
+    "label": "fieldBet_5_3"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Ace Decuce rolls?",
+    "label": "fieldBet_5_3"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Four rolls?",
+    "label": "fieldBet_5_4"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Five rolls?",
+    "label": "fieldBet_5_5"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Six rolls?",
+    "label": "fieldBet_5_6"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Seven rolls?",
+    "label": "fieldBet_5_7"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Eight rolls?",
+    "label": "fieldBet_5_8"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Nine rolls?",
+    "label": "fieldBet_5_9"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Ten rolls?",
+    "label": "fieldBet_5_10"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Eleven rolls?",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Yo Eleven rolls?",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Yo rolls?",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What happens to my $5 Field Bet if Twelve rolls?",
+    "label": "fieldBet_5_12"
+  },
+  {
     "text": "What does a $5 Field Bet when Two rolls?",
     "label": "fieldBet_5_2"
   },

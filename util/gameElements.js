@@ -1,5 +1,6 @@
 
 module.exports.betPhrases = [
+    "What happens to my _amount_ _betName_ if _roll_ rolls?",
     "What does a _amount_ _betName_ when _roll_ rolls?",
     "What happens to a _betName_ when _roll_ rolls?",
     "Does a _betName_ win on _roll_",
