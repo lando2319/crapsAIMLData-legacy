@@ -9,6 +9,11 @@ module.exports.betPhrases = [
     "with a _betName_, _roll_ rolls, what happens",
 ];
 
+module.exports.validationBetPhrases = [
+    "if _roll_ rolls what happens to my _betName_",
+    "What does a _amount_ _betName_ pay, if _rolls_"
+];
+
 module.exports.betNames = [
     {
         slug: "fieldBet",
