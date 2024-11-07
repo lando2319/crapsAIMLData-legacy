@@ -1,18 +1,58 @@
 [
     {
+        "text": "does a Five Dollar Field Bet win if two is rolled",
+        "label": "fieldBet_5_2"
+    },
+    {
+        "text": "If an Aces rolled, what happens to my Field Bet?",
+        "label": "fieldBet__2"
+    },
+    {
+        "text": "Does a Field Bet win if a Three is rolled",
+        "label": "fieldBet__3"
+    },
+    {
+        "text": "What is the payout for a Field Bet if Ace Deuce rolls",
+        "label": "fieldBet__3"
+    },
+    {
+        "text": "If I have $5 in the Field and Four rolls, does it lose?",
+        "label": "fieldBet_5_4"
+    },
+    {
+        "text": "What does a Field Bet pay if 5 rolls",
+        "label": "fieldBet__5"
+    },
+    {
         "text": "If I have $5 in the Field and a Six rolls, what happens",
         "label": "fieldBet_5_6"
     },
     {
-        "text": "What does a Field Bet pay if Eight rolls",
+        "text": "Does a Field Bet win on Seven",
+        "label": "fieldBet__7"
+    },
+    {
+        "text": "What does a Field Bet win if Eight rolls",
         "label": "fieldBet__8"
     },
     {
-        "text": "Does a Field Bet win on Four",
-        "label": "fieldBet__4"
+        "text": "Does a Field Bet win on Nine",
+        "label": "fieldBet__9"
     },
     {
-        "text": "How much does a $5 Field Bet pay if Eight Rolls",
-        "label": "fieldBet_5_8"
+        "text": "How much does a $5 Field Bet pay if Ten Rolls",
+        "label": "fieldBet_5_10"
+    },
+    {
+        "text": "if a Yo is rolled, does the Field Bet win?",
+        "label": "fieldBet__11"
+    },
+    {
+        "text": "If an Eleven is rolled, does the Field Bet win?",
+        "label": "fieldBet__11"
+    },
+    {
+        "text": "If a Twelve is rolled, does the Field Bet win",
+        "label": "fieldBet__12"
     }
 ]

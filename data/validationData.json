@@ -8,6 +8,10 @@
     "label": "fieldBet__2"
   },
   {
+    "text": "if 2 rolls what happens to my Field Bet",
+    "label": "fieldBet__2"
+  },
+  {
     "text": "if Three rolls what happens to my Field Bet",
     "label": "fieldBet__3"
   },
@@ -16,7 +20,15 @@
     "label": "fieldBet__3"
   },
   {
+    "text": "if 3 rolls what happens to my Field Bet",
+    "label": "fieldBet__3"
+  },
+  {
     "text": "if Four rolls what happens to my Field Bet",
+    "label": "fieldBet__4"
+  },
+  {
+    "text": "if 4 rolls what happens to my Field Bet",
     "label": "fieldBet__4"
   },
   {
@@ -24,7 +36,15 @@
     "label": "fieldBet__5"
   },
   {
+    "text": "if 5 rolls what happens to my Field Bet",
+    "label": "fieldBet__5"
+  },
+  {
     "text": "if Six rolls what happens to my Field Bet",
+    "label": "fieldBet__6"
+  },
+  {
+    "text": "if 6 rolls what happens to my Field Bet",
     "label": "fieldBet__6"
   },
   {
@@ -32,7 +52,15 @@
     "label": "fieldBet__7"
   },
   {
+    "text": "if 7 rolls what happens to my Field Bet",
+    "label": "fieldBet__7"
+  },
+  {
     "text": "if Eight rolls what happens to my Field Bet",
+    "label": "fieldBet__8"
+  },
+  {
+    "text": "if 8 rolls what happens to my Field Bet",
     "label": "fieldBet__8"
   },
   {
@@ -40,7 +68,15 @@
     "label": "fieldBet__9"
   },
   {
+    "text": "if 9 rolls what happens to my Field Bet",
+    "label": "fieldBet__9"
+  },
+  {
     "text": "if Ten rolls what happens to my Field Bet",
+    "label": "fieldBet__10"
+  },
+  {
+    "text": "if 10 rolls what happens to my Field Bet",
     "label": "fieldBet__10"
   },
   {
@@ -56,7 +92,15 @@
     "label": "fieldBet__11"
   },
   {
+    "text": "if 11 rolls what happens to my Field Bet",
+    "label": "fieldBet__11"
+  },
+  {
     "text": "if Twelve rolls what happens to my Field Bet",
+    "label": "fieldBet__12"
+  },
+  {
+    "text": "if 12 rolls what happens to my Field Bet",
     "label": "fieldBet__12"
   },
   {
@@ -64,7 +108,23 @@
     "label": "fieldBet_5_2"
   },
   {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_2"
+  },
+  {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_2"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_2"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_2"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_2"
   },
   {
@@ -72,7 +132,23 @@
     "label": "fieldBet_5_3"
   },
   {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_3"
+  },
+  {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_3"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_3"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_3"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_3"
   },
   {
@@ -80,7 +156,31 @@
     "label": "fieldBet_5_4"
   },
   {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_4"
+  },
+  {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_4"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_4"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_5"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_5"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_5"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_5"
   },
   {
@@ -88,7 +188,31 @@
     "label": "fieldBet_5_6"
   },
   {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_6"
+  },
+  {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_6"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_6"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_7"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_7"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_7"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_7"
   },
   {
@@ -96,7 +220,31 @@
     "label": "fieldBet_5_8"
   },
   {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_8"
+  },
+  {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_8"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_8"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_9"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_9"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_9"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_9"
   },
   {
@@ -104,7 +252,23 @@
     "label": "fieldBet_5_10"
   },
   {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_10"
+  },
+  {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_10"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_10"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_11"
   },
   {
@@ -112,11 +276,39 @@
     "label": "fieldBet_5_11"
   },
   {
-    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_11"
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_12"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_12"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_12"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_12"
   }
 ]

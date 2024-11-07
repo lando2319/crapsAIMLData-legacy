@@ -10,28 +10,35 @@ function generate(gameElements, loggit) {
             logThis("Bet Phrase " + betPhrase);
 
             var hasAmount = betPhrase.includes("_amount_");
-            var amount = "";
-
-            if (hasAmount) {
-                amount = "$5";
-            };
 
             gameElements.diceRolls.forEach(diceRollPkg => {
                 logThis("Dice Roll " + diceRollPkg.name);
 
                 var allNames = JSON.parse(JSON.stringify(diceRollPkg.aliases));
                 allNames.push(diceRollPkg.name);
+                allNames.push(diceRollPkg.number);
 
                 allNames.forEach(diceRollName => {
 
-                    var formattedPhrase = lineFormatter.formatLine(betPhrase, betNamePkg, diceRollName);
+                    if (!hasAmount) {
+                        var formattedPhrase = lineFormatter.formatLine(betPhrase, betNamePkg, diceRollName, "");
 
-                    var formattedAmount = amount.replace("$", "");
+                        jsonToGo.push({
+                            "text": formattedPhrase,
+                            "label": betNamePkg.slug + "__" + diceRollPkg.number
+                        });
+                    } else {
+                        ["$5", "Five Dollar"].forEach(amountText => {
+                            var formattedPhrase = lineFormatter.formatLine(betPhrase, betNamePkg, diceRollName, amountText);
 
-                    jsonToGo.push({
-                        "text": formattedPhrase,
-                        "label": betNamePkg.slug + "_" + formattedAmount + "_" + diceRollPkg.number
-                    });
+                            var formattedAmount = amountText.replace("$", "").replace("Five Dollar", "5");
+
+                            jsonToGo.push({
+                                "text": formattedPhrase,
+                                "label": betNamePkg.slug + "_" + formattedAmount + "_" + diceRollPkg.number
+                            });
+                        });
+                    };
                 });
             });
         });
