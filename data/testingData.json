@@ -54,5 +54,101 @@
     {
         "text": "If a Twelve is rolled, does the Field Bet win",
         "label": "fieldBet__12"
+    },
+    {
+        "text": "What happens to a Come Bet when Aces rolls?",
+        "label": "comeBet__2"
+    },
+    {
+        "text": "Does a Come Bet win on Ace Deuce",
+        "label": "comeBet__3"
+    },
+    {
+        "text": "If I have $5 in the Come and Four rolls, does it lose?",
+        "label": "comeBet_5_4"
+    },
+    {
+        "text": "What does a Come Bet pay if 5 rolls",
+        "label": "comeBet__5"
+    },
+    {
+        "text": "If I have $5 in the Come and a Six rolls, what happens",
+        "label": "comeBet_5_6"
+    },
+    {
+        "text": "Does a Come Bet win on Seven",
+        "label": "comeBet__7"
+    },
+    {
+        "text": "What does a Come Bet win if Eight rolls",
+        "label": "comeBet__8"
+    },
+    {
+        "text": "Does a Come Bet win on Nine",
+        "label": "comeBet__9"
+    },
+    {
+        "text": "How much does a $5 Come Bet pay if Ten Rolls",
+        "label": "comeBet_5_10"
+    },
+    {
+        "text": "if a Yo is rolled, does the Come Bet win?",
+        "label": "comeBet__11"
+    },
+    {
+        "text": "If an Eleven is rolled, does the Come Bet win?",
+        "label": "comeBet__11"
+    },
+    {
+        "text": "If a Twelve is rolled, does the Come Bet win",
+        "label": "comeBet__12"
+    },
+    {
+        "text": "What happens to a C&E Bet when Aces rolls?",
+        "label": "cAndE__2"
+    },
+    {
+        "text": "Does a C&E Bet win on Ace Deuce",
+        "label": "cAndE__3"
+    },
+    {
+        "text": "If I $2 on the C&E and Four rolls, does it lose?",
+        "label": "cAndE_2_4"
+    },
+    {
+        "text": "What does a C&E Bet pay if 5 rolls",
+        "label": "cAndE__5"
+    },
+    {
+        "text": "If I have $2 on the C&E and a Six rolls, what happens",
+        "label": "cAndE_2_6"
+    },
+    {
+        "text": "Does a C&E Bet win on Seven",
+        "label": "cAndE__7"
+    },
+    {
+        "text": "What does a C&E Bet win if Eight rolls",
+        "label": "cAndE__8"
+    },
+    {
+        "text": "Does a C&E Bet win on Nine",
+        "label": "cAndE__9"
+    },
+    {
+        "text": "How much does a $2 C&E Bet pay if Ten Rolls",
+        "label": "cAndE_2_10"
+    },
+    {
+        "text": "if a Yo is rolled, does the C&E Bet win?",
+        "label": "cAndE__11"
+    },
+    {
+        "text": "If an Eleven is rolled, does the C&E Bet win?",
+        "label": "cAndE__11"
+    },
+    {
+        "text": "If a Twelve is rolled, does the C&E Bet win",
+        "label": "cAndE__12"
     }
 ]

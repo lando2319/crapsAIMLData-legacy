@@ -104,10 +104,6 @@
     "label": "fieldBet__12"
   },
   {
-    "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_2"
-  },
-  {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_2"
   },
@@ -129,7 +125,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_3"
+    "label": "fieldBet_5_2"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -153,7 +149,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_4"
+    "label": "fieldBet_5_3"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -169,7 +165,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_5"
+    "label": "fieldBet_5_4"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -185,7 +181,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_6"
+    "label": "fieldBet_5_5"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -201,7 +197,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_7"
+    "label": "fieldBet_5_6"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -217,7 +213,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_8"
+    "label": "fieldBet_5_7"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -233,7 +229,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_9"
+    "label": "fieldBet_5_8"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -249,7 +245,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_10"
+    "label": "fieldBet_5_9"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -265,7 +261,7 @@
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_11"
+    "label": "fieldBet_5_10"
   },
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
@@ -294,6 +290,14 @@
   {
     "text": "What does a Five Dollar Field Bet pay, if _rolls_",
     "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a $5 Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
+    "label": "fieldBet_5_12"
   },
   {
     "text": "What does a $5 Field Bet pay, if _rolls_",
@@ -308,7 +312,1043 @@
     "label": "fieldBet_5_12"
   },
   {
-    "text": "What does a Five Dollar Field Bet pay, if _rolls_",
-    "label": "fieldBet_5_12"
+    "text": "if Two rolls what happens to my Come Bet",
+    "label": "comeBet__2"
+  },
+  {
+    "text": "if Aces rolls what happens to my Come Bet",
+    "label": "comeBet__2"
+  },
+  {
+    "text": "if 2 rolls what happens to my Come Bet",
+    "label": "comeBet__2"
+  },
+  {
+    "text": "if Three rolls what happens to my Come Bet",
+    "label": "comeBet__3"
+  },
+  {
+    "text": "if Ace Decuce rolls what happens to my Come Bet",
+    "label": "comeBet__3"
+  },
+  {
+    "text": "if 3 rolls what happens to my Come Bet",
+    "label": "comeBet__3"
+  },
+  {
+    "text": "if Four rolls what happens to my Come Bet",
+    "label": "comeBet__4"
+  },
+  {
+    "text": "if 4 rolls what happens to my Come Bet",
+    "label": "comeBet__4"
+  },
+  {
+    "text": "if Five rolls what happens to my Come Bet",
+    "label": "comeBet__5"
+  },
+  {
+    "text": "if 5 rolls what happens to my Come Bet",
+    "label": "comeBet__5"
+  },
+  {
+    "text": "if Six rolls what happens to my Come Bet",
+    "label": "comeBet__6"
+  },
+  {
+    "text": "if 6 rolls what happens to my Come Bet",
+    "label": "comeBet__6"
+  },
+  {
+    "text": "if Seven rolls what happens to my Come Bet",
+    "label": "comeBet__7"
+  },
+  {
+    "text": "if 7 rolls what happens to my Come Bet",
+    "label": "comeBet__7"
+  },
+  {
+    "text": "if Eight rolls what happens to my Come Bet",
+    "label": "comeBet__8"
+  },
+  {
+    "text": "if 8 rolls what happens to my Come Bet",
+    "label": "comeBet__8"
+  },
+  {
+    "text": "if Nine rolls what happens to my Come Bet",
+    "label": "comeBet__9"
+  },
+  {
+    "text": "if 9 rolls what happens to my Come Bet",
+    "label": "comeBet__9"
+  },
+  {
+    "text": "if Ten rolls what happens to my Come Bet",
+    "label": "comeBet__10"
+  },
+  {
+    "text": "if 10 rolls what happens to my Come Bet",
+    "label": "comeBet__10"
+  },
+  {
+    "text": "if Eleven rolls what happens to my Come Bet",
+    "label": "comeBet__11"
+  },
+  {
+    "text": "if Yo Eleven rolls what happens to my Come Bet",
+    "label": "comeBet__11"
+  },
+  {
+    "text": "if Yo rolls what happens to my Come Bet",
+    "label": "comeBet__11"
+  },
+  {
+    "text": "if 11 rolls what happens to my Come Bet",
+    "label": "comeBet__11"
+  },
+  {
+    "text": "if Twelve rolls what happens to my Come Bet",
+    "label": "comeBet__12"
+  },
+  {
+    "text": "if 12 rolls what happens to my Come Bet",
+    "label": "comeBet__12"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_2"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_2"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_2"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_2"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_2"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_2"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_3"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_3"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_3"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_3"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_3"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_3"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_4"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_4"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_4"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_4"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_5"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_5"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_5"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_5"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_6"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_6"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_6"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_6"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_7"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_7"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_7"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_7"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_8"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_8"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_8"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_8"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_9"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_9"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_9"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_9"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_10"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_10"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_10"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_10"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_11"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_12"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_12"
+  },
+  {
+    "text": "What does a Five Dollar Come Bet pay, if _rolls_",
+    "label": "comeBet_5_12"
+  },
+  {
+    "text": "What does a $5 Come Bet pay, if _rolls_",
+    "label": "comeBet_5_12"
+  },
+  {
+    "text": "if Two rolls what happens to my C&E",
+    "label": "cAndE__2"
+  },
+  {
+    "text": "if Aces rolls what happens to my C&E",
+    "label": "cAndE__2"
+  },
+  {
+    "text": "if 2 rolls what happens to my C&E",
+    "label": "cAndE__2"
+  },
+  {
+    "text": "if Three rolls what happens to my C&E",
+    "label": "cAndE__3"
+  },
+  {
+    "text": "if Ace Decuce rolls what happens to my C&E",
+    "label": "cAndE__3"
+  },
+  {
+    "text": "if 3 rolls what happens to my C&E",
+    "label": "cAndE__3"
+  },
+  {
+    "text": "if Four rolls what happens to my C&E",
+    "label": "cAndE__4"
+  },
+  {
+    "text": "if 4 rolls what happens to my C&E",
+    "label": "cAndE__4"
+  },
+  {
+    "text": "if Five rolls what happens to my C&E",
+    "label": "cAndE__5"
+  },
+  {
+    "text": "if 5 rolls what happens to my C&E",
+    "label": "cAndE__5"
+  },
+  {
+    "text": "if Six rolls what happens to my C&E",
+    "label": "cAndE__6"
+  },
+  {
+    "text": "if 6 rolls what happens to my C&E",
+    "label": "cAndE__6"
+  },
+  {
+    "text": "if Seven rolls what happens to my C&E",
+    "label": "cAndE__7"
+  },
+  {
+    "text": "if 7 rolls what happens to my C&E",
+    "label": "cAndE__7"
+  },
+  {
+    "text": "if Eight rolls what happens to my C&E",
+    "label": "cAndE__8"
+  },
+  {
+    "text": "if 8 rolls what happens to my C&E",
+    "label": "cAndE__8"
+  },
+  {
+    "text": "if Nine rolls what happens to my C&E",
+    "label": "cAndE__9"
+  },
+  {
+    "text": "if 9 rolls what happens to my C&E",
+    "label": "cAndE__9"
+  },
+  {
+    "text": "if Ten rolls what happens to my C&E",
+    "label": "cAndE__10"
+  },
+  {
+    "text": "if 10 rolls what happens to my C&E",
+    "label": "cAndE__10"
+  },
+  {
+    "text": "if Eleven rolls what happens to my C&E",
+    "label": "cAndE__11"
+  },
+  {
+    "text": "if Yo Eleven rolls what happens to my C&E",
+    "label": "cAndE__11"
+  },
+  {
+    "text": "if Yo rolls what happens to my C&E",
+    "label": "cAndE__11"
+  },
+  {
+    "text": "if 11 rolls what happens to my C&E",
+    "label": "cAndE__11"
+  },
+  {
+    "text": "if Twelve rolls what happens to my C&E",
+    "label": "cAndE__12"
+  },
+  {
+    "text": "if 12 rolls what happens to my C&E",
+    "label": "cAndE__12"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_2"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_2"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_2"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_2"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_2"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_2"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_2"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_2"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_2"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_2"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_2"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_2"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_2"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_2"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_2"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_2"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_2"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_2"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_3"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_3"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_3"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_3"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_3"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_3"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_3"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_3"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_3"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_3"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_3"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_3"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_3"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_3"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_3"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_3"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_3"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_3"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_4"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_4"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_4"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_4"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_4"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_4"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_4"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_4"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_4"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_4"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_4"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_4"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_5"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_5"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_5"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_5"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_5"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_5"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_5"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_5"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_5"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_5"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_5"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_5"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_6"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_6"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_6"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_6"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_6"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_6"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_6"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_6"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_6"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_6"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_6"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_6"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_7"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_7"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_7"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_7"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_7"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_7"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_7"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_7"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_7"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_7"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_7"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_7"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_8"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_8"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_8"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_8"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_8"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_8"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_8"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_8"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_8"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_8"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_8"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_8"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_9"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_9"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_9"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_9"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_9"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_9"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_9"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_9"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_9"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_9"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_9"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_9"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_10"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_10"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_10"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_10"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_10"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_10"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_10"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_10"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_10"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_10"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_10"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_10"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_11"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_11"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_11"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_12"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_12"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_12"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_12"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_12"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_12"
+  },
+  {
+    "text": "What does a Two Dollar C&E pay, if _rolls_",
+    "label": "cAndE_2_12"
+  },
+  {
+    "text": "What does a $2 C&E pay, if _rolls_",
+    "label": "cAndE_2_12"
+  },
+  {
+    "text": "What does a Four Dollar C&E pay, if _rolls_",
+    "label": "cAndE_4_12"
+  },
+  {
+    "text": "What does a $4 C&E pay, if _rolls_",
+    "label": "cAndE_4_12"
+  },
+  {
+    "text": "What does a Six Dollar C&E pay, if _rolls_",
+    "label": "cAndE_6_12"
+  },
+  {
+    "text": "What does a $6 C&E pay, if _rolls_",
+    "label": "cAndE_6_12"
   }
 ]

@@ -1,5 +1,23 @@
 var lineFormatter = require('./lineFormatter.js');
 
+// might need to get more clever if I go over 10
+function wordToNumber(word) {
+    const numbers = {
+        "one dollar": 1,
+        "two dollar": 2,
+        "three dollar": 3,
+        "four dollar": 4,
+        "five dollar": 5,
+        "six dollar": 6,
+        "seven dollar": 7,
+        "eight dollar": 8,
+        "nine dollar": 9,
+        "ten dollar": 10
+    };
+
+    return numbers[word.toLowerCase()] ?? word;
+}
+
 function generate(gameElements, loggit) {
     var jsonToGo = [];
 
@@ -28,10 +46,11 @@ function generate(gameElements, loggit) {
                             "label": betNamePkg.slug + "__" + diceRollPkg.number
                         });
                     } else {
-                        ["$5", "Five Dollar"].forEach(amountText => {
+                        betNamePkg.amounts.forEach(amountText => {
                             var formattedPhrase = lineFormatter.formatLine(betPhrase, betNamePkg, diceRollName, amountText);
 
-                            var formattedAmount = amountText.replace("$", "").replace("Five Dollar", "5");
+                            var amountWithoutDollarSign = amountText.replace("$", "");
+                            var formattedAmount = wordToNumber(amountWithoutDollarSign);
 
                             jsonToGo.push({
                                 "text": formattedPhrase,

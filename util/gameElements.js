@@ -26,8 +26,36 @@ module.exports.betNames = [
         slug: "fieldBet",
         name: "Field Bet",
         nickname: "The Field",
+        amounts: [
+            "Five Dollar",
+            "$5",
+        ],
         betType: "oneTimeBet"
-    }
+    },
+    {
+        slug: "comeBet",
+        name: "Come Bet",
+        nickname: "The Come",
+        amounts: [
+            "Five Dollar",
+            "$5",
+        ],
+        betType: "contract"
+    },
+    {
+        slug: "cAndE",
+        name: "C&E",
+        nickname: "The C&E",
+        amounts: [
+            "Two Dollar",
+            "$2",
+            "Four Dollar",
+            "$4",
+            "Six Dollar",
+            "$6"
+        ],
+        betType: "oneTimeBet"
+    },
 ];
 
 module.exports.diceRolls = [
@@ -227,5 +255,53 @@ module.exports.extraTrainingData = [
     {
         "text": "If I roll a five does my Field Bet win?",
         "label": "fieldBet__5"
+    },
+    {
+        "text": "What does a $4 C&E Bet pay if Six rolls",
+        "label": "cAndE_4_6"
+    },
+    {
+        "text": "If a Six rolls, what happens to my Four Dollar C&E Bet",
+        "label": "cAndE_4_6"
+    },
+    {
+        "text": "What does a $4 C&E Bet pay if Ten Rolls",
+        "label": "cAndE_4_10"
+    },
+    {
+        "text": "What happens to my Four Dollar C&E bet if Six rolls",
+        "label": "cAndE_4_6"
+    },
+    {
+        "text": "If an Eleven rolls, does my $4 C&E win",
+        "label": "cAndE_4_11"
+    },
+    {
+        "text": "If a 10 rolls does my $4 C&E bet win",
+        "label": "cAndE_4_10"
+    },
+    {
+        "text": "Does a C&E bet win on Six",
+        "label": "cAndE__6"
+    },
+    {
+        "text": "Does a C&E lose on Four",
+        "label": "cAndE__4"
+    },
+    {
+        "text": "Does my Six Dollar C&E bet lose if Six rolls",
+        "label": "cAndE_6_6"
+    },
+    {
+        "text": "if an Eleven rolls does a six doller C&E bet win",
+        "label": "cAndE_6_11"
+    },
+    {
+        "text": "If a 10 rolls does my $6 C&E bet win",
+        "label": "cAndE_6_10"
+    },
+    {
+        "text": "Does a C&E bet win on Six",
+        "label": "cAndE__6"
     },
 ];

@@ -11,7 +11,6 @@ var gameElements = require('./util/gameElements.js');
         console.log(loggit, "Generating Training Data");
 
         var jsonToGo = generateJSON.generate(gameElements, loggit);
-
         
         gameElements.extraTrainingData.forEach(trainingData => {
             jsonToGo.push(trainingData);
