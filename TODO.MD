@@ -14,5 +14,9 @@ Aliases
 - Craps Eleven
 - (See how Android and iOS dictation does it)
 
+Crap Check
+Aliases
+- Any Craps
+
 
 

@@ -52,7 +52,23 @@ module.exports.betNames = [
             "Four Dollar",
             "$4",
             "Six Dollar",
-            "$6"
+            "$6",
+            "Twenty Dollar",
+            "$20"
+        ],
+        betType: "oneTimeBet"
+    },
+    {
+        slug: "crapCheck",
+        name: "Crap Check",
+        nickname: "Crap Check",
+        amounts: [
+            "One Dollar",
+            "$1",
+            "Five Dollar",
+            "$5",
+            "20 Dollar",
+            "$20"
         ],
         betType: "oneTimeBet"
     },
