@@ -72,6 +72,20 @@ module.exports.betNames = [
         ],
         betType: "oneTimeBet"
     },
+    {
+        slug: "hardFour",
+        name: "Hard Four",
+        nickname: "Hard Four",
+        amounts: [
+            "One Dollar",
+            "$1",
+            "Five Dollar",
+            "$5",
+            "20 Dollar",
+            "$20"
+        ],
+        betType: "oneTimeBet"
+    },
 ];
 
 module.exports.diceRolls = [

@@ -198,5 +198,53 @@
     {
         "text": "If a Twelve is rolled, does the Crap Check win",
         "label": "crapCheck__12"
+    },
+    {
+        "text": "What happens to a Hard Four when Aces rolls?",
+        "label": "hardFour__2"
+    },
+    {
+        "text": "Does a Hard Four win on Ace Deuce",
+        "label": "hardFour__3"
+    },
+    {
+        "text": "If I $1 on the Hard Four and Four rolls, does it lose?",
+        "label": "hardFour_1_4"
+    },
+    {
+        "text": "What does a Hard Four pay if 5 rolls",
+        "label": "hardFour__5"
+    },
+    {
+        "text": "If I have $2 on the Hard Four and a Six rolls, what happens",
+        "label": "hardFour_2_6"
+    },
+    {
+        "text": "Does a Hard Four win on Seven",
+        "label": "hardFour__7"
+    },
+    {
+        "text": "What does a Hard Four win if Eight rolls",
+        "label": "hardFour__8"
+    },
+    {
+        "text": "Does a Hard Four win on Nine",
+        "label": "hardFour__9"
+    },
+    {
+        "text": "How much does a $5 Hard Four pay if Ten Rolls",
+        "label": "hardFour_5_10"
+    },
+    {
+        "text": "if a Yo is rolled, does the Hard Four win?",
+        "label": "hardFour__11"
+    },
+    {
+        "text": "If an Eleven is rolled, does the Hard Four win?",
+        "label": "hardFour__11"
+    },
+    {
+        "text": "If a Twelve is rolled, does the Hard Four win",
+        "label": "hardFour__12"
     }
 ]
