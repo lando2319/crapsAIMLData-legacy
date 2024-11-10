@@ -18,5 +18,5 @@ Crap Check
 Aliases
 - Any Craps
 
-
-
+Training Data Do at least on loop of "no odds" with slug like comeBet5_5_0_10
+with test cases

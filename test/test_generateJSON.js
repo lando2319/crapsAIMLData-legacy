@@ -13,7 +13,9 @@ describe("Testing generateJSON", function () {
                 slug: "fieldBet",
                 name: "Field Bet",
                 nickname: "The Field",
-                betType: "oneTimeBet"
+                amounts: [
+                    "$5",
+                ]
             }
         ];
 
@@ -54,15 +56,7 @@ describe("Testing generateJSON", function () {
                 label: 'fieldBet_5_4'
             },
             {
-                text: 'What does a Five Dollar Field Bet pay when Four rolls?',
-                label: 'fieldBet_5_4'
-            },
-            {
                 text: 'What does a $5 Field Bet pay when 4 rolls?',
-                label: 'fieldBet_5_4'
-            },
-            {
-                text: 'What does a Five Dollar Field Bet pay when 4 rolls?',
                 label: 'fieldBet_5_4'
             },
             {
@@ -70,15 +64,7 @@ describe("Testing generateJSON", function () {
                 label: 'fieldBet_5_5'
             },
             {
-                text: 'What does a Five Dollar Field Bet pay when Five rolls?',
-                label: 'fieldBet_5_5'
-            },
-            {
                 text: 'What does a $5 Field Bet pay when 5 rolls?',
-                label: 'fieldBet_5_5'
-            },
-            {
-                text: 'What does a Five Dollar Field Bet pay when 5 rolls?',
                 label: 'fieldBet_5_5'
             }
         ]

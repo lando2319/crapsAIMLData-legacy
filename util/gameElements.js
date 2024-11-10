@@ -1,18 +1,18 @@
 
 module.exports.betPhrases = [
-    "What happens to my _amount_ _betName_ if _roll_ rolls?",
-    "What does a _amount_ _betName_ pay when _roll_ rolls?",
+    "What happens to my _amount_ _betName_ _odds_ if _roll_ rolls?",
+    "What does a _amount_ _betName_ _odds_ pay when _roll_ rolls?",
     "What happens to a _betName_ when _roll_ rolls?",
     "Does a _betName_ win on _roll_",
     "Does a _betName_ lose on _roll_",
     "what does rolling _roll_ pay in _betNickname_",
     "with a _betName_, _roll_ rolls, what happens",
     "if _roll_ rolls what happens to my _betName_",
-    "What does a _amount_ _betName_ pay, if _roll_ rolls",
-    "If I have _amount_ in the _betName_ does it win if _roll_ rolls?",
+    "What does a _amount_ _betName_ _odds_ pay, if _roll_ rolls",
+    "If I have _amount_ on the _betName_ _odds_ does it win if _roll_ rolls?",
     "Does my _amount_ bet in _betNickname_ win if _roll_ is rolled",
     "Does my _betName_ win if _roll_ is rolled?",
-    "How much does my _amount_ _betName_ pay if _roll_ is rolled"
+    "How much does my _amount_ _betName_ _odds_ pay if _roll_ is rolled"
 ];
 
 // Not in use, using "Auto" on Create ML
@@ -30,7 +30,6 @@ module.exports.betNames = [
             "Five Dollar",
             "$5",
         ],
-        betType: "oneTimeBet"
     },
     {
         slug: "comeBet",
@@ -40,12 +39,10 @@ module.exports.betNames = [
             "Five Dollar",
             "$5",
         ],
-        betType: "contract"
     },
     {
         slug: "cAndE",
         name: "C&E",
-        nickname: "The C&E",
         amounts: [
             "Two Dollar",
             "$2",
@@ -56,35 +53,198 @@ module.exports.betNames = [
             "Twenty Dollar",
             "$20"
         ],
-        betType: "oneTimeBet"
     },
     {
         slug: "crapCheck",
         name: "Crap Check",
-        nickname: "Crap Check",
         amounts: [
             "One Dollar",
             "$1",
             "Five Dollar",
             "$5",
-            "20 Dollar",
+            "Twenty Dollar",
             "$20"
         ],
-        betType: "oneTimeBet"
     },
     {
         slug: "hardFour",
         name: "Hard Four",
-        nickname: "Hard Four",
         amounts: [
             "One Dollar",
             "$1",
             "Five Dollar",
             "$5",
-            "20 Dollar",
+            "Twenty Dollar",
             "$20"
         ],
-        betType: "oneTimeBet"
+    },
+    {
+        slug: "placeBet4",
+        name: "Place Bet on Four",
+        amounts: [
+            "Four Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10",
+            "Twenty Five Dollar",
+            "$25"
+        ],
+    },
+    {
+        slug: "placeBet5",
+        name: "Place Bet on Five",
+        amounts: [
+            "Five Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10",
+            "Twenty Five Dollar",
+            "$25"
+        ],
+    },
+    {
+        slug: "placeBet6",
+        name: "Place Bet on Six",
+        amounts: [
+            "Six Dollar",
+            "$6",
+            "Five Dollar",
+            "$5",
+            "Thirty Dollar",
+            "$30"
+        ],
+    },
+    {
+        slug: "placeBet8",
+        name: "Place Bet on Eight",
+        amounts: [
+            "Six Dollar",
+            "$6",
+            "Five Dollar",
+            "$5",
+            "Thirty Dollar",
+            "$30"
+        ],
+    },
+    {
+        slug: "placeBet9",
+        name: "Place Bet on Nine",
+        amounts: [
+            "Nine Dollar",
+            "$6",
+            "Five Dollar",
+            "$5",
+            "Twenty Five Dollar",
+            "$25"
+        ],
+    },
+    {
+        slug: "placeBet10",
+        name: "Place Bet on Ten",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Six Dollar",
+            "$6",
+            "Twenty Five Dollar",
+            "$25"
+        ],
+    },
+    {
+        slug: "comeBet4",
+        name: "Come Bet on Four",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10"
+        ],
+        odds: [
+            "Ten Dollar",
+            "$10",
+            "Twenty Dollar",
+            "$20",
+        ]
+    },
+    {
+        slug: "comeBet5",
+        name: "Come Bet on Five",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10"
+        ],
+        odds: [
+            "Ten Dollar",
+            "$10",
+            "Twenty Dollar",
+            "$20",
+        ]
+    },
+    {
+        slug: "comeBet6",
+        name: "Come Bet on Six",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10"
+        ],
+        odds: [
+            "Ten Dollar",
+            "$10",
+            "Twenty Dollar",
+            "$20",
+        ]
+    },
+    {
+        slug: "comeBet8",
+        name: "Come Bet on Eight",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10"
+        ],
+        odds: [
+            "Ten Dollar",
+            "$10",
+            "Twenty Dollar",
+            "$20",
+        ]
+    },
+    {
+        slug: "comeBet9",
+        name: "Come Bet on Nine",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10"
+        ],
+        odds: [
+            "Ten Dollar",
+            "$10",
+            "Twenty Dollar",
+            "$20",
+        ]
+    },
+    {
+        slug: "comeBet10",
+        name: "Come Bet on Ten",
+        amounts: [
+            "Ten Dollar",
+            "$5",
+            "Ten Dollar",
+            "$10"
+        ],
+        odds: [
+            "Ten Dollar",
+            "$10",
+            "Twenty Dollar",
+            "$20",
+        ]
     },
 ];
 
