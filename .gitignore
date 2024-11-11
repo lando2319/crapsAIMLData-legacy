@@ -3,6 +3,6 @@ node_modules
 data/**
 !data/testingData.json
 !data/betTestingData.json
-!data/amountTestingData.json
 !data/oddsTestingData.json
+!data/amountTestingData.json
 !data/rollTestingData.json
