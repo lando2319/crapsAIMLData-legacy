@@ -1,6 +1,26 @@
 var lineFormatter = require('./lineFormatter.js');
 
-function generate(gameElements, loggit) {
+
+function generateLabelSlug(labelType, formatPkg, roll) {
+    var outgoingObj = {
+        text: formatPkg.phrase,
+        label: ""
+    };
+
+    if (labelType == "BET") {
+        outgoingObj.label = formatPkg.bet;
+    } else if (labelType == "AMOUNT") {
+        outgoingObj.label = formatPkg.amount;
+    } else if (labelType == "ODDS") {
+        outgoingObj.label = formatPkg.odds;
+    } else if (labelType == "ROLL") {
+        outgoingObj.label = roll.toString();
+    };
+
+    return outgoingObj
+}
+
+function generate(gameElements, labelType, loggit) {
     var jsonToGo = [];
 
     gameElements.betNames.forEach(betNamePkg => {
@@ -23,30 +43,25 @@ function generate(gameElements, loggit) {
                 allNames.forEach(diceRollName => {
 
                     if (!hasAmount) {
-                        var formattedPhrase = lineFormatter.formatLine(betPhrase, betNamePkg, diceRollName, "");
+                        var formatPkg = lineFormatter.process(betPhrase, betNamePkg, diceRollName, "", "");
+                        var jsonObj = generateLabelSlug(labelType, formatPkg, diceRollPkg.number);
 
-                        jsonToGo.push({
-                            "text": formattedPhrase,
-                            "label": betNamePkg.slug + "__" + diceRollPkg.number
-                        });
+                        jsonToGo.push(jsonObj);
                     } else {
                         betNamePkg.amounts.forEach(amountText => {
                             if (betNamePkg.odds && betPhrase.includes("_odds_")){
                                 betNamePkg.odds.forEach(oddsAmount => {
 
                                     var formatPkg = lineFormatter.process(betPhrase, betNamePkg, diceRollName, amountText, oddsAmount);
+                                    var jsonObj = generateLabelSlug(labelType, formatPkg, diceRollPkg.number);
 
-                                    jsonToGo.push({
-                                        "text": formatPkg.phrase,
-                                        "label": betNamePkg.slug + "_" + formatPkg.amount + "_" + formatPkg.odds + "_" + diceRollPkg.number
-                                    });
+                                    jsonToGo.push(jsonObj);
                                 })
                             } else {
                                 var formatPkg = lineFormatter.process(betPhrase, betNamePkg, diceRollName, amountText, "");
-                                jsonToGo.push({
-                                    "text": formatPkg.phrase,
-                                    "label": betNamePkg.slug + "_" + formatPkg.amount + "_" + diceRollPkg.number
-                                });
+                                var jsonObj = generateLabelSlug(labelType, formatPkg, diceRollPkg.number);
+
+                                jsonToGo.push(jsonObj);
                             };
                         });
                     };

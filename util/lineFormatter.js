@@ -6,7 +6,7 @@ function formatLine(betPhrase, betNamePkg, diceRollName, betAmount, oddsAmount) 
         .replace("_roll_", diceRollName)
 
     if (oddsAmount) {
-        oddsAmount = "with " + oddsAmount + " odds";
+        oddsAmount = " with " + oddsAmount + " odds";
     }
 
     formattedPhrase = formattedPhrase.replace("_odds_", oddsAmount);
@@ -18,12 +18,17 @@ function process(betPhrase, betNamePkg, diceRollName, betAmount, oddsAmount) {
     var formattedPhrase = formatLine(betPhrase, betNamePkg, diceRollName, betAmount, oddsAmount);
 
     var amountWithoutDollarSign = betAmount.replace("$", "");
-    var formattedAmount = wordToNumber(amountWithoutDollarSign);
+    var formattedAmount = wordToNumber(amountWithoutDollarSign).toString();
 
     var oddsWithoutDollarSign = oddsAmount.replace("$", "");
-    var formattedOddsAmount = wordToNumber(oddsWithoutDollarSign);
+    var formattedOddsAmount = wordToNumber(oddsWithoutDollarSign).toString();
 
-    return {phrase:formattedPhrase, amount:formattedAmount, odds: formattedOddsAmount}
+    return {
+        phrase: formattedPhrase,
+        bet: betNamePkg.slug,
+        amount: formattedAmount,
+        odds: formattedOddsAmount
+    }
 };
 
 function wordToNumber(word) {

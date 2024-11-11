@@ -1,2 +1,8 @@
 node_modules
-data/trainingData.json
+
+data/**
+!data/testingData.json
+!data/betTestingData.json
+!data/amountTestingData.json
+!data/oddsTestingData.json
+!data/rollTestingData.json

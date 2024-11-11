@@ -20,3 +20,50 @@ Aliases
 
 Training Data Do at least on loop of "no odds" with slug like comeBet5_5_0_10
 with test cases
+
+
+# NEW PLAN
+Multiple models
+
+- Roll Model
+- Bet Models
+- Amount
+- Odds Model
+
+MAKE THE JSON LIKE SO
+
+{
+    text:"how do I...",
+    betLabel:"comeBet5",
+    rollLabel:"7",
+    amount:"5",
+    odds:"10"
+}
+
+
+
+CONFIRM EACH
+
+
+
+// LEFT OFF HERE
+// These two look good, not perfect, but good
+// Move on to the next one
+
+    - thoroughly check roll training data
+    - thoroughly check roll testing data
+
+
+
+
+
+
+
+- thoroughly check bet training data
+- thoroughly check bet testing data
+
+- thoroughly check amount training data
+- thoroughly check amount testing data
+
+- thoroughly check odds training data
+- thoroughly check odds testing data

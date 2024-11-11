@@ -23,3 +23,11 @@ This validation data code was removed from generateTrainingData since we're doin
 // await fs.promises.writeFile("./data/validationData.json", JSON.stringify(validationJSON, null, 2));
 
 // console.log(loggit, "Successfully Generated File validationData.json")
+
+
+
+
+        // Turn this off for now, trying multiple models
+        // gameElements.extraTrainingData.forEach(trainingData => {
+        //     jsonToGo.push(trainingData);
+        // })
