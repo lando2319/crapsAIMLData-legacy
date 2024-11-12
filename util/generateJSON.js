@@ -12,7 +12,7 @@ function generateLabelSlug(labelType, formatPkg, roll) {
     } else if (labelType == "AMOUNT") {
         outgoingObj.label = formatPkg.amount;
     } else if (labelType == "ODDS") {
-        outgoingObj.label = formatPkg.odds;
+        outgoingObj.label = formatPkg.odds || "no_odds";
     } else if (labelType == "ROLL") {
         outgoingObj.label = roll.toString();
     };
@@ -49,6 +49,11 @@ function generate(gameElements, labelType, loggit) {
                         jsonToGo.push(jsonObj);
                     } else {
                         betNamePkg.amounts.forEach(amountText => {
+                            if (labelType == "ODDS") {
+                                amountText = "<amount>"
+                                diceRollName = "<roll>"
+                            };
+
                             if (betNamePkg.odds && betPhrase.includes("_odds_")){
                                 betNamePkg.odds.forEach(oddsAmount => {
 
@@ -79,4 +84,52 @@ function generate(gameElements, labelType, loggit) {
     return jsonToGo;
 };
 
+// MIGHT DRY IT UP, MAYBE
+function generateAmount(gameElements, loggit) {
+    var jsonToGo = [];
+
+    gameElements.amountBetNames.forEach(betNamePkg => {
+        logThis("Generating for " + betNamePkg.name)
+
+        gameElements.amountBetPhrases.forEach(betPhrase => {
+            logThis("Bet Phrase " + betPhrase);
+
+            var hasAmount = betPhrase.includes("<amount>");
+
+            if (betPhrase.includes("<betNickname>") && !betNamePkg.nickname) return
+            
+            betPhrase = betPhrase
+                .replace("<betName>", betNamePkg.name)
+                .replace("<betNickname>", betNamePkg.nickname);
+
+            if (!hasAmount) {
+                jsonToGo.push({
+                    "text": betPhrase,
+                    "label": "<no_amount>"
+                });
+            } else {
+                for (let i = 1; i <= 100; i++) {
+                    var formattedPhrase = betPhrase
+                        .replace("<amount>", "$"+i)
+                        
+                    jsonToGo.push({
+                        "text": formattedPhrase,
+                        "label": i.toString()
+                    });
+                };
+            };
+        });
+    });
+
+    function logThis(log) {
+        if (loggit) {
+            console.log(loggit, log);
+        }
+    };
+
+    return jsonToGo;
+};
+
+
 module.exports.generate = generate;
+module.exports.generateAmount = generateAmount;

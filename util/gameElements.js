@@ -12,13 +12,109 @@ module.exports.betPhrases = [
     "If I have _amount_ on the _betName__odds_ does it win if _roll_ rolls?",
     "Does my _amount_ bet in _betNickname_ win if _roll_ is rolled",
     "Does my _betName_ win if _roll_ is rolled?",
-    "How much does my _amount_ _betName__odds_ pay if _roll_ is rolled"
+    "How much does my _amount_ _betName__odds_ pay if _roll_ is rolled",
+    
+    // adding these for more odds data to improve oddsTesting
+    "If I have a _amount_ _betName__odds_ what happens if _roll_ rolls",
+    "Do a _amount_ _betName__odds_ win on _roll_"
 ];
+
+module.exports.amountBetPhrases = [
+    "What happens to my <amount> <betName> <odds> if <roll> rolls?",
+    "What does a <amount> <betName> <odds> pay when <roll> rolls?",
+    "What happens to a <betName> when <roll> rolls?",
+    "Does a <betName> win on <roll>",
+    "Does a <betName> lose on <roll>",
+    "what does rolling <roll> pay in <betNickname>",
+    "with a <betName>, <roll> rolls, what happens",
+    "if <roll> rolls what happens to my <betName>",
+    "What does a <amount> <betName> <odds> pay, if <roll> rolls",
+    "If I have <amount> on the <betName> <odds> does it win if <roll> rolls?",
+    "Does my <amount> bet in <betNickname> win if <roll> is rolled",
+    "Does my <betName> win if <roll> is rolled?",
+    "How much does my <amount> <betName> <odds> pay if <roll> is rolled",
+    "If I have a <amount> <betName> <odds> what happens if <roll> rolls",
+    "Does a <amount> <betName> <odds> win on <roll>"
+];
+
 
 // Not in use, using "Auto" on Create ML
 module.exports.validationBetPhrases = [
     "if _roll_ rolls what happens to my _betName_",
     "What does a _amount_ _betName_ pay, if _rolls_"
+];
+
+module.exports.amountBetNames = [
+    {
+        slug: "fieldBet",
+        name: "Field Bet",
+        nickname: "The Field",
+    },
+    {
+        slug: "comeBet",
+        name: "Come Bet",
+        nickname: "The Come",
+    },
+    {
+        slug: "cAndE",
+        name: "C&E",
+    },
+    {
+        slug: "crapCheck",
+        name: "Crap Check",
+    },
+    {
+        slug: "hardFour",
+        name: "Hard Four",
+    },
+    {
+        slug: "placeBet4",
+        name: "Place Bet on Four",
+    },
+    {
+        slug: "placeBet5",
+        name: "Place Bet on Five",
+    },
+    {
+        slug: "placeBet6",
+        name: "Place Bet on Six",
+    },
+    {
+        slug: "placeBet8",
+        name: "Place Bet on Eight",
+    },
+    {
+        slug: "placeBet9",
+        name: "Place Bet on Nine",
+    },
+    {
+        slug: "placeBet10",
+        name: "Place Bet on Ten",
+    },
+    {
+        slug: "comeBet4",
+        name: "Come Bet on Four",
+    },
+    {
+        slug: "comeBet5",
+        name: "Come Bet on Five",
+    },
+    {
+        slug: "comeBet6",
+        name: "Come Bet on Six",
+    },
+    {
+        slug: "comeBet8",
+        name: "Come Bet on Eight",
+    },
+    {
+        slug: "comeBet9",
+        name: "Come Bet on Nine",
+    },
+    {
+        slug: "comeBet10",
+        name: "Come Bet on Ten",
+    },
 ];
 
 module.exports.betNames = [
@@ -108,8 +204,8 @@ module.exports.betNames = [
         amounts: [
             "Six Dollar",
             "$6",
-            "Five Dollar",
-            "$5",
+            "Five Dollar", // improper bet
+            "$5", // improper bet
             "Thirty Dollar",
             "$30"
         ],
@@ -120,8 +216,8 @@ module.exports.betNames = [
         amounts: [
             "Six Dollar",
             "$6",
-            "Five Dollar",
-            "$5",
+            "Five Dollar", // improper bet
+            "$5", // improper bet
             "Thirty Dollar",
             "$30"
         ],
@@ -130,8 +226,8 @@ module.exports.betNames = [
         slug: "placeBet9",
         name: "Place Bet on Nine",
         amounts: [
-            "Nine Dollar",
-            "$6",
+            "Nine Dollar", // improper bet
+            "$6", // improper bet
             "Five Dollar",
             "$5",
             "Twenty Five Dollar",
@@ -164,6 +260,7 @@ module.exports.betNames = [
             "$10",
             "Twenty Dollar",
             "$20",
+            "<odds>",
         ]
     },
     {
@@ -180,6 +277,7 @@ module.exports.betNames = [
             "$10",
             "Twenty Dollar",
             "$20",
+            "<odds>",
         ]
     },
     {
@@ -196,6 +294,7 @@ module.exports.betNames = [
             "$10",
             "Twenty Dollar",
             "$20",
+            "<odds>",
         ]
     },
     {
@@ -212,6 +311,7 @@ module.exports.betNames = [
             "$10",
             "Twenty Dollar",
             "$20",
+            "<odds>",
         ]
     },
     {
@@ -221,13 +321,14 @@ module.exports.betNames = [
             "Ten Dollar",
             "$5",
             "Ten Dollar",
-            "$10"
+            "$10",
         ],
         odds: [
             "Ten Dollar",
             "$10",
             "Twenty Dollar",
             "$20",
+            "<odds>",
         ]
     },
     {
@@ -237,13 +338,14 @@ module.exports.betNames = [
             "Ten Dollar",
             "$5",
             "Ten Dollar",
-            "$10"
+            "$10",
         ],
         odds: [
             "Ten Dollar",
             "$10",
             "Twenty Dollar",
             "$20",
+            "<odds>",
         ]
     },
 ];

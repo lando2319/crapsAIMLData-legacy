@@ -67,3 +67,11 @@ CONFIRM EACH
 
 - thoroughly check odds training data
 - thoroughly check odds testing data
+
+
+# MUST DO
+Right now I'm training for ONLY numbers, no word numbers at all
+
+SET UP PREPROCESS
+
+convert all word numbers 1-100 to number version

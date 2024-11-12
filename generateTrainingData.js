@@ -17,15 +17,7 @@ var gameElements = require('./util/gameElements.js');
 
         console.log(loggit, "Successfully Generated File betTrainingData.json")
 
-
-        console.log(loggit, "Generating Training Data for AMOUNT");
-        var jsonToGo = generateJSON.generate(gameElements, "AMOUNT", loggit);
-        
-        console.log(loggit, "Generating File amountTrainingData.json")
-        await fs.promises.writeFile("./data/amountTrainingData.json", JSON.stringify(jsonToGo, null, 2));
-
-        console.log(loggit, "Successfully Generated File amountTrainingData.json")
-
+        // Amount has it's own
 
         console.log(loggit, "Generating Training Data for ODDS");
         var jsonToGo = generateJSON.generate(gameElements, "ODDS", loggit);
