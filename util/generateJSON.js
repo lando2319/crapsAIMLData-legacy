@@ -109,11 +109,10 @@ function generateAmount(gameElements, loggit) {
                 });
             } else {
                 for (let i = 1; i <= 100; i++) {
-                    var formattedPhrase = betPhrase
-                        .replace("<amount>", "$"+i)
-                        
+                    var cleanedBetPhrase = betPhrase.replace("<amount>", "$" + i);
+
                     jsonToGo.push({
-                        "text": formattedPhrase,
+                        "text": cleanedBetPhrase,
                         "label": i.toString()
                     });
                 };

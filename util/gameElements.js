@@ -19,22 +19,23 @@ module.exports.betPhrases = [
     "Do a _amount_ _betName__odds_ win on _roll_"
 ];
 
+// CLEANED
 module.exports.amountBetPhrases = [
-    "What happens to my <amount> <betName> <odds> if <roll> rolls?",
-    "What does a <amount> <betName> <odds> pay when <roll> rolls?",
-    "What happens to a <betName> when <roll> rolls?",
-    "Does a <betName> win on <roll>",
-    "Does a <betName> lose on <roll>",
-    "what does rolling <roll> pay in <betNickname>",
-    "with a <betName>, <roll> rolls, what happens",
-    "if <roll> rolls what happens to my <betName>",
-    "What does a <amount> <betName> <odds> pay, if <roll> rolls",
-    "If I have <amount> on the <betName> <odds> does it win if <roll> rolls?",
-    "Does my <amount> bet in <betNickname> win if <roll> is rolled",
-    "Does my <betName> win if <roll> is rolled?",
-    "How much does my <amount> <betName> <odds> pay if <roll> is rolled",
-    "If I have a <amount> <betName> <odds> what happens if <roll> rolls",
-    "Does a <amount> <betName> <odds> win on <roll>"
+    "What happens to my <amount> <betName>  if ?",
+    "What does a <amount> <betName>  pay when ?",
+    "What happens to a <betName> when ?",
+    "Does a <betName> ",
+    "Does a <betName> ",
+    "what does  pay in <betNickname>",
+    "with a <betName>, , what happens",
+    "if  what happens to my <betName>",
+    "What does a <amount> <betName>  pay, if ",
+    "If I have <amount> on the <betName>  does it win if ?",
+    "Does my <amount> bet in <betNickname> win if ",
+    "Does my <betName> win if ?",
+    "How much does my <amount> <betName>  pay if ",
+    "If I have a <amount> <betName>  what happens if ",
+    "Does a <amount> <betName>  "
 ];
 
 
@@ -68,52 +69,12 @@ module.exports.amountBetNames = [
         name: "Hard Four",
     },
     {
-        slug: "placeBet4",
-        name: "Place Bet on Four",
+        slug: "placeBeti",
+        name: "Place Bet on ",
     },
     {
-        slug: "placeBet5",
-        name: "Place Bet on Five",
-    },
-    {
-        slug: "placeBet6",
-        name: "Place Bet on Six",
-    },
-    {
-        slug: "placeBet8",
-        name: "Place Bet on Eight",
-    },
-    {
-        slug: "placeBet9",
-        name: "Place Bet on Nine",
-    },
-    {
-        slug: "placeBet10",
-        name: "Place Bet on Ten",
-    },
-    {
-        slug: "comeBet4",
-        name: "Come Bet on Four",
-    },
-    {
-        slug: "comeBet5",
-        name: "Come Bet on Five",
-    },
-    {
-        slug: "comeBet6",
-        name: "Come Bet on Six",
-    },
-    {
-        slug: "comeBet8",
-        name: "Come Bet on Eight",
-    },
-    {
-        slug: "comeBet9",
-        name: "Come Bet on Nine",
-    },
-    {
-        slug: "comeBet10",
-        name: "Come Bet on Ten",
+        slug: "comeBeti",
+        name: "Come Bet on ",
     },
 ];
 

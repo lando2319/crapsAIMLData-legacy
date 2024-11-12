@@ -1,4 +1,51 @@
 # LATEST
+
+
+Next do some tests to make sure
+
+If I have $1 on the Come Bet on Six with $10 odds and Four rolls, does it lose
+
+DO TESTS FOR
+- going from Four to 4
+- all the replace steps on cleaner.js
+
+make sure I'm getting data the EXACT same way as I'm training on
+
+
+JUST HAVE A MAX LIMIT OF 1000
+
+THEN in my clean process, check for any number over 1000
+
+NEED:
+FIRST turn all word numbers into digits
+THEN PREPROCESS
+
+
+PROCESS FOR AMOUNT:
+User enters
+
+"If I have $6 on the Come Bet on Ten with $10 odds then a Six rolls does it win"
+
+cleaner converts to
+
+"If I have $6 on the Come Bet on with then a does it win"
+
+Run through model to get 6
+
+Run through other processes to go the other numbers
+
+Calculate and Answer question, and show supporting files
+
+
+BIG PICTURE:
+
+setup iOS app
+
+- have model on it
+- text label for query
+- clean and prompt model
+- show result, for now just number
+
 Things are fluid
 
 I've broken off the process for amount training data gen
@@ -51,28 +98,14 @@ placed in repo /models/amount GOOD
     - 9: 0.5
     - 6: 0.5
     - 4: 0.8
+UNDER DEVELOPMENT
+Redo with cleaning
 
 ### Odds
-
-
-
-
-LEFT OFF HERE
-Try doing a much slimmer version of the test
-
-8-10
-
-3-4 no odds
-2 "$10 odds"
-2 "Ten Dollar odds"
-2 "Ten odds"
-2 "$20 odds"
-
-
-
-
-
-
 UNDER DEVELOPMENT
+
 ### Bet
+UNDER DEVELOPMENT
+
 ### Amount
+READY
