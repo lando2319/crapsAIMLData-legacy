@@ -20,6 +20,7 @@ function generateLabelSlug(labelType, formatPkg, roll) {
     return outgoingObj
 }
 
+// TO DUMP
 function generate(gameElements, labelType, loggit) {
     var jsonToGo = [];
 
@@ -83,16 +84,17 @@ function generate(gameElements, labelType, loggit) {
 
     return jsonToGo;
 };
+/////////
 
 // MIGHT DRY IT UP, MAYBE
 function generateAmount(gameElements, loggit) {
     var jsonToGo = [];
 
     gameElements.amountBetNames.forEach(betNamePkg => {
-        logThis("Generating for " + betNamePkg.name)
+        logThis("Generating for " + betNamePkg.name, loggit)
 
         gameElements.amountBetPhrases.forEach(betPhrase => {
-            logThis("Bet Phrase " + betPhrase);
+            logThis("Bet Phrase " + betPhrase, loggit);
 
             var hasAmount = betPhrase.includes("<amount>");
 
@@ -120,15 +122,53 @@ function generateAmount(gameElements, loggit) {
         });
     });
 
-    function logThis(log) {
-        if (loggit) {
-            console.log(loggit, log);
-        }
-    };
+    return jsonToGo;
+};
+
+function generateRoll(gameElements, loggit) {
+    var jsonToGo = [];
+
+    gameElements.amountBetNames.forEach(betNamePkg => {
+        logThis("Generating for " + betNamePkg.name, loggit)
+
+        gameElements.rollBetPhrases.forEach(betPhrase => {
+            logThis("Bet Phrase " + betPhrase, loggit);
+            var hasAmount = betPhrase.includes("_roll_");
+
+            if (betPhrase.includes("_betNickname_") && !betNamePkg.nickname) return
+            
+            betPhrase = betPhrase
+                .replace("_betName_", betNamePkg.name)
+                .replace("_betNickname_", betNamePkg.nickname);
+
+            if (!hasAmount) {
+                jsonToGo.push({
+                    "text": betPhrase,
+                    "label": "<no_roll>"
+                });
+            } else {
+                for (let i = 2; i <= 12; i++) {
+                    var cleanedBetPhrase = betPhrase.replace("_roll_", i);
+
+                    jsonToGo.push({
+                        "text": cleanedBetPhrase,
+                        "label": i.toString()
+                    });
+                };
+            };
+        });
+    });
 
     return jsonToGo;
+};
+
+function logThis(log, loggit) {
+    if (loggit) {
+        console.log(loggit, log);
+    }
 };
 
 
 module.exports.generate = generate;
 module.exports.generateAmount = generateAmount;
+module.exports.generateRoll = generateRoll;

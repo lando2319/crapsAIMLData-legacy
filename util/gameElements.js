@@ -1,4 +1,5 @@
 
+// TO DUMP
 module.exports.betPhrases = [
     "What happens to my _amount_ _betName__odds_ if _roll_ rolls?",
     "What does a _amount_ _betName__odds_ pay when _roll_ rolls?",
@@ -18,8 +19,10 @@ module.exports.betPhrases = [
     "If I have a _amount_ _betName__odds_ what happens if _roll_ rolls",
     "Do a _amount_ _betName__odds_ win on _roll_"
 ];
+////////
 
 // CLEANED
+// FINAL TO KEEP
 module.exports.amountBetPhrases = [
     "What happens to my <amount> <betName>  if ?",
     "What does a <amount> <betName>  pay when ?",
@@ -38,46 +41,67 @@ module.exports.amountBetPhrases = [
     "Does a <amount> <betName>  "
 ];
 
+module.exports.rollBetPhrases = [
+    "What happens to my  _betName_ with if _roll_ rolls?",
+    "What does a  _betName_ with pay when _roll_ rolls?",
+    "What happens to a _betName_ when _roll_ rolls?",
+    "Does a _betName_ win on _roll_",
+    "Does a _betName_ lose on _roll_",
+    "what does rolling _roll_ pay in _betNickname_",
+    "with a _betName_, _roll_ rolls, what happens",
+    "if _roll_ rolls what happens to my _betName_",
+    "What does a  _betName_ with pay, if _roll_ rolls",
+    "If I have  on the _betName_ with does it win if _roll_ rolls?",
+    "Does my  bet in _betNickname_ win if _roll_ is rolled",
+    "Does my _betName_ win if _roll_ is rolled?",
+    "How much does my  _betName_ with pay if _roll_ is rolled",
+    "If I have a  _betName_ with what happens if _roll_ rolls",
+    "Do a  _betName_ with win on _roll_",
+    "What does a _betName_ do",
+    "Is the _betName_ a good bet",
+    "Does _betName_ pay good",
+    "whats the best bet in the house",
+];
+/////
 
+
+// TO DUMP
 // Not in use, using "Auto" on Create ML
 module.exports.validationBetPhrases = [
     "if _roll_ rolls what happens to my _betName_",
     "What does a _amount_ _betName_ pay, if _rolls_"
 ];
+/////////
 
+// Update name, this can be a mass file
 module.exports.amountBetNames = [
     {
-        slug: "fieldBet",
         name: "Field Bet",
         nickname: "The Field",
     },
     {
-        slug: "comeBet",
         name: "Come Bet",
         nickname: "The Come",
     },
     {
-        slug: "cAndE",
         name: "C&E",
     },
     {
-        slug: "crapCheck",
         name: "Crap Check",
     },
     {
-        slug: "hardFour",
         name: "Hard Four",
     },
     {
-        slug: "placeBeti",
         name: "Place Bet on ",
     },
     {
-        slug: "comeBeti",
         name: "Come Bet on ",
     },
 ];
+/////////
 
+// TO DUMP
 module.exports.betNames = [
     {
         slug: "fieldBet",
@@ -310,7 +334,9 @@ module.exports.betNames = [
         ]
     },
 ];
+////////
 
+// TO DUMP
 module.exports.diceRolls = [
     {
         name: "Aces",
@@ -375,7 +401,9 @@ module.exports.diceRolls = [
         aliases: []
     }
 ];
+////////
 
+// TO DUMP
 module.exports.extraTrainingData = [
     {
         "text": "What does a $5 Field Bet pay if two rolls",
@@ -558,3 +586,4 @@ module.exports.extraTrainingData = [
         "label": "cAndE__6"
     },
 ];
+////////

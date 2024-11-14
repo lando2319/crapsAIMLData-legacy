@@ -6,3 +6,4 @@ data/**
 !data/oddsTestingData.json
 !data/amountTestingData.json
 !data/rollTestingData.json
+!data/rollTestingData-HOLD.json

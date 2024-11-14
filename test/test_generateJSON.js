@@ -1,6 +1,9 @@
 var assert = require("assert");
 var generateJSON = require("../util/generateJSON.js")
 
+// DUMP THIS WHOLE THING
+// It's on swift now
+
 describe("Testing generateJSON", function () {
     it('With Four and Five as test cases, labelType as BET, should produce proper json', function () {
         var betPhrases = [

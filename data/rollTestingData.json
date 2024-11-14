@@ -1,14 +1,10 @@
 [
     {
-        "text": "What happens to my $5 Field Bet if Two rolls?",
+        "text": "What happens to my Field Bet if 2 rolls?",
         "label": "2"
     },
     {
-        "text": "What happens to my Five Dollar Field Bet if Aces rolls?",
-        "label": "2"
-    },
-    {
-        "text": "What happens to a Place Bet on Five when Aces rolls?",
+        "text": "What happens to a Place Bet on when 2 rolls?",
         "label": "2"
     },
     {
@@ -16,83 +12,75 @@
         "label": "3"
     },
     {
-        "text": "Does a Place Bet on Eight win on Ace Deuce",
-        "label": "3"
-    },
-    {
-        "text": "What happens to my $4 C&E if 4 rolls?",
+        "text": "What happens to my C&E if 4 rolls?",
         "label": "4"
     },
     {
-        "text": "If I have $1 on the Place Bet on Six and Four rolls, does it lose?",
+        "text": "If I have on the Place Bet on and 4 rolls, does it lose?",
         "label": "4"
     },
     {
-        "text": "What does a $5 Crap Check pay, if Five rolls",
+        "text": "What does a Crap Check pay, if 5 rolls",
         "label": "5"
     },
     {
-        "text": "What does a Place Bet on Eight pay if 5 rolls",
+        "text": "What does a Place Bet on pay if 5 rolls",
         "label": "5"
     },
     {
-        "text": "Does a Hard Four win on Six",
+        "text": "Does a Hard win on 6",
         "label": "6"
     },
     {
-        "text": "What happens to a Place Bet on Four when Six rolls?",
+        "text": "What happens to a Place Bet on  when 6 rolls?",
         "label": "6"
     },
     {
-        "text": "If I have $5 on the Place Bet on Nine and a Six rolls, what happens",
+        "text": "If I have on the Place Bet on and a 6 rolls, what happens",
         "label": "6"
     },
     {
-        "text": "Does a Place Bet on Ten win on Seven",
+        "text": "Does a Place Bet on win on 7",
         "label": "7"
     },
     {
-        "text": "Does a Come Bet on Four win on Seven",
+        "text": "Does a Come Bet on  win on 7",
         "label": "7"
     },
     {
-        "text": "What does a Come Bet on Five win if Eight rolls",
+        "text": "What does a Come Bet on  win if 8 rolls",
         "label": "8"
     },
     {
-        "text": "What does a Come Bet on Eight win if Eight rolls",
+        "text": "What does a Come Bet on win if 8 rolls",
         "label": "8"
     },
     {
-        "text": "Does a Come Bet on Nine win on Nine",
+        "text": "Does a Come Bet on win on 9",
         "label": "9"
     },
     {
-        "text": "Does a Come Bet on Ten win on Nine",
+        "text": "Does a Come Bet on win on 9",
         "label": "9"
     },
     {
-        "text": "How much does a $5 Come Bet on Ten with $10 odds pay if Ten Rolls",
+        "text": "How much does a Come Bet on with  pay if 10 Rolls",
         "label": "10"
     },
     {
-        "text": "How much does a $5 Field Bet pay if Ten Rolls",
+        "text": "How much does a Field Bet pay if 10 Rolls",
         "label": "10"
     },
     {
-        "text": "if a Yo is rolled, does the C&E Bet win?",
+        "text": "If an 11 is rolled, does the Place Bet on win?",
         "label": "11"
     },
     {
-        "text": "If an Eleven is rolled, does the Place Bet on Five win?",
-        "label": "11"
-    },
-    {
-        "text": "If a Twelve is rolled, does the Crap Check win",
+        "text": "If a 12 is rolled, does the Crap Check win",
         "label": "12"
     },
     {
-        "text": "If a Twelve is rolled, does the Hard Four win",
+        "text": "If a 12 is rolled, does the Hard Four win",
         "label": "12"
     }
 ]

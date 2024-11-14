@@ -75,3 +75,18 @@ Right now I'm training for ONLY numbers, no word numbers at all
 SET UP PREPROCESS
 
 convert all word numbers 1-100 to number version
+
+
+
+I had to drop Aces/Ace Deuce for now as roll combinations in the roll model
+
+Somehow I'm going to need to distinguish between Ace/Ace Deuce the Bet and the roll
+
+
+
+# RIGHT NOW
+
+// put in iOS app
+// back up final version on hugging face
+
+// Then I need to do the same cleaning process in Swift
