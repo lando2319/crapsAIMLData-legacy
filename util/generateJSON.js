@@ -125,6 +125,47 @@ function generateAmount(gameElements, loggit) {
     return jsonToGo;
 };
 
+function generateOdds(gameElements, loggit) {
+    var jsonToGo = [];
+
+    gameElements.oddsBetNames.forEach(betNamePkg => {
+        logThis("Generating for " + betNamePkg.name, loggit)
+
+        gameElements.oddsBetPhrases.forEach(betPhrase => {
+            logThis("Bet Phrase " + betPhrase, loggit);
+
+            var hasOddds = betPhrase.includes("_odds_");
+
+            if (betPhrase.includes("_betNickname_") && !betNamePkg.nickname) return
+            
+            betPhrase = betPhrase
+                .replace("_betName_", betNamePkg.name)
+                .replace("_betNickname_", betNamePkg.nickname);
+
+            if (!hasOddds) {
+                jsonToGo.push({
+                    "text": betPhrase,
+                    "label": "no_odds"
+                });
+            } else {
+                ["$5", "$10"].forEach(betAmount => {
+                    var betPhraseWithAmount = betPhrase.replace("_amount_", betAmount);
+                    for (let i = 1; i <= 100; i++) {
+                        var cleanedBetPhrase = betPhraseWithAmount.replace("_odds_", " with $" + i + " odds");
+
+                        jsonToGo.push({
+                            "text": cleanedBetPhrase,
+                            "label": i.toString()
+                        });
+                    };
+                });
+            };
+        });
+    });
+
+    return jsonToGo;
+};
+
 function generateRoll(gameElements, loggit) {
     var jsonToGo = [];
 
@@ -172,3 +213,4 @@ function logThis(log, loggit) {
 module.exports.generate = generate;
 module.exports.generateAmount = generateAmount;
 module.exports.generateRoll = generateRoll;
+module.exports.generateOdds = generateOdds;

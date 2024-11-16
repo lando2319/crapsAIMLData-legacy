@@ -91,21 +91,15 @@ placed in repo /models/amount GOOD
 # Models and Status
 
 ### Roll
-- Producing correct data
-- TESTS look good
-- All perfect except 
-    - 10: 0.8
-    - 9: 0.5
-    - 6: 0.5
-    - 4: 0.8
-UNDER DEVELOPMENT
-Redo with cleaning
+READY
 
 ### Odds
-UNDER DEVELOPMENT
+READY FOR NOW
+RETRAIN with final list of bets
 
 ### Bet
 UNDER DEVELOPMENT
 
 ### Amount
-READY
+READY FOR NOW
+RETRAIN with final list of bets

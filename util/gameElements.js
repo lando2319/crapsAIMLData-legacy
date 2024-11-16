@@ -41,6 +41,24 @@ module.exports.amountBetPhrases = [
     "Does a <amount> <betName>  "
 ];
 
+module.exports.oddsBetPhrases = [
+    "What happens to my _amount_ _betName__odds_ if ?",
+    "What does a _amount_ _betName__odds_ pay when ?",
+    "What happens to a _betName_ when ?",
+    "Does a _betName_ ",
+    "Does a _betName_ ",
+    "what does  pay in _betNickname_",
+    "with a _betName_, , what happens",
+    "if  what happens to my _betName_",
+    "What does a _amount_ _betName__odds_ pay, if ",
+    "If I have _amount_ on the _betName__odds_ does it win if ?",
+    "Does my _amount_ bet in _betNickname_ win if ",
+    "Does my _betName_ win if ?",
+    "How much does my _amount_ _betName__odds_ pay if ",
+    "If I have a _amount_ _betName__odds_ what happens if ",
+    "Do a _amount_ _betName__odds_ "
+];
+
 module.exports.rollBetPhrases = [
     "What happens to my  _betName_ with if _roll_ rolls?",
     "What does a  _betName_ with pay when _roll_ rolls?",
@@ -75,6 +93,33 @@ module.exports.validationBetPhrases = [
 
 // Update name, this can be a mass file
 module.exports.amountBetNames = [
+    {
+        name: "Field Bet",
+        nickname: "The Field",
+    },
+    {
+        name: "Come Bet",
+        nickname: "The Come",
+    },
+    {
+        name: "C&E",
+    },
+    {
+        name: "Crap Check",
+    },
+    {
+        name: "Hard Four",
+    },
+    {
+        name: "Place Bet on ",
+    },
+    {
+        name: "Come Bet on ",
+    },
+];
+
+// These should both use the same array
+module.exports.oddsBetNames = [
     {
         name: "Field Bet",
         nickname: "The Field",

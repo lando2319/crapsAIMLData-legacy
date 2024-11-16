@@ -1,110 +1,98 @@
 [
     {
-        "text": "does a Five Dollar Field Bet win if two is rolled",
+        "text": "does a Five Dollar Field Bet win if ",
         "label": "no_odds"
     },
     {
-        "text": "What happens to a Come Bet when Aces rolls?",
+        "text": "If I have on the C&E and a Six rolls, what happens",
         "label": "no_odds"
     },
     {
-        "text": "If I have $2 on the C&E and a Six rolls, what happens",
+        "text": "If I have on the Crap Check and , does it lose?",
         "label": "no_odds"
     },
     {
-        "text": "Does a Crap Check win on Ace Deuce",
+        "text": "If I have on the Hard and , does it lose?",
         "label": "no_odds"
     },
     {
-        "text": "If I have $2 on the Crap Check and Four rolls, does it lose?",
+        "text": "What does a Hard pay if ",
         "label": "no_odds"
     },
     {
-        "text": "If I have $1 on the Hard Four and Four rolls, does it lose?",
+        "text": "What does a Place Bet on pay if",
         "label": "no_odds"
     },
     {
-        "text": "What does a Hard Four pay if 5 rolls",
+        "text": "If I have on the Place Bet on and a , what happens",
         "label": "no_odds"
     },
     {
-        "text": "What does a Place Bet on Four pay if 5 rolls",
-        "label": "no_odds"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on Five and a Six rolls, what happens",
-        "label": "no_odds"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on Ten with $30 odds and a Six rolls, what happens",
+        "text": "If I have $5 on the Come Bet on with $30 odds and a , what happens",
         "label": "30"
     },
     {
-        "text": "If I have $5 on the Place Bet on Eight and a Six rolls, what happens",
+        "text": "If I have on the Place Bet on and a , what happens",
         "label": "no_odds"
     },
     {
-        "text": "Does a Place Bet on Ten win on 7",
+        "text": "Does a Place Bet on ",
         "label": "no_odds"
     },
     {
-        "text": "What does a Come Bet on Four win if Eight rolls",
+        "text": "What does a Come Bet on win if ",
         "label": "no_odds"
     },
     {
-        "text": "Does a Come Bet on Five win on Nine",
+        "text": "Does a Come Bet on ",
         "label": "no_odds"
     },
     {
-        "text": "If I have $6 on the Come Bet on Ten with $24 odds then a Nine rolls does it win",
+        "text": "If I have $6 on the Come Bet on with $24 odds then a does it win",
         "label": "24"
     },
     {
-        "text": "How much does a $5 Come Bet on Five with $10 odds pay if Ten Rolls",
+        "text": "How much does a $5 Come Bet on with $10 odds pay if",
         "label": "10"
     },
     {
-        "text": "How much does a $5 Come Bet on Four with $14 odds pay if Ten Rolls",
+        "text": "How much does a $10 Come Bet on with $14 odds pay if",
         "label": "14"
     },
     {
-        "text": "How much does a $5 Come Bet on Six with $10 odds pay if Ten Rolls",
+        "text": "How much does a $5 Come Bet on with $10 odds pay if",
         "label": "10"
     },
     {
-        "text": "If an Eleven is rolled, does the Come Bet on Nine win?",
+        "text": "If an , does the Come Bet on win?",
         "label": "no_odds"
     },
     {
-        "text": "If a Twelve is rolled, does the Come Bet on Nine win",
+        "text": "If a , does the Come Bet on win",
         "label": "no_odds"
     },
     {
-        "text": "Does a Come Bet on Ten win on Seven",
+        "text": "Does a Come Bet on ",
         "label": "no_odds"
     },
     {
-        "text": "What does a Come Bet on Ten win if Eight rolls",
+        "text": "What does a Come Bet on win if",
         "label": "no_odds"
     },
     {
-        "text": "Does a Come Bet on Ten win on Nine",
+        "text": "Does a Come Bet on ",
         "label": "no_odds"
     },
     {
-        "text": "How much does a $5 Come Bet on Ten with $13 odds pay if Ten Rolls",
+        "text": "How much does a $5 Come Bet on with $13 odds pay if",
         "label": "13"
     },
     {
-        "text": "if a Yo is rolled, does the Come Bet on Ten win?",
+        "text": "If an , does the Come Bet on win?",
         "label": "no_odds"
     },
     {
-        "text": "If an Eleven is rolled, does the Come Bet on Ten win?",
-        "label": "no_odds"
-    },
-    {
-        "text": "If a Twelve is rolled, does the Come Bet on Ten win",
+        "text": "If a , does the Come Bet on win",
         "label": "no_odds"
     }
 ]

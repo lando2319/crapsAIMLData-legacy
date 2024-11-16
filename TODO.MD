@@ -42,41 +42,7 @@ MAKE THE JSON LIKE SO
 
 
 
-CONFIRM EACH
-
-
-
-// LEFT OFF HERE
-// These two look good, not perfect, but good
-// Move on to the next one
-
-    - thoroughly check roll training data
-    - thoroughly check roll testing data
-
-
-
-
-
-
-
-- thoroughly check bet training data
-- thoroughly check bet testing data
-
-- thoroughly check amount training data
-- thoroughly check amount testing data
-
-- thoroughly check odds training data
-- thoroughly check odds testing data
-
-
 # MUST DO
-Right now I'm training for ONLY numbers, no word numbers at all
-
-SET UP PREPROCESS
-
-convert all word numbers 1-100 to number version
-
-
 
 I had to drop Aces/Ace Deuce for now as roll combinations in the roll model
 
@@ -84,9 +50,6 @@ Somehow I'm going to need to distinguish between Ace/Ace Deuce the Bet and the r
 
 
 
-# RIGHT NOW
+# ALSO
 
-// put in iOS app
-// back up final version on hugging face
-
-// Then I need to do the same cleaning process in Swift
+- back up final version on hugging face
