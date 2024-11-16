@@ -1,25 +1,83 @@
 
-// TO DUMP
-module.exports.betPhrases = [
-    "What happens to my _amount_ _betName__odds_ if _roll_ rolls?",
-    "What does a _amount_ _betName__odds_ pay when _roll_ rolls?",
-    "What happens to a _betName_ when _roll_ rolls?",
-    "Does a _betName_ win on _roll_",
-    "Does a _betName_ lose on _roll_",
-    "what does rolling _roll_ pay in _betNickname_",
-    "with a _betName_, _roll_ rolls, what happens",
-    "if _roll_ rolls what happens to my _betName_",
-    "What does a _amount_ _betName__odds_ pay, if _roll_ rolls",
-    "If I have _amount_ on the _betName__odds_ does it win if _roll_ rolls?",
-    "Does my _amount_ bet in _betNickname_ win if _roll_ is rolled",
-    "Does my _betName_ win if _roll_ is rolled?",
-    "How much does my _amount_ _betName__odds_ pay if _roll_ is rolled",
-    
-    // adding these for more odds data to improve oddsTesting
-    "If I have a _amount_ _betName__odds_ what happens if _roll_ rolls",
-    "Do a _amount_ _betName__odds_ win on _roll_"
+module.exports.promptTypesBetPhrases = [
+    {
+        phrase: "What happens to my _amount_ _betName__odds_ if _roll_ rolls?",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "What does a _amount_ _betName__odds_ pay when _roll_ rolls?",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "What happens to a _betName_ when _roll_ rolls?",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "Does a _betName_ win on _roll_",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "Does a _betName_ lose on _roll_",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "what does rolling _roll_ pay in _betNickname_",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "with a _betName_, _roll_ rolls, what happens",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "if _roll_ rolls what happens to my _betName_",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "What does a _amount_ _betName__odds_ pay, if _roll_ rolls",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "If I have _amount_ on the _betName__odds_ does it win if _roll_ rolls?",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "Does my _amount_ bet in _betNickname_ win if _roll_ is rolled",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "Does my _betName_ win if _roll_ is rolled?",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "How much does my _amount_ _betName__odds_ pay if _roll_ is rolled",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "If I have a _amount_ _betName__odds_ what happens if _roll_ rolls",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "Do a _amount_ _betName__odds_ win on _roll_",
+        promptType: "CALCULATE"
+    },
+    {
+        phrase: "What's the best bet in the house",
+        promptType: "RECOMMENDATION"
+    },
+    {
+        phrase: "What bet pays the bet odds",
+        promptType: "RECOMMENDATION"
+    },
+    {
+        phrase: "What time is it",
+        promptType: "UNKNOWN"
+    },
+    {
+        phrase: "How does the _betName_ work",
+        promptType: "INFO"
+    },
+
 ];
-////////
 
 module.exports.amountBetPhrases = [
     "What happens to my <amount> <betName>  if ?",

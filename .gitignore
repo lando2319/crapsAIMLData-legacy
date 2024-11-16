@@ -7,4 +7,5 @@ data/**
 !data/amountTestingData.json
 !data/rollTestingData.json
 !data/betNamesTestingData.json
+!data/promptTypesTestingData.json
 !data/rollTestingData-HOLD.json
