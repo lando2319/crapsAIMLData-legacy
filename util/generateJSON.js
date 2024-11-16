@@ -1,96 +1,8 @@
-var lineFormatter = require('./lineFormatter.js');
 
-
-function generateLabelSlug(labelType, formatPkg, roll) {
-    var outgoingObj = {
-        text: formatPkg.phrase,
-        label: ""
-    };
-
-    if (labelType == "BET") {
-        outgoingObj.label = formatPkg.bet;
-    } else if (labelType == "AMOUNT") {
-        outgoingObj.label = formatPkg.amount;
-    } else if (labelType == "ODDS") {
-        outgoingObj.label = formatPkg.odds || "no_odds";
-    } else if (labelType == "ROLL") {
-        outgoingObj.label = roll.toString();
-    };
-
-    return outgoingObj
-}
-
-// TO DUMP
-function generate(gameElements, labelType, loggit) {
-    var jsonToGo = [];
-
-    gameElements.betNames.forEach(betNamePkg => {
-        logThis("Generating for " + betNamePkg.name)
-
-        gameElements.betPhrases.forEach(betPhrase => {
-            logThis("Bet Phrase " + betPhrase);
-
-            var hasAmount = betPhrase.includes("_amount_");
-
-            if (betPhrase.includes("_betNickname_") && !betNamePkg.nickname) return
-
-            gameElements.diceRolls.forEach(diceRollPkg => {
-                logThis("Dice Roll " + diceRollPkg.name);
-
-                var allNames = JSON.parse(JSON.stringify(diceRollPkg.aliases));
-                allNames.push(diceRollPkg.name);
-                allNames.push(diceRollPkg.number);
-
-                allNames.forEach(diceRollName => {
-
-                    if (!hasAmount) {
-                        var formatPkg = lineFormatter.process(betPhrase, betNamePkg, diceRollName, "", "");
-                        var jsonObj = generateLabelSlug(labelType, formatPkg, diceRollPkg.number);
-
-                        jsonToGo.push(jsonObj);
-                    } else {
-                        betNamePkg.amounts.forEach(amountText => {
-                            if (labelType == "ODDS") {
-                                amountText = "<amount>"
-                                diceRollName = "<roll>"
-                            };
-
-                            if (betNamePkg.odds && betPhrase.includes("_odds_")){
-                                betNamePkg.odds.forEach(oddsAmount => {
-
-                                    var formatPkg = lineFormatter.process(betPhrase, betNamePkg, diceRollName, amountText, oddsAmount);
-                                    var jsonObj = generateLabelSlug(labelType, formatPkg, diceRollPkg.number);
-
-                                    jsonToGo.push(jsonObj);
-                                })
-                            } else {
-                                var formatPkg = lineFormatter.process(betPhrase, betNamePkg, diceRollName, amountText, "");
-                                var jsonObj = generateLabelSlug(labelType, formatPkg, diceRollPkg.number);
-
-                                jsonToGo.push(jsonObj);
-                            };
-                        });
-                    };
-                });
-            });
-        });
-    });
-
-    function logThis(log) {
-        if (loggit) {
-            console.log(loggit, log);
-        }
-    };
-
-    return jsonToGo;
-};
-/////////
-
-// MIGHT DRY IT UP, MAYBE
 function generateAmount(gameElements, loggit) {
     var jsonToGo = [];
 
-    gameElements.amountBetNames.forEach(betNamePkg => {
+    gameElements.cleanBetNames.forEach(betNamePkg => {
         logThis("Generating for " + betNamePkg.name, loggit)
 
         gameElements.amountBetPhrases.forEach(betPhrase => {
@@ -128,7 +40,7 @@ function generateAmount(gameElements, loggit) {
 function generateOdds(gameElements, loggit) {
     var jsonToGo = [];
 
-    gameElements.oddsBetNames.forEach(betNamePkg => {
+    gameElements.cleanBetNames.forEach(betNamePkg => {
         logThis("Generating for " + betNamePkg.name, loggit)
 
         gameElements.oddsBetPhrases.forEach(betPhrase => {
@@ -158,6 +70,48 @@ function generateOdds(gameElements, loggit) {
                             "label": i.toString()
                         });
                     };
+                });
+            };
+        });
+    });
+
+    return jsonToGo;
+};
+
+function generateBetNames(gameElements, loggit) {
+    var jsonToGo = [];
+
+    gameElements.betNames.forEach(betNamePkg => {
+        logThis("Generating for " + betNamePkg.name, loggit)
+
+        gameElements.betNamesBetPhrases.forEach(betPhrase => {
+            logThis("Bet Phrase " + betPhrase, loggit);
+
+            var hasName = betPhrase.includes("_betName_") || betPhrase.includes("_betNickname_");
+
+            if (betPhrase.includes("_betNickname_") && !betNamePkg.nickname) return
+            
+            betPhrase = betPhrase
+                .replace("_betName_", betNamePkg.name)
+                .replace("_betNickname_", betNamePkg.nickname);
+
+            if (!hasName) {
+                jsonToGo.push({
+                    "text": betPhrase,
+                    "label": "no_bet"
+                });
+            } else {
+                ["$5", "$10"].forEach(betAmount => {
+                    var betPhraseWithAmount = betPhrase.replace("_amount_", betAmount);
+
+                    ["$10", "$20"].forEach(oddsAmount => {
+                        var cleanedBetPhrase = betPhraseWithAmount.replace("_odds_", " with " + oddsAmount + " odds");
+
+                        jsonToGo.push({
+                            "text": cleanedBetPhrase,
+                            "label": betNamePkg.slug
+                        });
+                    })
                 });
             };
         });
@@ -209,8 +163,7 @@ function logThis(log, loggit) {
     }
 };
 
-
-module.exports.generate = generate;
+module.exports.generateBetNames = generateBetNames;
 module.exports.generateAmount = generateAmount;
 module.exports.generateRoll = generateRoll;
 module.exports.generateOdds = generateOdds;
