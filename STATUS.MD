@@ -97,9 +97,13 @@ READY
 READY FOR NOW
 RETRAIN with final list of bets
 
-### Bet
-UNDER DEVELOPMENT
+### Bet Names
+READY FOR NOW
+RETRAIN with final list of bets
 
 ### Amount
 READY FOR NOW
 RETRAIN with final list of bets
+
+### Prompt Type
+UNDER DEVELOPMENT
