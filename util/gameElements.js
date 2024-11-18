@@ -175,12 +175,36 @@ module.exports.betNamesBetPhrases = [
 
 module.exports.cleanBetNames = [
     {
+        name: "Pass Line",
+        nickname: "The Pass Line",
+    },
+    {
+        name: "Don't Pass Bet",
+        nickname: "The Don't Pass",
+    },
+    {
         name: "Field Bet",
         nickname: "The Field",
     },
     {
+        name: "Place Bet on ",
+    },
+    {
+        name: "Lay Bet on ",
+    },
+    {
+        name: "Don't Come",
+        nickname: "The DC",
+    },
+    {
+        name: "Don't Come Bet on ",
+    },
+    {
         name: "Come Bet",
         nickname: "The Come",
+    },
+    { // Props
+        name: "Hard ",
     },
     {
         name: "C&E",
@@ -189,13 +213,58 @@ module.exports.cleanBetNames = [
         name: "Crap Check",
     },
     {
-        name: "Hard Four",
+        name: "Yo Bet",
     },
     {
-        name: "Place Bet on ",
+        name: "Aces Bet",
     },
     {
-        name: "Come Bet on ",
+        name: "Ace Deuce Bet",
+    },
+    {
+        name: "Twelve Bet",
+    },
+    {
+        name: "Horn Bet",
+    },
+    {
+        name: "Horn High Yo Bet",
+    },
+    {
+        name: "Horn High Aces Bet",
+    },
+    {
+        name: "Horn High Ace Deuce Bet",
+    },
+    {
+        name: "Horn High  Bet", // cleaned Horn High Twelve
+    },
+    {
+        name: "World Bet",
+    },
+    {
+        name: "Any Bet", // cleaned Any Seven Bet
+    },
+    {
+        name: " - Hopping",
+    },
+    {
+        name: "Easy  Hopping",
+    },
+    {
+        name: "Hard  Hopping",
+    },
+    {
+        name: "Hop the s",
+    },
+    {
+        name: "s Hop",
+    },
+    {
+        name: "High Low",
+    },
+    {
+        name: " Way Craps", // cleaned Three Way Craps
     },
 ];
 

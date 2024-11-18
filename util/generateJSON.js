@@ -160,12 +160,12 @@ function generatePromptTypes(gameElements, loggit) {
 function generateRoll(gameElements, loggit) {
     var jsonToGo = [];
 
-    gameElements.amountBetNames.forEach(betNamePkg => {
+    gameElements.cleanBetNames.forEach(betNamePkg => {
         logThis("Generating for " + betNamePkg.name, loggit)
 
         gameElements.rollBetPhrases.forEach(betPhrase => {
             logThis("Bet Phrase " + betPhrase, loggit);
-            var hasAmount = betPhrase.includes("_roll_");
+            var hasRoll = betPhrase.includes("_roll_");
 
             if (betPhrase.includes("_betNickname_") && !betNamePkg.nickname) return
             
@@ -173,7 +173,7 @@ function generateRoll(gameElements, loggit) {
                 .replace("_betName_", betNamePkg.name)
                 .replace("_betNickname_", betNamePkg.nickname);
 
-            if (!hasAmount) {
+            if (!hasRoll) {
                 jsonToGo.push({
                     "text": betPhrase,
                     "label": "<no_roll>"

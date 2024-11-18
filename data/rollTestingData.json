@@ -82,5 +82,13 @@
     {
         "text": "If a 12 is rolled, does the Hard Four win",
         "label": "12"
+    },
+    {
+        "text": "What time is it right now",
+        "label": "<no_roll>"
+    },
+    {
+        "text": "Where is the bathroom",
+        "label": "<no_roll>"
     }
 ]

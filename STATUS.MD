@@ -1,8 +1,11 @@
 # LATEST
 
+LEFT OFF HERE
+- Finalizing Models
+
 NEXT
 - add aliases to bet check match
-- add aliases to bet check match
+- finish all bets
 
 Models are loaded
 
@@ -18,18 +21,25 @@ MVP:
 - A user can ask non-prop bet questions
 - A user can see bet details (Learn Craps)
 - A users' queries get saved to firestore
+- A users sees barebones design
 
 V1 (MVP PLUS):
 - A user sees full pretty design
 - A user pays
 - A user can ask prop bets
 
+V+:
+- Save all queries
+- Train and retrain
+- maybe even get a pretrained model to see if it's gibberish
+    - how can a pretrain model help me?
+
 # Models and Status
 
 All models loaded
 
 ### Roll
-READY
+V0 READY
 
 ### Odds
 READY FOR NOW
