@@ -1,11 +1,38 @@
 # LATEST
 
+## NEW PLAN
+
+I'm abandoning the big 4 model approach
+
+I'm trying a new approach:
+
+- Word Tagger Model + Bet Name Classifier
+
+"How much does a $5 Field Bet pay if a 6 rolls"
+
+["How", "much", "does", "a" "$5" "Field" "Bet" "pay" "if" "a" "6" "rolls"]
+["NONE", "NONE", "NONE", "NONE" "AMOUNT" "BET_NAME" "BET_NAME" "NONE" "NONE" "NONE" "ROLL" "NONE"]
+
+Then I pluck out the BET_NAME hits and join into
+"Field Bet"
+
+Then I run THAT through the new BetNamesViaTags model
+
+which returns "fieldBet"
+
+
+
+
+
+
+
+
 LEFT OFF HERE
-- Finalizing Models
+- Finish setting up word tagging testing
+- Expand the new bet name model with bet name aliases
 
 NEXT
 - add aliases to bet check match
-- finish all bets
 
 Models are loaded
 
@@ -38,20 +65,24 @@ V+:
 
 All models loaded
 
+# CORE MODELS
+
 ### Roll
 V0 READY
+
+### Bet Names
+V0 READY
+
+# NUMBER MODELS
 
 ### Odds
 READY FOR NOW
 RETRAIN with final list of bets
 
-### Bet Names
-READY FOR NOW
-RETRAIN with final list of bets
-
 ### Amount
-READY FOR NOW
-RETRAIN with final list of bets
+V0 READY
+
+# CONTEXT MODELS
 
 ### Prompt Type
 READY FOR NOW
@@ -60,6 +91,8 @@ RETRAIN with final list of bets
 ### Word Tagger
 LOADED AND FUNCTIONAL
 POOR rating
+
+# EXPERIMENTAL MODELS
 
 ### Probs
 I'm experimenting to get probabilities

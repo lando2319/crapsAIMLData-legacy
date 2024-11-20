@@ -1,0 +1,22 @@
+[
+    {
+        "text":"come bet on 4",
+        "label":"comeBetOn4"
+    },
+    {
+        "text":"Horn High Ace Deuce",
+        "label":"hornHighAceDeuce"
+    },
+    {
+        "text":"The Field",
+        "label":"fieldBet"
+    },
+    {
+        "text":"Field Bet",
+        "label":"fieldBet"
+    },
+    {
+        "text":"World Bet",
+        "label":"worldBet"
+    }
+]

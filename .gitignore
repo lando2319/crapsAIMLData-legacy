@@ -2,10 +2,5 @@ node_modules
 
 data/**
 !data/testingData.json
-!data/betTestingData.json
-!data/oddsTestingData.json
-!data/amountTestingData.json
-!data/rollTestingData.json
-!data/betNamesTestingData.json
-!data/promptTypesTestingData.json
-!data/rollTestingData-HOLD.json
+!data/wordTaggingTestingData.json
+!data/betNameTestingDataForWordTagging.json

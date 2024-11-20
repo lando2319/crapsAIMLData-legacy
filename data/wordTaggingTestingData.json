@@ -1,4 +1,38 @@
 [
+
+
+  {
+    "tokens": [
+      "Does",
+      "my",
+      "Come",
+      "Bet",
+      "on",
+      "6",
+      "win",
+      "if",
+      "4",
+      "is",
+      "rolled?"
+    ],
+    "labels": [
+      "NONE",
+      "NONE",
+      "BET_NAME",
+      "BET_NAME",
+      "BET_NAME",
+      "BET_NAME",
+      "NONE",
+      "NONE",
+      "ROLL",
+      "NONE",
+      "NONE"
+    ]
+  },
+
+
+
+
     {
         "text": "does a 5 Dollar Field Bet win if two is rolled",
         "label": "CALCULATE"
