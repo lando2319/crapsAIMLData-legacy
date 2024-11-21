@@ -1,258 +1,112 @@
 var assert = require("assert");
 var generateJSON = require("../util/generateJSON.js")
 
-// DUMP THIS WHOLE THING
-// It's on swift now
-
 describe("Testing generateJSON", function () {
-    it('With Four and Five as test cases, labelType as BET, should produce proper json', function () {
-        var betPhrases = [
-            "What happens to a _betName_ when _roll_ rolls?",
-            "What does a _amount_ _betName_ pay when _roll_ rolls?"
-        ];
+    it('With with _amount_ as, "$5" should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_amount_",
+            "",
+            "$5",
+            "",
+            6
+        );
 
-        var betNames = [
-            {
-                slug: "fieldBet",
-                name: "Field Bet",
-                nickname: "The Field",
-                amounts: [
-                    "$5",
-                ]
-            }
-        ];
-
-        var diceRolls = [
-            {
-                name: "Four",
-                number: 4,
-                aliases: []
-            },
-            {
-                name: "Five",
-                number: 5,
-                aliases: []
-            },
-        ];
-
-        var jsonReturned = generateJSON.generate({betPhrases, betNames, diceRolls}, "BET", "")
-
-        var expectation = [
-            {
-                text: 'What happens to a Field Bet when Four rolls?',
-                label:'fieldBet'
-            },
-            {
-                text: 'What happens to a Field Bet when 4 rolls?',
-                label: 'fieldBet'
-            },
-            {
-                text: 'What happens to a Field Bet when Five rolls?',
-                label: 'fieldBet'
-            },
-            {
-                text: 'What happens to a Field Bet when 5 rolls?',
-                label: 'fieldBet'
-            },
-            {
-                text: 'What does a $5 Field Bet pay when Four rolls?',
-                label: 'fieldBet'
-            },
-            {
-                text: 'What does a $5 Field Bet pay when 4 rolls?',
-                label: 'fieldBet'
-            },
-            {
-                text: 'What does a $5 Field Bet pay when Five rolls?',
-                label: 'fieldBet'
-            },
-            {
-                text: 'What does a $5 Field Bet pay when 5 rolls?',
-                label: 'fieldBet'
-            }
-        ];
-
-        assert.deepEqual(jsonReturned, expectation);
+        assert.deepEqual(entry.tokens, ["$5"]);
+        assert.deepEqual(entry.labels, ["AMOUNT"]);
     })
 
-    it('With Four and Five as test cases, labelType as AMOUNT, should produce proper json', function () {
-        var betPhrases = [
-            "What does a _amount_ _betName__odds_ pay when _roll_ rolls?"
-        ];
+    it('With with _amount_ as, "5 dollars" should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_amount_",
+            "",
+            "5 dollars",
+            "",
+            6
+        );
 
-        var betNames = [
-            {
-                slug: "fieldBet",
-                name: "Field Bet",
-                nickname: "The Field",
-                amounts: [
-                    "$5",
-                ],
-            },
-            {
-                slug: "comeBet9",
-                name: "Come Bet on Nine",
-                amounts: [
-                    "$5"
-                ],
-                odds: [
-                    "$10",
-                    "$20",
-                ]
-            }
-        ];
-
-        var diceRolls = [
-            {
-                name: "Four",
-                number: 4,
-                aliases: []
-            }
-        ];
-
-        var jsonReturned = generateJSON.generate({betPhrases, betNames, diceRolls}, "AMOUNT", "")
-
-        var expectation = [
-            {
-                text: 'What does a $5 Field Bet pay when Four rolls?',
-                label: '5'
-            },
-            {
-                text: 'What does a $5 Field Bet pay when 4 rolls?',
-                label: '5'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $10 odds pay when Four rolls?',
-                label: '5'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $20 odds pay when Four rolls?',
-                label: '5'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $10 odds pay when 4 rolls?',
-                label: '5'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $20 odds pay when 4 rolls?',
-                label: '5'
-            }
-        ];
-
-        assert.deepEqual(jsonReturned, expectation);
+        assert.deepEqual(entry.tokens, ["5", "dollars"]);
+        assert.deepEqual(entry.labels, ["AMOUNT", "NONE"]);
     })
 
-    it('With Four and Five as test cases, labelType as ODDS, should produce proper json', function () {
-        var betPhrases = [
-            "What does a _amount_ _betName__odds_ pay when _roll_ rolls?"
-        ];
+    it('With with _betName_ as, "Field Bet" should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_betName_",
+            "Field Bet",
+            "",
+            "",
+            6
+        );
 
-        var betNames = [
-            {
-                slug: "fieldBet",
-                name: "Field Bet",
-                nickname: "The Field",
-                amounts: [
-                    "$5",
-                ],
-            },
-            {
-                slug: "comeBet9",
-                name: "Come Bet on Nine",
-                amounts: [
-                    "$5"
-                ],
-                odds: [
-                    "$10",
-                    "$20",
-                ]
-            }
-        ];
-
-        var diceRolls = [
-            {
-                name: "Four",
-                number: 4,
-                aliases: []
-            }
-        ];
-
-        var jsonReturned = generateJSON.generate({betPhrases, betNames, diceRolls}, "ODDS", "")
-
-        var expectation = [
-            {
-                text: 'What does a $5 Field Bet pay when Four rolls?',
-                label: 'no_odds'
-            },
-            {
-                text: 'What does a $5 Field Bet pay when 4 rolls?',
-                label: 'no_odds'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $10 odds pay when Four rolls?',
-                label: '10'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $20 odds pay when Four rolls?',
-                label: '20'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $10 odds pay when 4 rolls?',
-                label: '10'
-            },
-            {
-                text: 'What does a $5 Come Bet on Nine with $20 odds pay when 4 rolls?',
-                label: '20'
-            }
-        ];
-
-        // NOT PASSING
-        // SHOULD FIX
-
-        // assert.deepEqual(jsonReturned, expectation);
+        assert.deepEqual(entry.tokens, ["Field", "Bet"]);
+        assert.deepEqual(entry.labels, ["BET_NAME", "BET_NAME"]);
     })
 
-    it('With a Dice Roll having an alias, should produce 2 elements', function () {
-        var betPhrases = [
-            "What happens to a _betName_ when _roll_ rolls?",
-        ];
+    it('With with _betName_ as, "Come Bet on 5" should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_betName_",
+            "Come Bet on 5",
+            "",
+            "",
+            6
+        );
 
-        var betNames = [
-            {
-                slug: "fieldBet",
-                name: "Field Bet",
-                nickname: "The Field",
-                betType: "oneTimeBet"
-            }
-        ];
-
-        var diceRolls = [
-            {
-                name: "Aces",
-                number: 2,
-                aliases: [
-                    "Two"
-                ]
-            }
-        ];
-
-        var jsonReturned = generateJSON.generate({betPhrases, betNames, diceRolls}, "ROLL", "")
-
-        var expectation = [
-            {
-                text: 'What happens to a Field Bet when Two rolls?',
-                label: '2'
-            },
-            {
-                text: 'What happens to a Field Bet when Aces rolls?',
-                label: '2'
-            },
-            {
-                text: 'What happens to a Field Bet when 2 rolls?',
-                label: '2'
-            }
-        ];
-
-        assert.deepEqual(jsonReturned, expectation);
+        assert.deepEqual(entry.tokens, ["Come", "Bet", "on", "5"]);
+        assert.deepEqual(entry.labels, ["BET_NAME", "BET_NAME", "BET_NAME", "BET_NAME"]);
     })
+
+    it('With with _odds_ as, "$20" should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_odds_",
+            "",
+            "",
+            "$20",
+            6
+        );
+
+        assert.deepEqual(entry.tokens, ["with", "$20", "odds"]);
+        assert.deepEqual(entry.labels, ["NONE", "ODDS", "NONE"]);
+    })
+    // TODO: setup '20 dollar odds' as a test, TDD, and add to codebase
+
+    it('With with _odds_ as, "$20", and _amount_ as, "$20" should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_amount_ _odds_",
+            "dud",
+            "$20",
+            "$20",
+            6
+        );
+
+        assert.deepEqual(entry.tokens, ["$20", "with", "$20", "odds"]);
+        assert.deepEqual(entry.labels, ["AMOUNT", "NONE", "ODDS", "NONE"]);
+    })
+
+    it('With with _roll_ as 6 should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_roll_ rolls",
+            "dud",
+            "$20",
+            "$20",
+            6
+        );
+
+        assert.deepEqual(entry.tokens, ["6", "rolls"]);
+        assert.deepEqual(entry.labels, ["ROLL", "NONE"]);
+    })
+
+    it('With with all element should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "With _amount_ _betName_ _odds_ and _roll_ rolls",
+            "Come Bet on 5",
+            "$5",
+            "$10",
+            5
+        );
+
+        assert.deepEqual(entry.tokens, ["With", "$5", "Come", "Bet", "on", "5", "with", "$10", "odds", "and", "5", "rolls"]);
+        assert.deepEqual(entry.labels, ["NONE", "AMOUNT", "BET_NAME", "BET_NAME", "BET_NAME", "BET_NAME", "NONE", "ODDS", "NONE", "NONE", "ROLL", "NONE"]);
+    })
+
+
+    // do one where amount and odds are the same number
 })

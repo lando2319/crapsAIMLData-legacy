@@ -1,20 +1,20 @@
 
 module.exports.betPhrases = [
-    "What happens to my _amount_ _betName__odds_ if _roll_ rolls?",
-    "What does a _amount_ _betName__odds_ pay when _roll_ rolls?",
+    "What happens to my _amount_ _betName_ _odds_ if _roll_ rolls?",
+    "What does a _amount_ _betName_ _odds_ pay when _roll_ rolls?",
     "What happens to a _betName_ when _roll_ rolls?",
     "Does a _betName_ win on _roll_",
     "Does a _betName_ lose on _roll_",
     "what does rolling _roll_ pay in _betNickname_",
     "with a _betName_, _roll_ rolls, what happens",
     "if _roll_ rolls what happens to my _betName_",
-    "What does a _amount_ _betName__odds_ pay, if _roll_ rolls",
-    "If I have _amount_ on the _betName__odds_ does it win if _roll_ rolls?",
+    "What does a _amount_ _betName_ _odds_ pay, if _roll_ rolls",
+    "If I have _amount_ on the _betName_ _odds_ does it win if _roll_ rolls?",
     "Does my _amount_ bet in _betNickname_ win if _roll_ is rolled",
     "Does my _betName_ win if _roll_ is rolled?",
-    "How much does my _amount_ _betName__odds_ pay if _roll_ is rolled",
-    "If I have a _amount_ _betName__odds_ what happens if _roll_ rolls",
-    "Do a _amount_ _betName__odds_ win on _roll_"
+    "How much does my _amount_ _betName_ _odds_ pay if _roll_ is rolled",
+    "If I have a _amount_ _betName_ _odds_ what happens if _roll_ rolls",
+    "Do a _amount_ _betName_ _odds_ win on _roll_"
 ];
 
 module.exports.nonBets = [

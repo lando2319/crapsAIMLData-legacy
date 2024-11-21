@@ -40,52 +40,41 @@ function generateWordTagging(gameElements, loggit) {
         logThis(`Processing Bet Phrase Template: ${betPhraseTemplate}`, loggit);
 
         gameElements.betNames.forEach((betNamePkg) => {
+            // might want to dump this in favor of aliases
             if (betPhraseTemplate.includes("_betNickname_") && !betNamePkg.nickname) return;
 
-            let betPhraseReplaced = betPhraseTemplate
-                .replace("_betName_", ` ${betNamePkg.name} `)
-                .replace("_betNickname_", ` ${betNamePkg.nickname || ""} `);
-
             for (let roll = 2; roll <= 12; roll++) {
-                const betPhraseWithRoll = betPhraseReplaced.replace("_roll_", ` ${roll} `);
+                let amounts = [
+                    "$" + betNamePkg.min, 
+                    "$" + betNamePkg.min * 2, 
+                    "$" + betNamePkg.min * 3,
+                    betNamePkg.min + " dollars", 
+                    (betNamePkg.min * 2) + " dollars", 
+                    (betNamePkg.min * 3) + " dollars"
+                ];
 
-                ["$5", "$10", "$15"].forEach((betAmount) => {
-                    const betPhraseWithAmount = betPhraseWithRoll.replace("_amount_", ` ${betAmount} `);
-
-                    ["$10", "$20", "$30"].forEach((oddsAmount) => {
-                        const cleanedBetPhrase = betPhraseWithAmount.replace("_odds_", ` with ${oddsAmount} odds `);
-
-                        const tokens = cleanedBetPhrase.split(/\s+/).filter(Boolean);
-                        const betNameTokens = betNamePkg.name.split(/\s+/);
-
-                        const labels = Array(tokens.length).fill("NONE");
-
-                        tokens.forEach((_, index) => {
-                            // Match multi-word BET_NAME
-                            if (
-                                index + betNameTokens.length <= tokens.length &&
-                                betNameTokens.every((word, i) => tokens[index + i] === word)
-                            ) {
-                                for (let i = 0; i < betNameTokens.length; i++) {
-                                    labels[index + i] = "BET_NAME";
-                                }
-                            }
+                amounts.forEach((betAmount) => {
+                    if (betPhraseTemplate.includes("_odds_") && betNamePkg.hasOdds) {
+                        ["$10", "$20", "$30"].forEach((oddsAmount) => {
+                            var entry = genearateTokensAndLabels(
+                                betPhraseTemplate, 
+                                betNamePkg.name, 
+                                betAmount, 
+                                oddsAmount, 
+                                roll
+                            );
+                            jsonToGo.push(entry);
                         });
-
-                        // Assign other labels
-                        tokens.forEach((token, index) => {
-                            if (labels[index] === "NONE") {
-                                if (token === roll.toString()) labels[index] = "ROLL";
-                                else if (token === betAmount) labels[index] = "AMOUNT";
-                                else if (token === `${oddsAmount}`) labels[index] = "ODDS";
-                            }
-                        });
-
-                        jsonToGo.push({
-                            tokens: tokens,
-                            labels: labels,
-                        });
-                    });
+                    } else {
+                        var entry = genearateTokensAndLabels(
+                            betPhraseTemplate,
+                            betNamePkg.name,
+                            betAmount,
+                            "",
+                            roll
+                        );
+                        jsonToGo.push(entry);
+                    }
                 });
             }
         });
@@ -94,6 +83,66 @@ function generateWordTagging(gameElements, loggit) {
     return jsonToGo;
 }
 
+function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount, roll) {
+    const betNameTokens = betName.split(/\s+/);
+    const oddsTokens = oddsAmount.split(/\s+/);
+    const amountTokens = betAmount.split(/\s+/);
 
+    if (incomingPhrase.includes("_odds_") && oddsAmount) {
+        incomingPhrase = incomingPhrase.replace("_odds_", "with _odds_ odds")
+    } else {
+        incomingPhrase = incomingPhrase.replace("_odds_", "")
+    };
+
+    const tokensBeforInterplation = incomingPhrase.split(/\s+/).filter(Boolean);
+
+    let betAmountAsNumber = betAmount.replace(/\D/g, '');
+    let oddsAmountAsNumber = oddsAmount.replace(/\D/g, '');
+
+    var labels = [];
+    var tokens = [];
+
+    tokensBeforInterplation.forEach((token, index) => {
+        if (token == "_amount_") {
+            amountTokens.forEach(amountToken => {
+                if (amountToken == betAmountAsNumber || amountToken == "$" + betAmountAsNumber) {
+                    labels.push("AMOUNT");
+                } else {
+                    labels.push("NONE");
+                }
+
+                tokens.push(amountToken);
+            });
+        } else if (token == "_betName_") {
+            betNameTokens.forEach(betNameToken => {
+                labels.push("BET_NAME");
+                tokens.push(betNameToken);
+            });
+        } else if (token == "_odds_" && oddsAmount) {
+            oddsTokens.forEach(oddsToken => {
+                if (oddsToken == oddsAmountAsNumber || oddsToken == "$" + oddsAmountAsNumber) {
+                    labels.push("ODDS");
+                } else {
+                    labels.push("NONE");
+                }
+
+                tokens.push(oddsToken);
+            });
+        } else if (token == "_roll_") {
+            labels.push("ROLL");
+            tokens.push(roll.toString());
+        } else {
+            labels.push("NONE");
+            tokens.push(token);
+        }
+    });
+
+    return {
+        tokens: tokens,
+        labels: labels,
+    }
+};
+
+module.exports.genearateTokensAndLabels = genearateTokensAndLabels
 module.exports.generateWordTagging = generateWordTagging
 module.exports.generateBetNamesForWordTagging = generateBetNamesForWordTagging;

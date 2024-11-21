@@ -20,19 +20,26 @@ Then I run THAT through the new BetNamesViaTags model
 
 which returns "fieldBet"
 
-
-
-
-
-
-
+----
 
 LEFT OFF HERE
-- Finish setting up word tagging testing
-- Expand the new bet name model with bet name aliases
+- Over on iOS
+    - plug in the matched value into calculate
+    - Figure out how EXACTLY I'm going to use the ROLL, AMOUNT, and ODDS tags
+    - Do I want to check number of groups of digits
 
-NEXT
-- add aliases to bet check match
+- Current models seems to be case sensitive, might want to go all caps
+- test how how it does with marking, "roll" as "ROLL" tag instead of NONE
+    - must measure it first
+    - and keep the current way of doing it too, duplicate
+
+THEN
+
+- Expand the new bet name model with bet name aliases
+- add aliases to bet check match, we'll need a shared alias list somehow
+
+TODO:
+- Try the other algo on createML for word tagging, "embeds"
 
 Models are loaded
 
@@ -63,37 +70,8 @@ V+:
 
 # Models and Status
 
-All models loaded
-
-# CORE MODELS
-
-### Roll
-V0 READY
-
 ### Bet Names
 V0 READY
 
-# NUMBER MODELS
-
-### Odds
-READY FOR NOW
-RETRAIN with final list of bets
-
-### Amount
-V0 READY
-
-# CONTEXT MODELS
-
-### Prompt Type
-READY FOR NOW
-RETRAIN with final list of bets
-
 ### Word Tagger
-LOADED AND FUNCTIONAL
-POOR rating
-
-# EXPERIMENTAL MODELS
-
-### Probs
-I'm experimenting to get probabilities
-SO far no luck, I don't think it's possible
+V0 READY

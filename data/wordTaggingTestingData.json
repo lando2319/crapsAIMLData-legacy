@@ -1,720 +1,160 @@
 [
-
-
-  {
-    "tokens": [
-      "Does",
-      "my",
-      "Come",
-      "Bet",
-      "on",
-      "6",
-      "win",
-      "if",
-      "4",
-      "is",
-      "rolled?"
-    ],
-    "labels": [
-      "NONE",
-      "NONE",
-      "BET_NAME",
-      "BET_NAME",
-      "BET_NAME",
-      "BET_NAME",
-      "NONE",
-      "NONE",
-      "ROLL",
-      "NONE",
-      "NONE"
-    ]
-  },
-
-
-
-
     {
-        "text": "does a 5 Dollar Field Bet win if two is rolled",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Field Bet win if a 3 is rolled",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What is the payout for a Field Bet if Ace Deuce rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 in the Field and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Field Bet pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 in the Field and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Field Bet win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Field Bet win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Field Bet win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Field Bet pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Field Bet win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Field Bet win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 in the Come and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 in the Come and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $2 on the C&E and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a C&E Bet pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $2 on the C&E and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a C&E Bet win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a C&E Bet win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a C&E Bet win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $2 C&E Bet pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the C&E Bet win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the C&E Bet win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $2 on the Crap Check and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Crap Check pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $2 on the Crap Check and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Crap Check win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Crap Check win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Crap Check win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $2 Crap Check pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Crap Check win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Crap Check win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Hard 4 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Hard 4 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $2 on the Hard 4 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Hard 4 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Hard 4 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Hard 4 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Hard 4 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Hard 4 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Hard 4 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Place Bet on 4 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 4 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on 4 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Place Bet on 4 then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 4 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 4 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 4 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Place Bet on 4 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Place Bet on 4 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Place Bet on 4 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Place Bet on 5 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 5 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on 5 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Place Bet on 5 then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 5 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 5 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 5 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Place Bet on 5 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Place Bet on 5 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Place Bet on 5 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Place Bet on 6 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 6 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on 6 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Place Bet on 6 then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 6 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 6 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 6 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Place Bet on 6 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Place Bet on 6 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Place Bet on 6 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Place Bet on 8 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 8 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on 8 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Place Bet on 8 then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 8 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 8 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 8 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Place Bet on 8 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Place Bet on 8 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Place Bet on 8 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Place Bet on 9 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 9 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on 9 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Place Bet on 9 then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 9 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 9 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 9 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Place Bet on 9 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Place Bet on 9 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Place Bet on 9 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Place Bet on 10 and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 10 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Place Bet on 10 and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Place Bet on 10 then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 10 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Place Bet on 10 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Place Bet on 10 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Place Bet on 10 pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Place Bet on 10 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Place Bet on 10 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Come Bet on 4 with $10 odds and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 4 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on 4 with $10 odds and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Come Bet on 4 with $10 odds then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 4 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 4 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 4 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet on 4 with $10 odds pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet on 4 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet on 4 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Come Bet on 5 with $10 odds and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 5 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on 5 with $10 odds and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Come Bet on 5 with $10 odds then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 5 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 5 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 5 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet on 5 with $10 odds pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet on 5 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet on 5 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Come Bet on 6 with $10 odds and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 6 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on 6 with $10 odds and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Come Bet on 6 with $10 odds then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 6 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 6 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 6 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet on 6 with $10 odds pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet on 6 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet on 6 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Come Bet on 8 with $10 odds and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 8 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on 8 with $10 odds and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Come Bet on 8 with $10 odds then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 8 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 8 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 8 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet on 8 with $10 odds pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet on 8 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet on 8 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Come Bet on 9 with $10 odds and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 9 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on 9 with $10 odds and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Come Bet on 9 with $10 odds then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 9 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 9 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 9 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet on 9 with $10 odds pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet on 9 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet on 9 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $1 on the Come Bet on 10 with $10 odds and 4 rolls, does it lose?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 10 pay if 5 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $5 on the Come Bet on 10 with $10 odds and a 6 rolls, what happens",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If I have $6 on the Come Bet on 10 with $10 odds then a 6 rolls does it win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 10 win on 7",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What does a Come Bet on 10 win if 8 rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "Does a Come Bet on 10 win on 9",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "How much does a $5 Come Bet on 10 with $10 odds pay if 10 Rolls",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If an 11 is rolled, does the Come Bet on 10 win?",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "If a 12 is rolled, does the Come Bet on 10 win",
-        "label": "CALCULATE"
-    },
-    {
-        "text": "What is the best bet on this table",
-        "label": "RECOMMENDATION"
-    },
-    {
-        "text": "How does the Come Bet Work?",
-        "label": "INFO"
-    },
-    {
-        "text": "Do you serve coffee",
-        "label": "UNKNOWN"
+        "tokens": [
+            "Does",
+            "my",
+            "Come",
+            "Bet",
+            "on",
+            "6",
+            "win",
+            "if",
+            "4",
+            "is",
+            "rolled?"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "ROLL",
+            "NONE",
+            "NONE"
+        ]
+    },
+    {
+        "tokens": [
+            "does",
+            "a",
+            "5",
+            "Dollar",
+            "Field",
+            "Bet",
+            "win",
+            "if",
+            "2",
+            "is",
+            "rolled"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "NONE",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "ROLL",
+            "NONE",
+            "NONE"
+        ]
+    },
+    {
+        "tokens": [
+            "what",
+            "happens",
+            "to",
+            "my",
+            "5",
+            "dollar",
+            "Crap",
+            "Check",
+            "if",
+            "4",
+            "rolls"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "NONE",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "ROLL",
+            "NONE"
+        ]
+    },
+    {
+        "tokens": [
+            "Is",
+            "the",
+            "Horn",
+            "Bet",
+            "a",
+            "good",
+            "bet"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "NONE"
+        ]
+    },
+    {
+        "tokens": [
+            "does",
+            "a",
+            "C",
+            "And",
+            "E",
+            "bet",
+            "win",
+            "on",
+            "6"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "ROLL"
+        ]
+    },
+    {
+        "tokens": [
+            "does",
+            "a",
+            "$5",
+            "Come",
+            "Bet",
+            "on",
+            "8",
+            "with",
+            "$20",
+            "odds",
+            "on",
+            "9"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "ODDS",
+            "NONE",
+            "NONE",
+            "ROLL"
+        ]
     }
 ]
