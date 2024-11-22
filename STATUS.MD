@@ -6,7 +6,7 @@ I'm abandoning the big 4 model approach
 
 I'm trying a new approach:
 
-- Word Tagger Model + Bet Name Classifier
+- Word Tagger Model => Bet Name Classifier
 
 "How much does a $5 Field Bet pay if a 6 rolls"
 
@@ -22,11 +22,34 @@ which returns "fieldBet"
 
 ----
 
+
+
+
+
+
+
+
+
+
 LEFT OFF HERE
-- Over on iOS
-    - plug in the matched value into calculate
-    - Figure out how EXACTLY I'm going to use the ROLL, AMOUNT, and ODDS tags
-    - Do I want to check number of groups of digits
+- Just trained a new all caps word tagger
+- check the tests vs last model
+- add model to iOS and try it out
+    - I added .uppercased, should be good
+    - see if it's better able to capture the bet names like, come bet on 4
+
+
+
+
+
+
+
+
+
+- Note the split on iOS is spliting, "$5" as two, but nodejs is splitting it as one
+    - so for consistency on node we should split two and traing that way
+
+- Do I want to check number of groups of digits on iOS
 
 - Current models seems to be case sensitive, might want to go all caps
 - test how how it does with marking, "roll" as "ROLL" tag instead of NONE
@@ -41,18 +64,15 @@ THEN
 TODO:
 - Try the other algo on createML for word tagging, "embeds"
 
-Models are loaded
-
 Big Things Left To Do:
 - Design App
 - Develop Calculator
 - Paywall Solution
-- Finish All Bets
 - Get a Backend For Swift
     - Do the local dependency move
 
 MVP:
-- A user can ask non-prop bet questions
+- A user can ask Craps questions
 - A user can see bet details (Learn Craps)
 - A users' queries get saved to firestore
 - A users sees barebones design
@@ -60,7 +80,6 @@ MVP:
 V1 (MVP PLUS):
 - A user sees full pretty design
 - A user pays
-- A user can ask prop bets
 
 V+:
 - Save all queries

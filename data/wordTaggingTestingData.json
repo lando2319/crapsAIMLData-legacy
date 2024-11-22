@@ -1,17 +1,17 @@
 [
     {
         "tokens": [
-            "Does",
-            "my",
-            "Come",
-            "Bet",
-            "on",
+            "DOES",
+            "MY",
+            "COME",
+            "BET",
+            "ON",
             "6",
-            "win",
-            "if",
+            "WIN",
+            "IF",
             "4",
-            "is",
-            "rolled?"
+            "IS",
+            "ROLLED?"
         ],
         "labels": [
             "NONE",
@@ -29,17 +29,17 @@
     },
     {
         "tokens": [
-            "does",
-            "a",
+            "DOES",
+            "A",
             "5",
-            "Dollar",
-            "Field",
-            "Bet",
-            "win",
-            "if",
+            "DOLLAR",
+            "FIELD",
+            "BET",
+            "WIN",
+            "IF",
             "2",
-            "is",
-            "rolled"
+            "IS",
+            "ROLLED"
         ],
         "labels": [
             "NONE",
@@ -57,17 +57,17 @@
     },
     {
         "tokens": [
-            "what",
-            "happens",
-            "to",
-            "my",
+            "WHAT",
+            "HAPPENS",
+            "TO",
+            "MY",
             "5",
-            "dollar",
-            "Crap",
-            "Check",
-            "if",
+            "DOLLAR",
+            "CRAP",
+            "CHECK",
+            "IF",
             "4",
-            "rolls"
+            "ROLLS"
         ],
         "labels": [
             "NONE",
@@ -85,13 +85,13 @@
     },
     {
         "tokens": [
-            "Is",
-            "the",
-            "Horn",
-            "Bet",
-            "a",
-            "good",
-            "bet"
+            "IS",
+            "THE",
+            "HORN",
+            "BET",
+            "A",
+            "GOOD",
+            "BET"
         ],
         "labels": [
             "NONE",
@@ -105,14 +105,14 @@
     },
     {
         "tokens": [
-            "does",
-            "a",
+            "DOES",
+            "A",
             "C",
-            "And",
+            "AND",
             "E",
-            "bet",
-            "win",
-            "on",
+            "BET",
+            "WIN",
+            "ON",
             "6"
         ],
         "labels": [
@@ -129,17 +129,17 @@
     },
     {
         "tokens": [
-            "does",
-            "a",
+            "DOES",
+            "A",
             "$5",
-            "Come",
-            "Bet",
-            "on",
+            "COME",
+            "BET",
+            "ON",
             "8",
-            "with",
+            "WITH",
             "$20",
-            "odds",
-            "on",
+            "ODDS",
+            "ON",
             "9"
         ],
         "labels": [

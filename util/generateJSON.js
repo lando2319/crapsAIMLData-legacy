@@ -6,20 +6,14 @@ function generateBetNamesForWordTagging(gameElements, loggit) {
         logThis("Generating for " + betNamePkg.name, loggit)
 
         jsonToGo.push({
-            "text": betNamePkg.name,
+            "text": betNamePkg.name.toUpperCase(),
             "label": betNamePkg.slug
         });
-
-        jsonToGo.push({
-            "text": betNamePkg.name.toLowerCase(),
-            "label": betNamePkg.slug
-        });
-
     });
 
     gameElements.nonBets.forEach(nonBet => {
         jsonToGo.push({
-            "text": nonBet,
+            "text": nonBet.toUpperCase(),
             "label": "no_bet"
         });
     });
@@ -37,24 +31,25 @@ function generateWordTagging(gameElements, loggit) {
     const jsonToGo = [];
 
     gameElements.betPhrases.forEach((betPhraseTemplate) => {
+        betPhraseTemplate = betPhraseTemplate.toUpperCase();
         logThis(`Processing Bet Phrase Template: ${betPhraseTemplate}`, loggit);
 
         gameElements.betNames.forEach((betNamePkg) => {
             // might want to dump this in favor of aliases
-            if (betPhraseTemplate.includes("_betNickname_") && !betNamePkg.nickname) return;
+            if (betPhraseTemplate.includes("_BETNICKNAME_") && !betNamePkg.nickname) return;
 
             for (let roll = 2; roll <= 12; roll++) {
                 let amounts = [
                     "$" + betNamePkg.min, 
                     "$" + betNamePkg.min * 2, 
                     "$" + betNamePkg.min * 3,
-                    betNamePkg.min + " dollars", 
-                    (betNamePkg.min * 2) + " dollars", 
-                    (betNamePkg.min * 3) + " dollars"
+                    betNamePkg.min + " DOLLARS", 
+                    (betNamePkg.min * 2) + " DOLLARS", 
+                    (betNamePkg.min * 3) + " DOLLARS"
                 ];
 
                 amounts.forEach((betAmount) => {
-                    if (betPhraseTemplate.includes("_odds_") && betNamePkg.hasOdds) {
+                    if (betPhraseTemplate.includes("_ODDS_") && betNamePkg.hasOdds) {
                         ["$10", "$20", "$30"].forEach((oddsAmount) => {
                             var entry = genearateTokensAndLabels(
                                 betPhraseTemplate, 
@@ -88,10 +83,10 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
     const oddsTokens = oddsAmount.split(/\s+/);
     const amountTokens = betAmount.split(/\s+/);
 
-    if (incomingPhrase.includes("_odds_") && oddsAmount) {
-        incomingPhrase = incomingPhrase.replace("_odds_", "with _odds_ odds")
+    if (incomingPhrase.includes("_ODDS_") && oddsAmount) {
+        incomingPhrase = incomingPhrase.replace("_ODDS_", "WITH _ODDS_ ODDS")
     } else {
-        incomingPhrase = incomingPhrase.replace("_odds_", "")
+        incomingPhrase = incomingPhrase.replace("_ODDS_", "")
     };
 
     const tokensBeforInterplation = incomingPhrase.split(/\s+/).filter(Boolean);
@@ -103,7 +98,7 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
     var tokens = [];
 
     tokensBeforInterplation.forEach((token, index) => {
-        if (token == "_amount_") {
+        if (token == "_AMOUNT_") {
             amountTokens.forEach(amountToken => {
                 if (amountToken == betAmountAsNumber || amountToken == "$" + betAmountAsNumber) {
                     labels.push("AMOUNT");
@@ -113,12 +108,12 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
 
                 tokens.push(amountToken);
             });
-        } else if (token == "_betName_") {
+        } else if (token == "_BETNAME_") {
             betNameTokens.forEach(betNameToken => {
                 labels.push("BET_NAME");
                 tokens.push(betNameToken);
             });
-        } else if (token == "_odds_" && oddsAmount) {
+        } else if (token == "_ODDS_" && oddsAmount) {
             oddsTokens.forEach(oddsToken => {
                 if (oddsToken == oddsAmountAsNumber || oddsToken == "$" + oddsAmountAsNumber) {
                     labels.push("ODDS");
@@ -128,7 +123,7 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
 
                 tokens.push(oddsToken);
             });
-        } else if (token == "_roll_") {
+        } else if (token == "_ROLL_") {
             labels.push("ROLL");
             tokens.push(roll.toString());
         } else {
