@@ -25,18 +25,31 @@ which returns "fieldBet"
 
 
 
-
-
-
-
-
-
 LEFT OFF HERE
-- Just trained a new all caps word tagger
-- check the tests vs last model
-- add model to iOS and try it out
-    - I added .uppercased, should be good
-    - see if it's better able to capture the bet names like, come bet on 4
+
+MVP TODO:
+- Firebase setup
+    - App check
+    - Kill Switch
+- Finish Calculator
+- Finish Suggested questions
+    - relevant questions
+
+
+
+
+
+
+- do a client side test and see why this isn't match correctly
+    - "How much is a $5 Don't Come Bet on 4 ..."
+        - should match dontComeBetOn4
+        - right now it's match comeBetOn4
+
+// - ORDER GEAR
+
+    // - get 30+ craps questions with preloaded answers
+    //      - for the general questions at the bottom
+
 
 
 
@@ -51,7 +64,6 @@ LEFT OFF HERE
 
 - Do I want to check number of groups of digits on iOS
 
-- Current models seems to be case sensitive, might want to go all caps
 - test how how it does with marking, "roll" as "ROLL" tag instead of NONE
     - must measure it first
     - and keep the current way of doing it too, duplicate
@@ -73,9 +85,8 @@ Big Things Left To Do:
 
 MVP:
 - A user can ask Craps questions
-- A user can see bet details (Learn Craps)
+- A user can see bet details (Learn Craps content)
 - A users' queries get saved to firestore
-- A users sees barebones design
 
 V1 (MVP PLUS):
 - A user sees full pretty design

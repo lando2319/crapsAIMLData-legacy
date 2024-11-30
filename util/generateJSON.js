@@ -111,7 +111,7 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
         } else if (token == "_BETNAME_") {
             betNameTokens.forEach(betNameToken => {
                 labels.push("BET_NAME");
-                tokens.push(betNameToken);
+                tokens.push(betNameToken.toUpperCase());
             });
         } else if (token == "_ODDS_" && oddsAmount) {
             oddsTokens.forEach(oddsToken => {
