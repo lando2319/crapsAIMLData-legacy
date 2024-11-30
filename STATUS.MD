@@ -27,6 +27,14 @@ which returns "fieldBet"
 
 LEFT OFF HERE
 
+- See if we're stripping out commas
+- probably should be JUST Digits and Letters, and just standard ones
+
+
+
+
+
+
 MVP TODO:
 - Firebase setup
     - App check

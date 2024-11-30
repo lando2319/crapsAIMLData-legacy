@@ -38,6 +38,12 @@ function generateWordTagging(gameElements, loggit) {
             // might want to dump this in favor of aliases
             if (betPhraseTemplate.includes("_BETNICKNAME_") && !betNamePkg.nickname) return;
 
+            var isLineBet = (betNamePkg.name == "Pass Line Bet" || betNamePkg.name == "Don't Pass Bet");
+
+            if (betPhraseTemplate.includes("_POINT_") && !isLineBet) {
+                return
+            }
+
             for (let roll = 2; roll <= 12; roll++) {
                 let amounts = [
                     "$" + betNamePkg.min, 
@@ -49,26 +55,12 @@ function generateWordTagging(gameElements, loggit) {
                 ];
 
                 amounts.forEach((betAmount) => {
-                    if (betPhraseTemplate.includes("_ODDS_") && betNamePkg.hasOdds) {
-                        ["$10", "$20", "$30"].forEach((oddsAmount) => {
-                            var entry = genearateTokensAndLabels(
-                                betPhraseTemplate, 
-                                betNamePkg.name, 
-                                betAmount, 
-                                oddsAmount, 
-                                roll
-                            );
-                            jsonToGo.push(entry);
-                        });
+                    if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
+                        ["4", "5", "6", "8", "9", "10"].forEach(point => {
+                            applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo);
+                        })
                     } else {
-                        var entry = genearateTokensAndLabels(
-                            betPhraseTemplate,
-                            betNamePkg.name,
-                            betAmount,
-                            "",
-                            roll
-                        );
-                        jsonToGo.push(entry);
+                        applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, "", jsonToGo);
                     }
                 });
             }
@@ -78,7 +70,36 @@ function generateWordTagging(gameElements, loggit) {
     return jsonToGo;
 }
 
-function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount, roll) {
+
+function applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo) {
+    if (betPhraseTemplate.includes("_ODDS_") && betNamePkg.hasOdds) {
+        ["$10", "$20", "$30"].forEach((oddsAmount) => {
+            var entry = genearateTokensAndLabels(
+                betPhraseTemplate,
+                betNamePkg.name,
+                betAmount,
+                oddsAmount,
+                roll,
+                point
+            );
+            jsonToGo.push(entry);
+        });
+    } else {
+        var entry = genearateTokensAndLabels(
+            betPhraseTemplate,
+            betNamePkg.name,
+            betAmount,
+            "",
+            roll,
+            point
+        );
+        jsonToGo.push(entry);
+    }
+
+}
+
+
+function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount, roll, point) {
     const betNameTokens = betName.split(/\s+/);
     const oddsTokens = oddsAmount.split(/\s+/);
     const amountTokens = betAmount.split(/\s+/);
@@ -126,6 +147,9 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
         } else if (token == "_ROLL_") {
             labels.push("ROLL");
             tokens.push(roll.toString());
+        } else if (token == "_POINT_") {
+            labels.push("POINT");
+            tokens.push(point);
         } else {
             labels.push("NONE");
             tokens.push(token);

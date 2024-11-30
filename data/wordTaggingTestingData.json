@@ -156,5 +156,50 @@
             "NONE",
             "ROLL"
         ]
+    },
+    {
+        "tokens": [
+            "WITH",
+            "A",
+            "$5",
+            "PASS",
+            "LINE",
+            "BET",
+            "WITH",
+            "$32",
+            "ODDS",
+            "WITH",
+            "A",
+            "POINT",
+            "OF",
+            "5",
+            "AND",
+            "5",
+            "ROLLS",
+            "WHAT",
+            "HAPPENS"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "ODDS",
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "POINT",
+            "NONE",
+            "ROLL",
+            "NONE",
+            "NONE",
+            "NONE"
+        ]
     }
+
 ]
