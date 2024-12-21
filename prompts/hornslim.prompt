@@ -1,0 +1,84 @@
+---
+model: googleai/gemini-1.5-flash
+input:
+  schema: 
+    message: string, the entire message from the player
+    amount?: number, the bet amount specified in the message, if available
+    roll?: number, the roll specified in the message, if available
+    betName?: string, the name of the bet in the message, if available
+output:
+  schema: 
+    BetSchema
+---
+
+### Horn Bet General Infomation ###
+
+Horn Bet is a prop bet
+
+I want you to explain how a Horn Bet works
+
+it wins on 2,3,11,12
+- the 3 and 11 pay, '16 for 1'
+- the 2 and 12 pay, '31 for 1'
+
+One roll bet
+
+### Calculating Horn Bet Payout ###
+
+AMOUNT is the amount bet amount specified in the message
+
+If the player wants to know the payout, the message might look like this: "How much does a ${{AMOUNT}} Horn Bet pay if {{ROLL}} rolls" 
+
+If the player provides an AMOUNT in their request you must use that as AMOUNT
+
+Only if the request does not contain an AMOUNT should you use $4 as AMOUNT
+
+The BET_MULTIPLE is 16 for a roll of 3 or 11
+The BET_MULTIPLE is 31 for a roll of 2 or 12
+
+if the roll is not a Horn Bet number: 2,3,11,12, it loses
+
+first divide the bet amount by 4, that is the PER_BET_AMOUNT
+
+you take the per bet PER_BET_AMOUNT and times it by the BET_MULTIPLE
+
+PER_BET_AMOUNT * BET_MULTIPLE = FULL_PAYOUT
+FULL_PAYOUT - AMOUNT = STILL_UP_PAYOUT
+
+When talking about payouts:
+- don't convert, "31 for 1" to "30 to 1"
+- don't convert, "16 for 1" to "15 to 1"
+
+- say it pays, "31 for 1" for 2 and 12
+- say it pays, "16 for 1" for 3 and 11
+
+Here are a few common calculation amounts:
+- AMOUNT as $4, if 3 or 11 roll its: FULL_PAYOUT 16, STILL_UP_PAYOUT 12, if 2 or 12 roll its: FULL_PAYOUT 31, STILL_UP_PAYOUT 27
+- AMOUNT as $8, if 3 or 11 roll its: FULL_PAYOUT 32, STILL_UP_PAYOUT 24, if 2 or 12 roll its: FULL_PAYOUT 62, STILL_UP_PAYOUT 27
+- AMOUNT as $12, if 3 or 11 roll its: FULL_PAYOUT 48, STILL_UP_PAYOUT 36, if 2 or 12 roll its: FULL_PAYOUT 93, STILL_UP_PAYOUT 27
+- AMOUNT as $16, if 3 or 11 roll its: FULL_PAYOUT 64, STILL_UP_PAYOUT 48, if 2 or 12 roll its: FULL_PAYOUT 124, STILL_UP_PAYOUT 27
+- AMOUNT as $20, if 3 or 11 roll its: FULL_PAYOUT 80, STILL_UP_PAYOUT 60, if 2 or 12 roll its: FULL_PAYOUT 155, STILL_UP_PAYOUT 27
+
+Describe the calculation as
+- STILL_UP_PAYOUT = "still up to win"
+- FULL_PAYOUT = "and down"
+
+If the AMOUNT is $4 it would be, '31 and down' or, '27 still up to win'
+
+STILL_UP_PAYOUT is always the FULL_PAYOUT minus the amount of the bet, should never be the same number as FULL_PAYOUT
+
+Calculate what the bet pays and make this the HEADLINE
+
+### Output Instructions ###
+
+Output must be in JSON format.
+
+HEADLINE: {{headline}} 
+BET_DETAILS: {{bet_details}} General Infomation about the bet
+BET_NAME: {{BET_NAME}} Just the Bet Name
+
+{{#if amount}}
+AMOUNT: {{AMOUNT}} The amount in the request
+FULL_PAYOUT: {{FULL_PAYOUT}}
+STILL_UP_PAYOUT: {{STILL_UP_PAYOUT}} 
+{{/if}}

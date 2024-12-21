@@ -17,6 +17,13 @@
     },
     "homepage": "https://github.com/lando2319/crapsAIMLData#readme",
     "devDependencies": {
+        "genkit-cli": "^0.9.12",
         "mocha": "^10.3.0"
+    },
+    "dependencies": {
+        "@genkit-ai/evaluator": "^0.9.12",
+        "@genkit-ai/googleai": "^0.9.12",
+        "dotenv": "^16.4.7",
+        "genkit": "^0.9.12"
     }
 }

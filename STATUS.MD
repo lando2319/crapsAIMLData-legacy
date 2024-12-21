@@ -1,5 +1,9 @@
 # LATEST
 
+TWO TYPES OF QUESTION
+- Calculatable
+- Non-Calculatable
+
 ## NEW PLAN
 
 I'm abandoning the big 4 model approach
@@ -21,6 +25,187 @@ Then I run THAT through the new BetNamesViaTags model
 which returns "fieldBet"
 
 ----
+
+
+
+
+
+
+// BIG BIG
+Try this Genkit
+see if it can REALLY provide a slug for
+"What does my $5 Come bet on 5 with $10 odds pay if 6 rolls"
+
+CAN IT REALLY DO THAT
+
+
+START BACK AT THE TOP
+
+First thing is first
+- How do I train it
+- can it really do structed output like that
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// WIP NEEDS UPDATING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WHERE DO I FIT IN????
+
+
+First Step
+- Get some effect on prompts with this prompt manager
+- Get some effect on fine tuning
+- try retrieval augmented generation
+- Setup SOME kind of evaluation
+
+
+LIKE SO
+
+---
+model: googleai/gemini-1.5-flash
+config:
+  temperature: 0.9
+input:
+  schema:
+    bet: string
+    amount?: int
+    roll?: int
+  default:
+    location: Horn Bet
+---
+
+I want you to explain how a Horn Bet works
+
+it wins on 2,3,11,12
+
+the 3 and 11 pay 16 for 1
+
+the 2 and 12 pay 31 for 1
+
+to calcualte a horn bet if the roll is not a horn bet number 2,3,11,12 it loses
+
+first divide the bet amount by 4, that is the per bet amount
+
+the proper way to describe the payout is per bet amount times 31 is the, 'and down amount'
+
+the, 'still up to win' amount is the, 'and down amount' minus the bet
+
+so if it's a $4 horn and 12 rolls it would be '31 and down' or '27 still up to win'
+
+
+HORN bet pays 16 for 1 on the lowside and 31 for 1 on the highside
+
+so a $4 Horn Bet if Ace Deuce Rolls it pays $16 and down or $12 still up to win
+
+// FINISH THIS, but use the interpolations, at least as a test
+// I think I can do this if stuff to match the winning rolls
+
+You are the world's most welcoming AI assistant and are currently working at {{location}}.
+
+Greet a guest{{#if name}} named {{name}}{{/if}}{{#if style}} in the style of {{style}}{{/if}}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Somehow I'm going to need to train the model for how the dice came
+ "I bet a 2-3 Hopping and 5 came but it rolled 4-1"
+
+ I would like to say definitatively yes, not just, 'yes if 5 came 2-3'
+ 
+ I think this means expanding the bet tagging to include DICE_CAME
+
+
+
+
+
+
+
+
+
+
+
+Need to train bet name model on high low
+
+
+
+
+I'm going to need a solution for Hops losing based on how it came
+idk, I guess I could update the tagger to check for 'how it came' info
+
+
+
+
+
 
 
 

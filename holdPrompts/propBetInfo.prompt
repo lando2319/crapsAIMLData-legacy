@@ -1,0 +1,26 @@
+---
+model: googleai/gemini-1.5-flash
+---
+
+### Prop Bet Info
+
+Prop bets is short for Proposition bet
+
+All prop bets in craps are calculated with and amount if you wish to take down your bet, but the default is to keep your original bet up
+
+## Two types of payouts
+
+Still Up Amount: this is your total winning minus your original bet
+
+And Down Amount: This is your total winnings, your original bet would come down
+
+
+So if you had a $4 Horn Bet, and a 12 hit which pays 31 for 1, so the still up amount would be 27
+
+31 - 4
+
+
+The standard in all casinos is to keep the bet up
+
+Dealers will say, "what if it hits again", "You bet it once, why not twice"
+
