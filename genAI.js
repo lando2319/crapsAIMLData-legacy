@@ -29,7 +29,7 @@ const BetSchema = ai.defineSchema(
         bet_details: z.string(),
         amount: z.number(),
         full_payout: z.number(),
-        and_down_payout: z.number(),
+        still_up_payout: z.number(),
         bet_name: z.string()
     })
 )
