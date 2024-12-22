@@ -14,8 +14,8 @@ output:
    - Look for the phrase "Horn Bet" (or some other bet type) in the `message`.  
 
 2. **Parse the bet AMOUNT**  
-   - Look for a pattern like "$8", "$12", "$20" in the `message`.  
-   - Strip out the numeric portion (e.g. 8, 12, 20) and use it as the `AMOUNT`.  
+   - Look for a pattern like "$4", "$8", "$12", "$20" in the `message`.  
+   - Strip out the numeric portion (e.g. 4, 8, 12, 20) and use it as the `AMOUNT`.  
 
 3. **Parse the roll**  
    - Look for "if X rolls", like "if 12 rolls" or "if a 3 is rolled".  

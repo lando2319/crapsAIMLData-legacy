@@ -67,6 +67,8 @@ First thing is first
 
 
 
+current cli
+npx genkit start -o -- node --watch genAIFlow.js
 
 
 
