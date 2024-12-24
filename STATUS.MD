@@ -1,5 +1,38 @@
 # LATEST
 
+It's a new day
+
+Genkit is the path forward with the 'two models, one calculator' approach
+- Parser AI: extract the following vars from message
+    - amount
+    - bet_name
+    - roll
+
+- JS Calculator: based on info of Parser AI Model, calculate payout
+
+- Talker AI: gives context and provide details about the bet
+
+Final Output To Clientside
+
+```
+{
+    message: "How much does a $4 Horn Bet pay if 12 rolls"          // original input
+
+    amount:4,                                                       // from Parser AI
+    bet_name:"Horn Bet",     
+    roll:12,                 
+
+    full_payout: 31                                                 // from JS Calculator
+    still_up_payout: 27
+
+    bet_details: "Horn wins on 2,3,11,12 ..."                       // From Talker AI
+}
+
+add image_slug
+```
+
+# Legacy
+
 
 Everythings changed
 
