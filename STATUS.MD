@@ -1,5 +1,92 @@
 # LATEST
 
+
+Everythings changed
+
+I have Genkit mostly working
+I have a flow
+I evaluated a flow
+
+This was pretty enlightening
+
+```
+- GenKit’s semantic evaluation for “Does the answer make sense?”
+- unit tests (or integration tests) for exact numeric checks.
+```
+
+FROM HERE
+I just got this one off file to work
+
+Now I want to setup tests
+- Base mocha test for payouts
+- Confirm that I'm having an effect by massively changing the prompt file
+- Setup my first test
+
+- make sure the dash still works
+
+
+
+
+
+
+
+
+
+
+// So I had it working in dash
+// Then I had to drop the message and just do string in order to get the flow to work
+
+// idk I don't even care about the input, its just without it
+
+it says no input json in the dash
+
+
+
+
+
+
+// START HERE
+// RIGHT NOW NOW
+// so I guess it works with no input
+// I just have to do the flows instead of the prompts, which I think is better anyways
+
+// find a way to run these tests where it's not just hanging
+
+
+
+// HOLD THIS
+// So I know how to setup the eval later
+const { gemini15Flash, googleAI, textEmbeddingGecko001 } = require('@genkit-ai/googleai');
+const { genkitEval, GenkitMetric } = require('@genkit-ai/evaluator');
+...
+const ai = genkit({
+    plugins: [
+        googleAI({
+            apiKey: process.env.GOOGLE_GENAI_API_KEY
+        }),
+        genkitEval({
+            judge: gemini15Flash,
+            metrics: [
+                GenkitMetric.ANSWER_RELEVANCY,
+                GenkitMetric.FAITHFULNESS,
+                GenkitMetric.MALICIOUSNESS
+            ],
+            embedder: textEmbeddingGecko001
+        })
+    ],
+    model: gemini15Flash
+});
+
+
+
+
+
+
+
+
+
+
+
 TWO TYPES OF QUESTION
 - Calculatable
 - Non-Calculatable

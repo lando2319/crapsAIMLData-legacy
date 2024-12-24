@@ -1,0 +1,48 @@
+---
+model: googleai/gemini-1.5-flash
+input:
+  schema:
+    message: string
+    bet_name: string
+    amount: number
+    roll: number
+    full_payout: number
+    still_up_payout: number
+---
+
+## System / Explanation Instructions
+
+You receive the following via input:
+- **bet_name**: Name of Bet
+- **amount**: A number indicating the amount on a bet which is being asked about (e.g., 4).
+- **roll**: A number indicating which dice roll is being asked about (e.g., 12).  
+- **full_payout**: The amount the bet pays if you take down your original bet
+- **still_up_payout**: The full_payout minus the original bet
+- **message**: original message asked by the player
+
+You do **not** need to calculate payouts. These are the final calulations.
+
+Your job:  
+1. Create a **concise “headline”**. For example, if `amount=8` and `roll=12`, you might say:  
+   > "A $8 Horn Bet pays 62 and down if a 12 rolls."  
+
+2. Provide a **short “bet_details”** explanation about Horn Bets. For instance:  
+   > "A Horn Bet is a prop bet that wins on 2,3,11,12. It pays 16 for 1 on 3 or 11, and 31 for 1 on 2 or 12."  
+
+3. Echo back the **numeric fields** from your input:
+   - `amount`: same as the user specified  
+   - `full_payout`: same as we computed in code  
+   - `still_up_payout`: same as we computed in code  
+
+4. Include the same `bet_name` that was passed in.  
+
+5. **Construct the JSON Output**  
+   - `headline`: A concise statement, e.g. “A $8 Horn Bet pays 31 and down if a 12 rolls.”  
+   - `bet_details`: General info about a Horn Bet.  
+
+A Horn Bet is a **prop bet** that wins if the dice roll 2, 3, 11, or 12.  
+- 3 and 11 pay **16 for 1**.  
+- 2 and 12 pay **31 for 1**.  
+It is a **one-roll** bet: if any number other than 2, 3, 11, or 12 comes up on the next roll, the bet loses.
+
+**Return only valid JSON** in your final answer.

@@ -1,79 +1,87 @@
 require('dotenv').config({ path: __dirname + '/.env' })
 
-const { gemini15Flash, googleAI, textEmbeddingGecko001 } = require('@genkit-ai/googleai');
-const { genkitEval, GenkitMetric } = require('@genkit-ai/evaluator');
+const { gemini15Flash, googleAI } = require('@genkit-ai/googleai');
 const { genkit, z } = require('genkit');
 
-const ai = genkit({
+const parserAI = genkit({
+    promptDir: "parserPrompts",
     plugins: [
         googleAI({
             apiKey: process.env.GOOGLE_GENAI_API_KEY
-        }),
-        genkitEval({
-            judge: gemini15Flash,
-            metrics: [
-                GenkitMetric.ANSWER_RELEVANCY,
-                GenkitMetric.FAITHFULNESS,
-                GenkitMetric.MALICIOUSNESS
-            ],
-            embedder: textEmbeddingGecko001
         })
     ],
     model: gemini15Flash
 });
 
-const BetSchema = ai.defineSchema(
-    'BetSchema',
+const talkerAI = genkit({
+    promptDir: "talkerPrompts",
+    plugins: [
+        googleAI({
+            apiKey: process.env.GOOGLE_GENAI_API_KEY
+        })
+    ],
+    model: gemini15Flash
+});
+
+
+const ParseSchema = parserAI.defineSchema(
+    'ParseSchema',
+    z.object({
+        bet_name: z.string(),
+        amount: z.number(),
+        roll: z.number()
+    })
+)
+
+const TalkerSchema = parserAI.defineSchema(
+    'TalkerSchema',
     z.object({
         headline: z.string(),
-        bet_details: z.string(),
-        amount: z.number(),
-        full_payout: z.number(),
-        still_up_payout: z.number(),
-        bet_name: z.string()
+        bet_details: z.string()
     })
 )
 
-const InputSchema = ai.defineSchema(
-    'InputSchema',
-    z.object({
-        message: z.string()
-    })
-)
+function calculateHorn(d) {
+    var perBetAmount = d.amount / 4;
+    d.full_payout = 0;
+    d.still_up_payout = 0;
 
+    if (d.roll == 3 || d.roll == 11) {
+        d.full_payout = perBetAmount * 16;
+        d.still_up_payout = d.full_payout - d.amount;
+    } else if (d.roll == 2 || d.roll == 12) {
+        d.full_payout = perBetAmount * 31;
+        d.still_up_payout = d.full_payout - d.amount;
+    };
+}
 
-exports.mainFlow = ai.defineFlow(
+exports.mainFlow = talkerAI.defineFlow(
     {
-        name: 'mainFlow',
-        // inputSchema: InputSchema, // OFF FOR NOW, confirm it works in dash
-        outputSchema: BetSchema
+        name: 'mainFlow'
     },
     async (inputData) => {
-        const { output } = await ai.generate({
+        const { output: parserOutput } = await parserAI.generate({
             model: gemini15Flash,
             prompt: inputData,
-            output: { schema: BetSchema }
+            output: { schema: ParseSchema }
         })
 
-        if (output == null) {
-            throw new Error("Response doesn't satisfy schema");
-        }
-        return output
-    }
-)
+        console.log("parserAI Generated", parserOutput);
 
-// WORKS WITH ONE OFF PROMPT
-exports.simpleFlow = ai.defineFlow(
-    {
-        name: 'simpleFlow',
-    },
-    async (inputData) => {
-        const { text } = await ai.generate({
+        calculateHorn(parserOutput);
+        parserOutput.message = inputData;
+
+        console.log("parserAI Adjusted", parserOutput);
+
+        const { output: talkerOutput } = await talkerAI.generate({
             model: gemini15Flash,
-            prompt: inputData
+            prompt: parserOutput.message,
+            input: { schema: parserOutput },
+            output: { schema: TalkerSchema },
         });
 
-        return text;
+        console.log("talkerAI Generated", talkerOutput);
+
+        return talkerOutput
     }
 )
-

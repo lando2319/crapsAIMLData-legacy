@@ -1,0 +1,54 @@
+
+
+
+
+output:
+   schema:
+      BetSchema
+
+
+
+
+
+
+// LEFT OFF HERE
+// get an example that consistently works
+// I guess I could do two ais
+// - one to decipher
+// - then run js 
+// - then feed that in as params
+
+I'd really rather not though
+
+idk, so annoying
+
+as a back to basics I could strip this file to be JUST calculation
+just see if I can get that going
+then try and add in the, 'explain the bet' stuff
+if that doesn't work do the two ai approach
+
+// get status page back
+
+
+
+
+
+5. **Construct the JSON Output**  
+   - `headline`: A concise statement, e.g. “A $8 Horn Bet pays 31 and down if a 12 rolls.”  
+   - `bet_details`: General info about a Horn Bet.  
+   - `amount`: The numeric bet AMOUNT after parsing.  
+   - `full_payout`: The numeric FULL_PAYOUT.  
+   - `still_up_payout`: The numeric STILL_UP_PAYOUT.  
+   - `bet_name`: The bet name that was parsed or defaulted.
+
+
+
+
+
+
+
+
+**Return only valid JSON** in your final answer.
+
+
+
