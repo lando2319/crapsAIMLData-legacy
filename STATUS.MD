@@ -1,5 +1,53 @@
 # LATEST
 
+
+
+
+
+
+
+
+
+
+
+
+
+New Plan
+
+Once and for all abandon the LLM talking approach
+
+MVP
+- onCall function to genkit
+- App Check
+- serverside query to vector db for confirmed data
+- serverside save to vector db as unconfirmed
+- return parsed response
+- answer question clientside or via vector data
+
+
+FROM HERE:
+- Setup vector db
+- Confirm I can query for vector db from here
+
+
+
+// LEFT OFF HERE
+// Setup firebase vector
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+
 It's a new day
 
 Genkit is the path forward with the 'two models, one calculator' approach

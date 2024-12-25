@@ -16,8 +16,8 @@ output:
 
 3. **Parse the roll**  
    - Look for "if X rolls", like "if 12 rolls" or "if a 3 is rolled".  
-   - Extract X as a number (2, 3, 11, 12, etc.).  
-   - If no valid roll is found, assume it’s an informational request (so no payout calculation, just say what it pays (16 for 1 or 31 for 1)).
+   - Extract X as a number (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12).  
+   - If no valid roll is found, leave blank.
 
 4. **Construct the JSON Output**  
    - `bet_name`: The bet name that was parsed or defaulted.

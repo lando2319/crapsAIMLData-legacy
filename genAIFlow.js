@@ -13,17 +13,6 @@ const parserAI = genkit({
     model: gemini15Flash
 });
 
-const talkerAI = genkit({
-    promptDir: "talkerPrompts",
-    plugins: [
-        googleAI({
-            apiKey: process.env.GOOGLE_GENAI_API_KEY
-        })
-    ],
-    model: gemini15Flash
-});
-
-
 const ParseSchema = parserAI.defineSchema(
     'ParseSchema',
     z.object({
@@ -33,29 +22,7 @@ const ParseSchema = parserAI.defineSchema(
     })
 )
 
-const TalkerSchema = parserAI.defineSchema(
-    'TalkerSchema',
-    z.object({
-        headline: z.string(),
-        bet_details: z.string()
-    })
-)
-
-function calculateHorn(d) {
-    var perBetAmount = d.amount / 4;
-    d.full_payout = 0;
-    d.still_up_payout = 0;
-
-    if (d.roll == 3 || d.roll == 11) {
-        d.full_payout = perBetAmount * 16;
-        d.still_up_payout = d.full_payout - d.amount;
-    } else if (d.roll == 2 || d.roll == 12) {
-        d.full_payout = perBetAmount * 31;
-        d.still_up_payout = d.full_payout - d.amount;
-    };
-}
-
-exports.mainFlow = talkerAI.defineFlow(
+exports.mainFlow = parserAI.defineFlow(
     {
         name: 'mainFlow'
     },
@@ -68,20 +35,6 @@ exports.mainFlow = talkerAI.defineFlow(
 
         console.log("parserAI Generated", parserOutput);
 
-        calculateHorn(parserOutput);
-        parserOutput.message = inputData;
-
-        console.log("parserAI Adjusted", parserOutput);
-
-        const { output: talkerOutput } = await talkerAI.generate({
-            model: gemini15Flash,
-            prompt: parserOutput.message,
-            input: { schema: parserOutput },
-            output: { schema: TalkerSchema },
-        });
-
-        console.log("talkerAI Generated", talkerOutput);
-
-        return talkerOutput
+        return parserOutput
     }
 )
