@@ -31,8 +31,22 @@ FROM HERE:
 
 
 
+
+
+
+
+
 // LEFT OFF HERE
-// Setup firebase vector
+// set up another file for retrieval
+// CONFIRM with a slightly different phrase
+
+// FUTURE
+// migrage over the whole saving questions part to an onCall function
+// set the rules to false, confirm service account still works
+// remove the dep on ios for firebase
+
+
+
 
 
 
