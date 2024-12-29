@@ -22,7 +22,9 @@
     },
     "dependencies": {
         "@genkit-ai/evaluator": "^0.9.12",
+        "@genkit-ai/firebase": "^0.9.12",
         "@genkit-ai/googleai": "^0.9.12",
+        "@genkit-ai/vertexai": "^0.9.12",
         "dotenv": "^16.4.7",
         "firebase-admin": "^13.0.2",
         "genkit": "^0.9.12"

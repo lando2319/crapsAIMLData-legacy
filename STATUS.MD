@@ -1,16 +1,39 @@
 # LATEST
 
+## Vector DB Status
+This is working
+- savePrompt.js is WORKING
+- queryDBForVector.js is WORKING, Ranking, always gives something
 
+- savePromptWithVertex.js is NOT WORKING, permission issue, See Stackoverflow
 
+```
+const docs = await ai.retrieve({
+    retriever,
+    query: question,
+    options: {
+        limit: 3,
+        where: { confirmed: true },
 
+        // Here are some options
+        // k: 2,
+        // preRerankK: 4,
+        // scoreThreshold: 1
+    },
+});
+```
 
+It's always pulling something
 
+TODO: find some way to gague likiness
+    Right now it's ranking well, most similar questions are top
+    But sometimes the question is way off, but still highest ranked
 
+    If I'm answering based on a match, I need to get some kind of likiness score
 
+    Ideally a firebase FieldValue type solution
 
-
-
-
+## Genkit approach
 
 New Plan
 
