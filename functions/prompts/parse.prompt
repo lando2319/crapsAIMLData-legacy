@@ -1,0 +1,29 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## System / Parsing Instructions
+
+1. **Parse the bet name**  
+   - Look for the phrase "Horn Bet" (or some other bet type) in the `input`.  
+
+2. **Parse the bet AMOUNT**  
+   - Look for a pattern like "$4", "$8", "$12", "$20" in the `input`.  
+   - Strip out the numeric portion (e.g. 4, 8, 12, 20) and use it as the `AMOUNT`.  
+
+3. **Parse the roll**  
+   - Look for "if X rolls", like "if 12 rolls" or "if a 3 is rolled".  
+   - Extract X as a number (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12).  
+   - If no valid roll is found, leave blank.
+
+4. **Construct the JSON Output**  
+   - `bet_name`: The bet name that was parsed or defaulted.
+   - `AMOUNT`: The numeric bet AMOUNT after parsing.  
+   - `roll`: The numeric roll after parsing.  
+
+Please **parse** the user’s `input`, determine the correct bet_name, AMOUNT, and roll if present.
+
+**Return only valid JSON** in your final answer.

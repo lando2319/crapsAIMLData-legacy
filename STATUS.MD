@@ -1,5 +1,72 @@
 # LATEST
 
+
+
+
+
+
+LEFT OFF HERE
+- npm i @genkit-ai/firebase
+JUST add to functions
+see if I can do the serve command
+
+firebase deploy https://firebase.google.com/docs/genkit/firebase
+
+
+- get local host going, hello world
+- hit from iOS
+
+THEN
+
+- setup flow
+
+
+SEE MOCKUP
+
+
+
+
+
+THIS SPRINT
+
+Get Deployed
+- First local host
+- onFlow https://firebase.google.com/docs/genkit/deploy-node
+- hit via sdk swift surely it exists
+- no Auth
+- setup AppCheck
+
+App check line shown here
+https://firebase.google.com/docs/genkit/auth#client_integrity
+
+
+# MVP DECLARATION
+
+Swift: "What does a $5 Horn Bet pay if 12 rolls"
+
+CALL
+
+onFlow call to firebase functions
+- run .generate get json
+- set to db as vector
+    - response json
+    - original question
+    - embedding
+
+- return firestore index
+
+RESPONSE
+
+Swift 
+- Runs Local Models
+- uses the json to answer question
+- Shows data and images
+- Updates db
+    - final answer
+    - local model data
+
+Pour over local model data to continually improve
+
 ## Vector DB Status
 This is working
 - savePrompt.js is WORKING
