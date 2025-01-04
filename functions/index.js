@@ -15,22 +15,21 @@ const { onFlow, noAuth } = require("@genkit-ai/firebase/functions");
 const { initializeApp } = require('firebase-admin/app');
 
 const { googleAI, gemini15Flash } = require("@genkit-ai/googleai");
-
 const { genkit, z } = require('genkit');
-
 const localSecrets = require("./secrets/secrets.json");
 
 
-// LEFT OFF HERE
-// Get this deployed 100%
-
-// - run the deployment command
-// - see if I can hit it with postman live
 // - connect to onFlow clientside
 //  - confirm I'm getting json
 
-// DONE
-// - try and hit it locally with postman
+// THEN
+// - setup the firestore vector stuff
+// - setup the firestore update via index stuff
+
+
+// SPRINT
+// Get the full flow 
+// app => functions (gen, retrieve, embed, add, return index and json) => app updates doc locally grabbed data
 
 
 initializeApp({

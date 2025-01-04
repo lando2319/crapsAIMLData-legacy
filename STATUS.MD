@@ -4,7 +4,6 @@
 
 
 
-
 LEFT OFF HERE
 - npm i @genkit-ai/firebase
 JUST add to functions
