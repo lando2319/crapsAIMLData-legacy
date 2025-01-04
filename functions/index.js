@@ -75,7 +75,7 @@ exports.parseAnswer = onFlow(
     async (inputData) => {
         try {
             console.log("Incoming Question", inputData);
-            const { output: parsedOutput } = await ai.generate({
+            var { output: parsedOutput } = await ai.generate({
                 model: gemini15Flash,
                 prompt: inputData,
                 output: { schema: ParseSchema }
@@ -107,12 +107,16 @@ exports.parseAnswer = onFlow(
 
             console.log("ai successfully embedded question, adding to firestore");
 
-            await firestore.collection("questions").add({
+            var dbResponse = await firestore.collection("questions").add({
                 "question": inputData,
                 "embedding": FieldValue.vector(embedding),
                 "parsedOutput": parsedOutput,
                 "confirmed": true
             });
+
+            parsedOutput.firestoreID = dbResponse.id;
+
+            console.log("ai successfully added question to firestore", parsedOutput.firestoreID);
 
             return parsedOutput;
         } catch (err) {

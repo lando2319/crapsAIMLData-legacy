@@ -35,7 +35,7 @@ const retriever = defineFirestoreRetriever(ai, {
     distanceMeasure: 'COSINE'
 });
 
-var question = "this thing also went boom over here";
+var question = "How much does a $12 Horn Bet pay if 12 rolls";
 
 (async () => {
     try {

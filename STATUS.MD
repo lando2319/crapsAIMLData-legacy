@@ -5,34 +5,19 @@
 
 
 LEFT OFF HERE
-- npm i @genkit-ai/firebase
-JUST add to functions
-see if I can do the serve command
-
-firebase deploy https://firebase.google.com/docs/genkit/firebase
-
-
-- get local host going, hello world
-- hit from iOS
+MILESTONE MET
+- Set up the return index move
+- Connect with API via live endpoint on Swift
+- Connect with localhost on Swift
+- Make a Readme with instructions for this operation
 
 THEN
 
-- setup flow
+- Back to Long Slog
+- Finish all Bets
 
+THEN
 
-SEE MOCKUP
-
-
-
-
-
-THIS SPRINT
-
-Get Deployed
-- First local host
-- onFlow https://firebase.google.com/docs/genkit/deploy-node
-- hit via sdk swift surely it exists
-- no Auth
 - setup AppCheck
 
 App check line shown here
