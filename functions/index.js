@@ -7,17 +7,24 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-const {onRequest} = require("firebase-functions/v2/https");
+const { onRequest } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 
 const { onFlow, noAuth } = require("@genkit-ai/firebase/functions");
 
 const { initializeApp } = require('firebase-admin/app');
+const { getFirestore, FieldValue } = require('firebase-admin/firestore');
 
-const { googleAI, gemini15Flash } = require("@genkit-ai/googleai");
+const { googleAI, gemini15Flash, textEmbeddingGecko001 } = require("@genkit-ai/googleai");
 const { genkit, z } = require('genkit');
+
+const { defineFirestoreRetriever } = require('@genkit-ai/firebase');
+
 const localSecrets = require("./secrets/secrets.json");
 
+const app = initializeApp();
+
+const firestore = getFirestore(app);
 
 // - connect to onFlow clientside
 //  - confirm I'm getting json
@@ -32,9 +39,6 @@ const localSecrets = require("./secrets/secrets.json");
 // app => functions (gen, retrieve, embed, add, return index and json) => app updates doc locally grabbed data
 
 
-initializeApp({
-    projectId: 'crapsai-72b89',
-});
 
 const ai = genkit({
     plugins: [
@@ -52,6 +56,16 @@ const ParseSchema = ai.defineSchema(
     })
 )
 
+const retriever = defineFirestoreRetriever(ai, {
+    name: 'questionRetriever',
+    firestore,
+    collection: 'questions',
+    contentField: 'question',
+    vectorField: 'embedding',
+    embedder: textEmbeddingGecko001,
+    distanceMeasure: 'COSINE'
+});
+
 exports.parseAnswer = onFlow(
     ai,
     {
@@ -59,17 +73,52 @@ exports.parseAnswer = onFlow(
         authPolicy: noAuth()
     },
     async (inputData) => {
-        console.log("GOT THAT INPUT");
-        console.log(inputData);
-        const { output: parsedOutput } = await ai.generate({
-            model: gemini15Flash,
-            prompt: inputData,
-            output: { schema: ParseSchema }
-        })
+        try {
+            console.log("Incoming Question", inputData);
+            const { output: parsedOutput } = await ai.generate({
+                model: gemini15Flash,
+                prompt: inputData,
+                output: { schema: ParseSchema }
+            })
 
-        console.log("ai Generated", parsedOutput);
+            console.log("ai Parsed as", parsedOutput);
 
-        return parsedOutput;
+            console.log("ai retrieving question");
+            const docs = await ai.retrieve({
+                retriever,
+                query: inputData,
+                options: {
+                    limit: 3,
+                    where: { confirmed: true }
+                },
+            });
+            console.log("ai retrieved question");
+
+            docs.forEach(doc => {
+                console.log(doc.content);
+            })
+
+            console.log("ai successfully retrieved question, embedding question");
+
+            const embedding = await ai.embed({
+                embedder: textEmbeddingGecko001,
+                content: inputData
+            });
+
+            console.log("ai successfully embedded question, adding to firestore");
+
+            await firestore.collection("questions").add({
+                "question": inputData,
+                "embedding": FieldValue.vector(embedding),
+                "parsedOutput": parsedOutput,
+                "confirmed": true
+            });
+
+            return parsedOutput;
+        } catch (err) {
+            console.error(err)
+            return err
+        }
     }
 )
 
@@ -77,7 +126,7 @@ exports.parseAnswer = onFlow(
 // https://firebase.google.com/docs/functions/get-started
 
 exports.helloWorld = onRequest((request, response) => {
-  logger.info("Hello logs!", {structuredData: true});
-  response.send("Hello from Firebase!");
+    logger.info("Hello logs!", { structuredData: true });
+    response.send("Hello from Firebase!");
 });
 
