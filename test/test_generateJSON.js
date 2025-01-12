@@ -9,6 +9,8 @@ describe("Testing generateJSON", function () {
             "$5",
             "",
             6,
+            0,
+            0,
             ""
         );
 
@@ -23,6 +25,8 @@ describe("Testing generateJSON", function () {
             "5 DOLLARS",
             "",
             6,
+            0,
+            0,
             ""
         );
 
@@ -37,6 +41,8 @@ describe("Testing generateJSON", function () {
             "",
             "",
             6,
+            0,
+            0,
             ""
         );
 
@@ -51,6 +57,8 @@ describe("Testing generateJSON", function () {
             "",
             "",
             6,
+            0,
+            0,
             ""
         );
 
@@ -65,6 +73,8 @@ describe("Testing generateJSON", function () {
             "",
             "$20",
             6,
+            0,
+            0,
             ""
         );
 
@@ -80,6 +90,8 @@ describe("Testing generateJSON", function () {
             "$20",
             "$20",
             6,
+            0,
+            0,
             ""
         );
 
@@ -94,6 +106,8 @@ describe("Testing generateJSON", function () {
             "$20",
             "$20",
             6,
+            0,
+            0,
             ""
         );
 
@@ -108,6 +122,8 @@ describe("Testing generateJSON", function () {
             "$20",
             "$20",
             6,
+            0,
+            0,
             "6"
         );
 
@@ -122,6 +138,8 @@ describe("Testing generateJSON", function () {
             "$5",
             "$10",
             5,
+            0,
+            0,
             ""
         );
 
@@ -130,4 +148,37 @@ describe("Testing generateJSON", function () {
     })
 
     // do one where amount and odds are the same number
+
+    it('With with _die1_ as 2 should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_DIE1_",
+            "dud",
+            "",
+            "",
+            6,
+            2,
+            4,
+            ""
+        );
+
+        assert.deepEqual(entry.tokens, ["2"]);
+        assert.deepEqual(entry.labels, ["DIE"]);
+    })
+
+    // This format might need to be updated, if all the entry are in a different format
+    it('With with _die1_ - _die2_ as 2-4 should produce proper entry', function () {
+        var entry = generateJSON.genearateTokensAndLabels(
+            "_DIE1_ - _DIE2_",
+            "dud",
+            "",
+            "",
+            6,
+            2,
+            4,
+            ""
+        );
+
+        assert.deepEqual(entry.tokens, ["2", "-", "4"]);
+        assert.deepEqual(entry.labels, ["DIE", "NONE", "DIE"]);
+    })
 })

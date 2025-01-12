@@ -27,6 +27,16 @@ function logThis(log, loggit) {
     }
 };
 
+const waysToMake = {
+    4:[[1,3], [2,2]],
+    5:[[1,4], [2,3]],
+    6:[[1,5], [2,4], [3,3]],
+    7:[[1,6], [2,5], [3,4]],
+    8:[[2,6], [3,5], [4,4]],
+    9:[[3,6], [4,5]],
+    10:[[4,6]]
+}
+
 function generateWordTagging(gameElements, loggit) {
     const jsonToGo = [];
 
@@ -42,7 +52,9 @@ function generateWordTagging(gameElements, loggit) {
 
             if (betPhraseTemplate.includes("_POINT_") && !isLineBet) {
                 return
-            }
+            };
+
+            var isHop = betNamePkg.name.includes("Hopping");
 
             for (let roll = 2; roll <= 12; roll++) {
                 let amounts = [
@@ -55,7 +67,23 @@ function generateWordTagging(gameElements, loggit) {
                 ];
 
                 amounts.forEach((betAmount) => {
-                    if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
+                    if (betPhraseTemplate.includes("_DIE1_")) {
+                        if (isHop && roll > 3 && roll < 11) {
+                            waysToMake[roll].forEach(wayToMake => {
+                                var entry = genearateTokensAndLabels(
+                                    betPhraseTemplate,
+                                    betNamePkg.name,
+                                    betAmount,
+                                    "",
+                                    roll,
+                                    wayToMake[0],
+                                    wayToMake[1],
+                                    0
+                                );
+                                jsonToGo.push(entry);
+                            });
+                        }
+                    } else if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
                         ["4", "5", "6", "8", "9", "10"].forEach(point => {
                             applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo);
                         })
@@ -70,7 +98,6 @@ function generateWordTagging(gameElements, loggit) {
     return jsonToGo;
 }
 
-
 function applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo) {
     if (betPhraseTemplate.includes("_ODDS_") && betNamePkg.hasOdds) {
         ["$10", "$20", "$30"].forEach((oddsAmount) => {
@@ -80,6 +107,8 @@ function applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonTo
                 betAmount,
                 oddsAmount,
                 roll,
+                0,
+                0,
                 point
             );
             jsonToGo.push(entry);
@@ -91,6 +120,8 @@ function applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonTo
             betAmount,
             "",
             roll,
+            0,
+            0,
             point
         );
         jsonToGo.push(entry);
@@ -99,7 +130,7 @@ function applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonTo
 }
 
 
-function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount, roll, point) {
+function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount, roll, die1, die2, point) {
     const betNameTokens = betName.split(/\s+/);
     const oddsTokens = oddsAmount.split(/\s+/);
     const amountTokens = betAmount.split(/\s+/);
@@ -150,6 +181,12 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
         } else if (token == "_POINT_") {
             labels.push("POINT");
             tokens.push(point);
+        } else if (token == "_DIE1_") {
+            labels.push("DIE");
+            tokens.push(die1.toString());
+        } else if (token == "_DIE2_") {
+            labels.push("DIE");
+            tokens.push(die2.toString());
         } else {
             labels.push("NONE");
             tokens.push(token);

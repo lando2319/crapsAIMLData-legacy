@@ -200,6 +200,74 @@
             "NONE",
             "NONE"
         ]
+    },
+    {
+        "tokens": [
+            "WITH",
+            "A",
+            "$5",
+            "3-4",
+            "HOPPING",
+            "WHAT",
+            "HAPPENS",
+            "IF",
+            "7",
+            "ROLLS",
+            "AS",
+            "5",
+            "-",
+            "2"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "NONE",
+            "ROLL",
+            "NONE",
+            "NONE",
+            "DIE",
+            "NONE",
+            "DIE"
+        ]
+    },
+    {
+        "tokens": [
+            "WITH",
+            "A",
+            "$5",
+            "3-6",
+            "HOPPING",
+            "WHAT",
+            "HAPPENS",
+            "IF",
+            "9",
+            "ROLLS",
+            "AS",
+            "5",
+            "-",
+            "4"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "NONE",
+            "ROLL",
+            "NONE",
+            "NONE",
+            "DIE",
+            "NONE",
+            "DIE"
+        ]
     }
 
 ]

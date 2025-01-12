@@ -1,23 +1,28 @@
 # LATEST
 
 
+LEFT OFF HERE
+- Implement rollDie1 rollDie2
+    - genkit
+        - need to expand .prompt files
+- add final bet list to .prompt file
+
+THEN
+
+- add activity indicator
+- QA Each bet one by one
+    - make sure genkit can capture
+    - QA the response
+    - Get specs for image, "Props Section Arrow on Hardways", make a huge list
+    - QA Follow up questions, sensible with answers ready
+
 
 
 
 LEFT OFF HERE
 MILESTONE MET
-- Set up the return index move
-- Connect with API via live endpoint on Swift
-- Connect with localhost on Swift
 - Make a Readme with instructions for this operation
-
-THEN
-
-- Back to Long Slog
-- Finish all Bets
-
-THEN
-
+- Might need to have proprocessor exception to split "8 rolled as 2-4" split the "2-4" into "2 - 4"
 - setup AppCheck
 
 App check line shown here
