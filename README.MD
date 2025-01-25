@@ -8,3 +8,7 @@ npm file for generating file for training data and the latest training data
 
 TODO Test cases
 `"text": "If a Twelve is rolled, does a the Field Bet pay double?",`
+
+For GenKitUI
+From within functions dir
+> npx genkit start -o -- node --watch index.js

@@ -52,7 +52,11 @@ const ParseSchema = ai.defineSchema(
     z.object({
         bet_name: z.string(),
         amount: z.number(),
-        roll: z.number()
+        roll: z.number(),
+        rollDie1: z.number(),
+        rollDie2: z.number(),
+        odds: z.number(),
+        point: z.number()
     })
 )
 
@@ -83,40 +87,42 @@ exports.parseAnswer = onFlow(
 
             console.log("ai Parsed as", parsedOutput);
 
-            console.log("ai retrieving question");
-            const docs = await ai.retrieve({
-                retriever,
-                query: inputData,
-                options: {
-                    limit: 3,
-                    where: { confirmed: true }
-                },
-            });
-            console.log("ai retrieved question");
+            // OFF DURING QA FOR GENKIT
 
-            docs.forEach(doc => {
-                console.log(doc.content);
-            })
+            // console.log("ai retrieving question");
+            // const docs = await ai.retrieve({
+            //     retriever,
+            //     query: inputData,
+            //     options: {
+            //         limit: 3,
+            //         where: { confirmed: true }
+            //     },
+            // });
+            // console.log("ai retrieved question");
 
-            console.log("ai successfully retrieved question, embedding question");
+            // docs.forEach(doc => {
+            //     console.log(doc.content);
+            // })
 
-            const embedding = await ai.embed({
-                embedder: textEmbeddingGecko001,
-                content: inputData
-            });
+            // console.log("ai successfully retrieved question, embedding question");
 
-            console.log("ai successfully embedded question, adding to firestore");
+            // const embedding = await ai.embed({
+            //     embedder: textEmbeddingGecko001,
+            //     content: inputData
+            // });
 
-            var dbResponse = await firestore.collection("questions").add({
-                "question": inputData,
-                "embedding": FieldValue.vector(embedding),
-                "parsedOutput": parsedOutput,
-                "confirmed": true
-            });
+            // console.log("ai successfully embedded question, adding to firestore");
 
-            parsedOutput.firestoreID = dbResponse.id;
+            // var dbResponse = await firestore.collection("questions").add({
+            //     "question": inputData,
+            //     "embedding": FieldValue.vector(embedding),
+            //     "parsedOutput": parsedOutput,
+            //     "confirmed": true
+            // });
 
-            console.log("ai successfully added question to firestore", parsedOutput.firestoreID);
+            // parsedOutput.firestoreID = dbResponse.id;
+
+            // console.log("ai successfully added question to firestore", parsedOutput.firestoreID);
 
             return parsedOutput;
         } catch (err) {

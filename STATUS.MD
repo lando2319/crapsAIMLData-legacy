@@ -2,9 +2,27 @@
 
 
 LEFT OFF HERE
-- Implement rollDie1 rollDie2
-    - genkit
-        - need to expand .prompt files
+- QA TOP TO BOTTOM
+    - Horn Bet
+    - Hop Bet
+
+TODO:
+Incoming Question What happens to my $4 Pass Line Bet with $10 odds with a Point of 6 if 6 rolls
+ai Parsed as {
+  amount: 4,
+  bet_name: 'Pass Line Bet',
+  odds: 10,
+  point: 6,
+  roll: 6,
+  rollDie1: 3,
+  rollDie2: 3
+}
+
+For some reason it's picking up 3-3 for how it came
+
+
+-----------------------------------------------
+
 - add final bet list to .prompt file
 
 THEN
