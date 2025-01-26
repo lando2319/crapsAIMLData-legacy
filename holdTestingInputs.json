@@ -1,8 +1,0 @@
-{
-  "samples": [
-    {
-      "input": "How much does a $8 Horn Bet pay if 12 rolls",
-      "reference": "A $8 Horn Bet pays 62 and down if a 12 rolls"
-    }
-  ]
-}

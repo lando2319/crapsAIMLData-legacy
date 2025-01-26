@@ -1,0 +1,80 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse
+
+INPUT: "How much does a $8 Horn Bet pay if 12 rolls"
+OUTPUT: 
+{
+   "amount": 8,
+   "bet_name": "Horn Bet",
+   "odds": 0, <-- INPUT HAS NO ODDS SO IT'S 0
+   "point": 0,
+   "roll": 12,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my Horn Bet if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Horn Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Pass Line work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Pass Line",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Pass Line work if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Pass Line",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my Pass Line with a point of 4 if 7 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Pass Line",
+   "odds": 0,
+   "point": 4,
+   "roll": 7,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What does a $5 Pass Line Bet with $40 odds with a Point of 5 if 5 rolls"
+OUTPUT: 
+{
+   "amount": 5,
+   "bet_name": "Pass Line",
+   "odds": 40,
+   "point": 5,
+   "roll": 5,
+   "rollDie1": 0,
+   "rollDie2": 0
+}

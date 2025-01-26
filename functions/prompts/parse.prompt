@@ -19,11 +19,58 @@ output:
    - Extract X as a number (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12).  
    - If no valid roll is found, leave blank.
 
-4. **Construct the JSON Output**  
+4. **Parse rollDie1 and rollDie2 'how it came'**  
+   - There are two dice in Craps so sometimes a user might inquire about how the Dice came, "If a 6 rolled as a 4 and a 2", these numbers should add up to the total dice roll.  
+   - These variable are rollDie1 and rollDie2
+   - Extract X as a number (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, or 12).  
+   - If no valid rollDie1 and rollDie2 is found, leave blank.
+
+5. **Parse the odds**  
+   - Look for "with 10 odds", like "If I have a Pass Line with 10 odds".  
+   - Look for a pattern like "$4", "$8", "$12", "$20" in the `input`.  
+   - Strip out the numeric portion (e.g. 4, 8, 12, 20) and use it as the `odds`.  
+   - Odds should be 0 unless explicitly stated in the input
+   - A message like, "How much does a Horn Bet pay if 12 rolls" does NOT have odds in the message and should be marked as 0 odds.
+
+6. **Parse the point**  
+   - Look for "with a Point of 6", like "What happens to my Pass Line with a Point of 5".  
+   - Extract X as a number (4, 5, 6, 8, 9, 10), The Point will be one of those numbers only.  
+   - If no valid point is found, leave blank.
+
+7. **Construct the JSON Output**  
    - `bet_name`: The bet name that was parsed or defaulted.
    - `AMOUNT`: The numeric bet AMOUNT after parsing.  
    - `roll`: The numeric roll after parsing.  
+   - `rollDie1`: The numberic value for rollDie1
+   - `rollDie2`: The numberic value for rollDie2
+   - `odds`: The numeric bet ODDS after parsing.  
+   - `point`: The numeric point after parsing.  
 
-Please **parse** the user’s `input`, determine the correct bet_name, AMOUNT, and roll if present.
+
+Here is an example:
+
+INPUT: "How much does a $8 Horn Bet pay if 12 rolls"
+OUTPUT: 
+{
+   "amount": 8,
+   "bet_name": "Horn Bet",
+   "odds": 0, <-- INPUT HAS NO ODDS SO IT'S 0
+   "point": 0,
+   "roll": 12,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+
+Please **parse** the user’s `input`, determine the correct bet_name, AMOUNT, roll, rollDie1, rollDie2, odds, and point if present.
 
 **Return only valid JSON** in your final answer.
+
+## Strict Output Rules
+
+- Do **not** guess or hallucinate values not provided in `input`.
+- If the user’s `input` doesn’t mention **odds**, set `odds` to `0`.
+- If the user’s `input` doesn’t mention **point**, set `point` to `0`.
+- If the user’s `input` doesn’t mention how the dice came (rollDie1/rollDie2), set them to `0`.
+- Output **only** a JSON object matching the schema. No additional commentary.
+- **Never** fill in an odds value greater than 0 unless the user explicitly states a numeric odds.

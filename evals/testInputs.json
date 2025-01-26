@@ -1,8 +1,0 @@
-{
-  "samples": [
-    {
-      "input": "{\"message\":\"How much does a $8 Horn Bet pay if 12 rolls\"}",
-      "reference": "{\"headline\":\"A $8 Horn Bet pays 62 and down if a 12 rolls.\",\"bet_details\":\"...\",\"amount\":8,\"full_payout\":62,\"still_up_payout\":54,\"bet_name\":\"Horn Bet\"}"
-    }
-  ]
-}

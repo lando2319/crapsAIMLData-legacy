@@ -4,6 +4,9 @@ const { gemini15Flash, googleAI, textEmbeddingGecko001 } = require('@genkit-ai/g
 const { genkitEval, GenkitMetric } = require('@genkit-ai/evaluator');
 const { genkit, z } = require('genkit');
 
+// For referrence this is how I had the testing setup
+// Untested, but it initialized
+
 const ai = genkit({
     plugins: [
         googleAI({
@@ -21,22 +24,3 @@ const ai = genkit({
     ],
     model: gemini15Flash
 });
-
-const BetSchema = ai.defineSchema(
-    'BetSchema',
-    z.object({
-        headline: z.string(),
-        bet_details: z.string(),
-        amount: z.number(),
-        full_payout: z.number(),
-        still_up_payout: z.number(),
-        bet_name: z.string()
-    })
-)
-
-const InputSchema = ai.defineSchema(
-    'InputSchema',
-    z.object({
-        message: z.string()
-    })
-)

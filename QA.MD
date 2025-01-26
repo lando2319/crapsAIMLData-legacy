@@ -6,8 +6,39 @@ Function URL (parseAnswer(us-central1)): https://parseanswer-4fifjrvc3a-uc.a.run
 Function URL (helloWorld(us-central1)): https://helloworld-4fifjrvc3a-uc.a.run.app
 
 BETS TO QA
-- Pass Line
-- Pass Line Odds
+
+
+
+
+
+- These go in Postman
+- Pass Line / Odds
+    // "How does the Pass Line work"
+    // "How does the Pass Line work if a 6 rolls"
+    // "How does the Pass Line work if a 2 rolls"
+    // "How does the Pass Line work if a 7 rolls"
+    // "If the Point is 4 and a 6 rolls what happens"
+    // "If the Point is 4 and a 4 rolls what happens"
+    // "If the Point is 4 and a 7 rolls what happens"
+    // "What happens to my $5 Pass Line with $10 odds with the Point is 4 if 6 rolls"
+    // "What happens to my $5 Pass Line with $10 odds with the Point is 4 if 7 rolls"
+    // "What happens to my $5 Pass Line with $10 odds with the Point is 4 if 4 rolls"
+
+
+LEFT OFF HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Don't Pass Line
 - Don't Pass Line Odds
 - Field
