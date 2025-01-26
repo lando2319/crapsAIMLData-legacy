@@ -5,7 +5,39 @@
 Function URL (parseAnswer(us-central1)): https://parseanswer-4fifjrvc3a-uc.a.run.app
 Function URL (helloWorld(us-central1)): https://helloworld-4fifjrvc3a-uc.a.run.app
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+LEFT OFF HERE
+Here's the plan for QA
+- Bet BY Bet
+    - make 1-5 postman tests
+    - mirror postman tests on parsedExamples.prompt
+    - confirm tests on iOS
+
+    - LIVE test the top 5 prompts
+    - finalize images
+
+
+
+
 BETS TO QA
+- Pass Line / Odds
+
+
+
+
+
 
 
 

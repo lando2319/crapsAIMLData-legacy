@@ -7,6 +7,8 @@ output:
 
 ## These are example of how to parse
 
+# Horn Bet examples
+
 INPUT: "How much does a $8 Horn Bet pay if 12 rolls"
 OUTPUT: 
 {
@@ -75,6 +77,70 @@ OUTPUT:
    "odds": 40,
    "point": 5,
    "roll": 5,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+# Pass Line examples
+
+INPUT: "What does a $10 Pass Line Bet with $50 odds with a Point of 5 if 7 rolls"
+OUTPUT: 
+{
+   "amount": 10,
+   "bet_name": "Pass Line",
+   "odds": 50,
+   "point": 5,
+   "roll": 7,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+# Hop Bet Examples
+
+INPUT: "How does the 2-3 Hopping Bet work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "2-3 Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my 2-4 Hopping bet if a 6 rolls as 5-1"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "2-4 Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 5,
+   "rollDie2": 1
+}
+
+INPUT: "What happens to my 2-4 Hopping bet if a 6 rolls as a 3 and a 3"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "2-4 Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 3,
+   "rollDie2": 3
+}
+
+INPUT: "If I roll a 2, does my 2-3 Hopping Bet win"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "2-3 Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 2,
    "rollDie1": 0,
    "rollDie2": 0
 }

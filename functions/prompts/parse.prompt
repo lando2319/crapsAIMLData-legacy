@@ -74,3 +74,9 @@ Please **parse** the user’s `input`, determine the correct bet_name, AMOUNT, r
 - If the user’s `input` doesn’t mention how the dice came (rollDie1/rollDie2), set them to `0`.
 - Output **only** a JSON object matching the schema. No additional commentary.
 - **Never** fill in an odds value greater than 0 unless the user explicitly states a numeric odds.
+
+**Double Check**:
+- If the user did not mention 'odds', set "odds": 0
+- If the user did not mention the point, set "point": 0
+- If the user did not mention how the dice came, set "rollDie1": 0 and "rollDie2": 0
+- Return only the fields in the schema with no additional properties or text.
