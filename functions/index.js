@@ -21,6 +21,7 @@ const { genkit, z } = require('genkit');
 const { defineFirestoreRetriever } = require('@genkit-ai/firebase');
 
 const localSecrets = require("./secrets/secrets.json");
+var postProcess = require("./util/postProcess.js")
 
 const app = initializeApp();
 
@@ -87,6 +88,9 @@ exports.parseAnswer = onFlow(
 
             console.log("ai Parsed as", parsedOutput);
 
+            var cleanData = postProcess.run(inputData, parsedOutput, "postProcess");
+
+
             // OFF DURING QA FOR GENKIT
 
             // console.log("ai retrieving question");
@@ -124,7 +128,8 @@ exports.parseAnswer = onFlow(
 
             // console.log("ai successfully added question to firestore", parsedOutput.firestoreID);
 
-            return parsedOutput;
+            // return parsedOutput;
+            return cleanData;
         } catch (err) {
             console.error(err)
             return err
