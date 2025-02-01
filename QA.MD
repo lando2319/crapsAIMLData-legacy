@@ -24,21 +24,22 @@ Here's the plan for QA
     - make 1-5 postman tests
     - mirror postman tests on parsedExamples.prompt
     - confirm tests on iOS
-
     - LIVE test the top 5 prompts
     - finalize images
 
+TESTS in Three Places
+- postman
+- iOS
+- parsedExamples.prompt
 
+
+// LEFT OFF HERE
+// - deploy
+// - I guess try using cleanData in that if statement
 
 
 BETS TO QA
 - Pass Line / Odds
-
-
-
-
-
-
 
 
 
@@ -61,6 +62,10 @@ LEFT OFF HERE
 
 
 
+            // TODO:
+            // Make sure there is training data for
+            // "If the Point is 4 and a 4 rolls what happens to my Pass Line"
+            // No amount just point and roll
 
 
 

@@ -33,68 +33,6 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "How does the Pass Line work"
-OUTPUT: 
-{
-   "amount": 0,
-   "bet_name": "Pass Line",
-   "odds": 0,
-   "point": 0,
-   "roll": 0,
-   "rollDie1": 0,
-   "rollDie2": 0
-}
-
-INPUT: "How does the Pass Line work if a 6 rolls"
-OUTPUT: 
-{
-   "amount": 0,
-   "bet_name": "Pass Line",
-   "odds": 0,
-   "point": 0,
-   "roll": 6,
-   "rollDie1": 0,
-   "rollDie2": 0
-}
-
-INPUT: "What happens to my Pass Line with a point of 4 if 7 rolls"
-OUTPUT: 
-{
-   "amount": 0,
-   "bet_name": "Pass Line",
-   "odds": 0,
-   "point": 4,
-   "roll": 7,
-   "rollDie1": 0,
-   "rollDie2": 0
-}
-
-INPUT: "What does a $5 Pass Line Bet with $40 odds with a Point of 5 if 5 rolls"
-OUTPUT: 
-{
-   "amount": 5,
-   "bet_name": "Pass Line",
-   "odds": 40,
-   "point": 5,
-   "roll": 5,
-   "rollDie1": 0,
-   "rollDie2": 0
-}
-
-# Pass Line examples
-
-INPUT: "What does a $10 Pass Line Bet with $50 odds with a Point of 5 if 7 rolls"
-OUTPUT: 
-{
-   "amount": 10,
-   "bet_name": "Pass Line",
-   "odds": 50,
-   "point": 5,
-   "roll": 7,
-   "rollDie1": 0,
-   "rollDie2": 0
-}
-
 # Hop Bet Examples
 
 INPUT: "How does the 2-3 Hopping Bet work"
