@@ -1,0 +1,68 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Don't Pass Line Bet
+
+INPUT: "How does the Don't Pass Line work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Don't Pass Line",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Don't Pass Line work if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Don't Pass Line",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my Don't Pass Line with a point of 4 if 7 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Don't Pass Line",
+   "odds": 0,
+   "point": 4,
+   "roll": 7,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What does a $5 Don't Pass Line Bet with $40 odds with a Point of 5 if 5 rolls"
+OUTPUT: 
+{
+   "amount": 5,
+   "bet_name": "Don't Pass Line",
+   "odds": 40,
+   "point": 5,
+   "roll": 5,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What does a $10 Don't Pass Line Bet with $50 odds with a Point of 5 if 7 rolls"
+OUTPUT: 
+{
+   "amount": 10,
+   "bet_name": "Don't Pass Line",
+   "odds": 50,
+   "point": 5,
+   "roll": 7,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
