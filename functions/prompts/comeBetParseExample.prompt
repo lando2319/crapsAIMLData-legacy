@@ -1,0 +1,68 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Come Bet Bet
+
+INPUT: "How does the Come Bet work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Come Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Come Bet work if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Come Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If the Come Bet is on the 4 and a 6 rolls what happens"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Come Bet on 4",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $5 Come Bet on 4 with $10 odds if 6 rolls"
+OUTPUT: 
+{
+   "amount": 5,
+   "bet_name": "Come Bet on 4",
+   "odds": 10,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $5 Come Bet on 4 with $10 odds if 7 rolls"
+OUTPUT: 
+{
+   "amount": 5,
+   "bet_name": "Come Bet on 4",
+   "odds": 10,
+   "point": 0,
+   "roll": 7,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
