@@ -5,13 +5,13 @@ output:
     ParseSchema
 ---
 
-## These are example of how to parse Don't Come Bet
+## These are example of how to parse Place Bet
 
-INPUT: "How does the Don't Come Bet work"
+INPUT: "How does the Place Bet work"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Don't Come Bet",
+   "bet_name": "Place Bet",
    "odds": 0,
    "point": 0,
    "roll": 0,
@@ -19,11 +19,11 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "How does the Don't Come Bet work if a 6 rolls"
+INPUT: "How does the Place Bet work if a 6 rolls"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Don't Come Bet",
+   "bet_name": "Place Bet",
    "odds": 0,
    "point": 0,
    "roll": 6,
@@ -31,11 +31,11 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "If the Don't Come Bet is on the 4 and a 6 rolls what happens"
+INPUT: "If the Place Bet is on the 4 and a 6 rolls what happens"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Don't Come Bet on 4",
+   "bet_name": "Place Bet on 4",
    "odds": 0,
    "point": 0,
    "roll": 6,
@@ -43,24 +43,24 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Don't Come Bet on 4 with $10 odds if 6 rolls"
+INPUT: "What happens to my $5 Place Bet on 4 and a 6 rolls"
 OUTPUT: 
 {
    "amount": 5,
-   "bet_name": "Don't Come Bet on 4",
-   "odds": 10,
+   "bet_name": "Place Bet on 4",
+   "odds": 0,
    "point": 0,
    "roll": 6,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Don't Come Bet on 4 with $10 odds if 7 rolls"
+INPUT: "What happens to my $5 Place Bet on 4 if 7 rolls"
 OUTPUT: 
 {
    "amount": 5,
-   "bet_name": "Don't Come Bet on 4",
-   "odds": 10,
+   "bet_name": "Place Bet on 4",
+   "odds": 0,
    "point": 0,
    "roll": 7,
    "rollDie1": 0,
