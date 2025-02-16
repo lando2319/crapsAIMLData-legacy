@@ -3,7 +3,7 @@
 
 ## TWO MODELS
 
-### Tagger
+### Tagger Model
 
 This used to parse a sentence into the needed elements
 

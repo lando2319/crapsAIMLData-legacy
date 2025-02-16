@@ -18,5 +18,9 @@
     {
         "text":"WORLD BET",
         "label":"worldBet"
+    },
+    {
+        "text":"BUY BET ON 4",
+        "label":"buyBet4"
     }
 ]
