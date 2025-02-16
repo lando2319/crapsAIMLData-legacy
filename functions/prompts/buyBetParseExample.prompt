@@ -1,0 +1,72 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Buy Bets
+
+Buy bets are placed on two numbers 4 and 10
+"Buy Bet on 10", "Buy Bet on 4"
+These should be captured as the bet_name
+
+INPUT: "How does the Buy Bet work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Buy Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Buy Bet work if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Buy Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I have a Buy Bet on the 4 and a 6 rolls what happens"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Buy Bet on 4",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $20 Buy Bet on 4 and a 6 rolls"
+OUTPUT: 
+{
+   "amount": 20,
+   "bet_name": "Buy Bet on 4",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $30 Buy Bet on 4 if 7 rolls"
+OUTPUT: 
+{
+   "amount": 30,
+   "bet_name": "Buy Bet on 4",
+   "odds": 0,
+   "point": 0,
+   "roll": 7,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
