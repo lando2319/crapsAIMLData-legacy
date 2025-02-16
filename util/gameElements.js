@@ -158,6 +158,16 @@ module.exports.betNames = [
         min:5
     },
     {
+        slug: "buyBet4",
+        name: "Buy Bet on 4",
+        min:20
+    },
+    {
+        slug: "buyBet10",
+        name: "Buy Bet on 10",
+        min:20
+    },
+    {
         slug: "comeBet4",
         name: "Come Bet on 4",
         hasOdds: true,

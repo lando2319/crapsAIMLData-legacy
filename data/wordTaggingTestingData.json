@@ -268,6 +268,36 @@
             "NONE",
             "DIE"
         ]
+    },
+    {
+        "tokens": [
+            "WITH",
+            "A",
+            "$25",
+            "BUY",
+            "BET",
+            "ON",
+            "4",
+            "WHAT",
+            "HAPPENS",
+            "IF",
+            "9",
+            "ROLLS"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "AMOUNT",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "BET_NAME",
+            "NONE",
+            "NONE",
+            "NONE",
+            "ROLL",
+            "NONE"
+        ]
     }
 
 ]
