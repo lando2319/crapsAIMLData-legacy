@@ -9,12 +9,12 @@ var gameElements = require('./util/gameElements.js');
     try {
 
         console.log(loggit, "Generating Training Data for Bet Names");
-        var jsonToGo = generateJSON.generateBetNamesForWordTagging(gameElements, loggit);
+        var jsonToGo = generateJSON.generateBetNames(gameElements, loggit);
         
-        console.log(loggit, "Generating File betNamesTrainingDataForWordTagging.json")
-        await fs.promises.writeFile("./data/betNamesTrainingDataForWordTagging.json", JSON.stringify(jsonToGo, null, 2));
+        console.log(loggit, "Generating File betNameTrainingData.json")
+        await fs.promises.writeFile("./data/betNameTrainingData.json", JSON.stringify(jsonToGo, null, 2));
 
-        console.log(loggit, "Successfully Generated File betNamesTrainingDataForWordTagging.json")
+        console.log(loggit, "Successfully Generated File betNameTrainingData.json")
 
         process.exit(0);
     } catch (err) {

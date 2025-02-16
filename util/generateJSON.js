@@ -1,5 +1,5 @@
 
-function generateBetNamesForWordTagging(gameElements, loggit) {
+function generateBetNames(gameElements, loggit) {
     var jsonToGo = [];
 
     gameElements.betNames.forEach(betNamePkg => {
@@ -201,4 +201,4 @@ function genearateTokensAndLabels(incomingPhrase, betName, betAmount, oddsAmount
 
 module.exports.genearateTokensAndLabels = genearateTokensAndLabels
 module.exports.generateWordTagging = generateWordTagging
-module.exports.generateBetNamesForWordTagging = generateBetNamesForWordTagging;
+module.exports.generateBetNames = generateBetNames;
