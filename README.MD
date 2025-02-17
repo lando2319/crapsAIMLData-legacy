@@ -77,11 +77,11 @@ First run file to get training data
 
 Then in CreateML open word tagger project in this repo
 
-Train (3+Hours)
+Train (3+ Seconds)
 
 Then add model to swift project
 
-Update the 2 places where the name of the model is declared and update to new name
+Update the 3 places where the name of the model is declared and update to new name
 
 ----
 
