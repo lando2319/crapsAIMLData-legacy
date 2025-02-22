@@ -6,6 +6,8 @@ data/**
 .env
 .genkit
 
+.vscode
+
 secrets/**
 functions/secrets/**
 
