@@ -1,0 +1,44 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Aces Bet
+
+INPUT: "What is the Aces Bet"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Aces Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my Aces if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Aces Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $20 Aces Bet if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 20,
+   "bet_name": "Aces Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
