@@ -5,13 +5,13 @@ output:
     ParseSchema
 ---
 
-## These are example of how to parse Aces Bet
+## These are example of how to parse Ace Deuce Bet
 
-INPUT: "What is the Aces Bet"
+INPUT: "What is the Ace Deuce Bet"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Aces",
+   "bet_name": "Ace Deuce",
    "odds": 0,
    "point": 0,
    "roll": 0,
@@ -19,11 +19,11 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my Aces if a 6 rolls"
+INPUT: "What happens to my Ace Deuce if a 6 rolls"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Aces",
+   "bet_name": "Ace Deuce",
    "odds": 0,
    "point": 0,
    "roll": 6,
@@ -31,11 +31,11 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $20 Aces Bet if a 6 rolls"
+INPUT: "What happens to my $20 Ace Deuce Bet if a 6 rolls"
 OUTPUT: 
 {
    "amount": 20,
-   "bet_name": "Aces",
+   "bet_name": "Ace Deuce",
    "odds": 0,
    "point": 0,
    "roll": 6,
