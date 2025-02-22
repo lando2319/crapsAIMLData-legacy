@@ -1,0 +1,56 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Field Bets
+
+INPUT: "How does the Field Bet work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Field Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Field Bet work if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Field Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $20 Field Bet if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 20,
+   "bet_name": "Field Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $30 Field Bet if 9 rolls"
+OUTPUT: 
+{
+   "amount": 30,
+   "bet_name": "Field Bet",
+   "odds": 0,
+   "point": 0,
+   "roll": 9,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
