@@ -1,0 +1,44 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Yo Eleven Bet
+
+INPUT: "What is the Yo Eleven Bet"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Yo Eleven",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I have a Yo Eleven Bet and 8 rolls, what happens"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Yo Eleven",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $20 Yo Eleven Bet if a 6 rolls"
+OUTPUT: 
+{
+   "amount": 20,
+   "bet_name": "Yo Eleven",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
