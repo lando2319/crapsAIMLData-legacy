@@ -5,13 +5,13 @@ output:
     ParseSchema
 ---
 
-## These are example of how to parse Horn Bet
+## These are example of how to parse High Low Bet
 
-INPUT: "How does the Horn Bet work"
+INPUT: "Tell me about the High Low"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Horn",
+   "bet_name": "High Low",
    "odds": 0,
    "point": 0,
    "roll": 0,
@@ -19,11 +19,11 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "If a 10 rolls what happens to my Horn Bet"
+INPUT: "What if a 10 rolls, what happens to my High Low Bet"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Horn",
+   "bet_name": "High Low",
    "odds": 0,
    "point": 0,
    "roll": 10,
@@ -31,11 +31,11 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "If I have my $24 Horn Bet and a 9 rolls what happens"
+INPUT: "if I have a $24 High Low Bet and a 9 rolls what happens to my bet"
 OUTPUT: 
 {
-   "amount": 24,
-   "bet_name": "Horn",
+   "amount": 20,
+   "bet_name": "High Low",
    "odds": 0,
    "point": 0,
    "roll": 9,
