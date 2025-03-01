@@ -1,0 +1,44 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse The Eleven Twelve Bet
+
+INPUT: "What is the Eleven Twleve Bet"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Eleven Twelve",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I have an Eleven Tweleve Bet and a 4 rolls, what happens"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Eleven Twelve",
+   "odds": 0,
+   "point": 0,
+   "roll": 4,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "let's say I have a $14 Eleven Twelve Bet and an 8 rolls"
+OUTPUT: 
+{
+   "amount": 14,
+   "bet_name": "Eleven Twelve",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 0,
+   "rollDie2": 0
+}

@@ -1,0 +1,44 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Three Way Craps Bet
+
+INPUT: "Tell me about the Three Way Craps Bet"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Three Way Craps",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What if a 10 rolls, what happens to my Three Way Craps Bet"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Three Way Craps",
+   "odds": 0,
+   "point": 0,
+   "roll": 10,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "if I have a $18 Three Way Craps Bet and a 9 rolls what happens to my bet"
+OUTPUT: 
+{
+   "amount": 18,
+   "bet_name": "Three Way Craps",
+   "odds": 0,
+   "point": 0,
+   "roll": 9,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
