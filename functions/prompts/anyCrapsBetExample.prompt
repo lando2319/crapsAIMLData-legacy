@@ -1,0 +1,46 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse Any Craps Bet
+
+Also known as Crap Check
+
+INPUT: "How does the Any Craps Bet work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Any Craps",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If a 11 rolls, what happens to my Crap Check"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Crap Check",
+   "odds": 0,
+   "point": 0,
+   "roll": 11,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "if I have a $6 Any Crap, and a 8 rolls, what happens"
+OUTPUT: 
+{
+   "amount": 6,
+   "bet_name": "Any Craps",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
