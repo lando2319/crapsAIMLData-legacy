@@ -1,0 +1,46 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse C&E Bet
+
+C&E is Craps and Eleven
+
+INPUT: "How does the C&E bet work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "C&E",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to a C and E bet if a 12 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "C and E",
+   "odds": 0,
+   "point": 0,
+   "roll": 12,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I have a $10 C&E bet and a 4 rolls what happens"
+OUTPUT: 
+{
+   "amount": 10,
+   "bet_name": "C&E",
+   "odds": 0,
+   "point": 0,
+   "roll": 4,
+   "rollDie1": 0,
+   "rollDie2": 0
+}

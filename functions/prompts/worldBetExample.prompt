@@ -1,0 +1,44 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse the World Bet
+
+INPUT: "What is the World Bet"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "World",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I roll a 10 does my World Bet win"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "World",
+   "odds": 0,
+   "point": 0,
+   "roll": 10,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "Let's say I have a $20 World bet and a 2 rolls, what happens"
+OUTPUT: 
+{
+   "amount": 20,
+   "bet_name": "World",
+   "odds": 0,
+   "point": 0,
+   "roll": 2,
+   "rollDie1": 0,
+   "rollDie2": 0
+}

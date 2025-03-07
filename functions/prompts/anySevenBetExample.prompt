@@ -1,0 +1,44 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## These are example of how to parse the Any Seven Bet
+
+INPUT: "How does the Any Seven work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Any Seven",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my Any Seven bet if a 10 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Any Seven",
+   "odds": 0,
+   "point": 0,
+   "roll": 10,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I have a $5 Any Seven Bet and a 6 rolls does it win"
+OUTPUT: 
+{
+   "amount": 5,
+   "bet_name": "Any Seven",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
