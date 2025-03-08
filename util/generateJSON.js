@@ -56,44 +56,63 @@ function generateWordTagging(gameElements, loggit) {
 
             var isHop = betNamePkg.name.includes("Hopping");
 
-            for (let roll = 2; roll <= 12; roll++) {
-                let amounts = [
-                    "$" + betNamePkg.min, 
-                    "$" + betNamePkg.min * 2, 
-                    "$" + betNamePkg.min * 3,
-                    betNamePkg.min + " DOLLARS", 
-                    (betNamePkg.min * 2) + " DOLLARS", 
-                    (betNamePkg.min * 3) + " DOLLARS"
-                ];
+            if (betPhraseTemplate.includes("_ROLL_")) {
+                for (let roll = 2; roll <= 12; roll++) {
+                    let amounts = [
+                        "$" + betNamePkg.min,
+                        "$" + betNamePkg.min * 2,
+                        "$" + betNamePkg.min * 3,
+                        betNamePkg.min + " DOLLARS",
+                        (betNamePkg.min * 2) + " DOLLARS",
+                        (betNamePkg.min * 3) + " DOLLARS"
+                    ];
 
-                amounts.forEach((betAmount) => {
-                    if (betPhraseTemplate.includes("_DIE1_")) {
-                        if (isHop && roll > 3 && roll < 11) {
-                            waysToMake[roll].forEach(wayToMake => {
-                                var entry = genearateTokensAndLabels(
-                                    betPhraseTemplate,
-                                    betNamePkg.name,
-                                    betAmount,
-                                    "",
-                                    roll,
-                                    wayToMake[0],
-                                    wayToMake[1],
-                                    0
-                                );
-                                jsonToGo.push(entry);
-                            });
-                        }
-                    } else if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
-                        ["4", "5", "6", "8", "9", "10"].forEach(point => {
-                            applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo);
-                        })
+                    if (betPhraseTemplate.includes("_AMOUNT_")) {
+                        amounts.forEach((betAmount) => {
+                            if (betPhraseTemplate.includes("_DIE1_")) {
+                                if (isHop && roll > 3 && roll < 11) {
+                                    waysToMake[roll].forEach(wayToMake => {
+                                        var entry = genearateTokensAndLabels(
+                                            betPhraseTemplate,
+                                            betNamePkg.name,
+                                            betAmount,
+                                            "",
+                                            roll,
+                                            wayToMake[0],
+                                            wayToMake[1],
+                                            0
+                                        );
+                                        jsonToGo.push(entry);
+                                    });
+                                }
+                            } else if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
+                                ["4", "5", "6", "8", "9", "10"].forEach(point => {
+                                    applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo);
+                                })
+                            } else {
+                                applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, "", jsonToGo);
+                            }
+                        });
                     } else {
-                        applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, "", jsonToGo);
+                        var entry = genearateTokensAndLabels(betPhraseTemplate, betNamePkg.name, "", "", roll, "", "", 0);
+                        jsonToGo.push(entry);
                     }
-                });
+                }
+            } else {
+                var entry = genearateTokensAndLabels(betPhraseTemplate, betNamePkg.name, "", "", "", "", "", 0);
+                jsonToGo.push(entry);
             }
         });
     });
+
+    gameElements.generalBetPhrases.forEach(betPhrase => {
+        betPhrase = betPhrase.toUpperCase();
+
+        gameElements.generalBetNames.forEach(betName => {
+            var entry = genearateTokensAndLabels(betPhrase, betName, "", "", "", "", "", 0);
+            jsonToGo.push(entry);
+        })
+    })
 
     return jsonToGo;
 }

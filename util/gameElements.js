@@ -20,6 +20,17 @@ module.exports.betPhrases = [
     "What happens to my _amount_ _betName_ if the dice roll _roll_ as _die1_ - _die2_",
 ];
 
+module.exports.generalBetNames = [
+    "Hop Bets",
+    "Hardways"
+]
+
+module.exports.generalBetPhrases = [
+    "How do the _betName_ work",
+    "Are the _betName_ a good bet",
+    "Tell me about the _betName_",
+];
+
 module.exports.nonBets = [
     "hot dog",
     "Hamburger",
