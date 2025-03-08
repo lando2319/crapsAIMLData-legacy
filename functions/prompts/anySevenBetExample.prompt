@@ -18,6 +18,7 @@ OUTPUT:
    "rollDie1": 0,
    "rollDie2": 0
 }
+NOTICE: Any Seven is the bet_name, there is NO roll mentioned
 
 INPUT: "What happens to my Any Seven bet if a 10 rolls"
 OUTPUT: 

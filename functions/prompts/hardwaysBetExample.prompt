@@ -1,0 +1,80 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+There are 4 versions of the Hardways Bets
+- Hard Four
+- Hard Six
+- Hard Eight
+- Hard Ten
+
+Also the person could be asking about the Hardways as a whole
+
+the person could be asking about the dice combination, it would look like
+"What happens to my Hard Four if 4 rolls as 1-3"
+rollDie1 would be 1 and rollDie2 would be 3
+
+## These are example of how to parse Hardways Bets
+
+INPUT: "Tell me about the Hardway Bets"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Hardway",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "How does the Hard Four work"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Hard Four",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my Hard Ten if an 8 rolls"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Hard Ten",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If a 5 rolls what happens to my Hard Six"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Hard Six",
+   "odds": 0,
+   "point": 0,
+   "roll": 5,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What happens to my $10 Hard Eight if the dice roll 8 as 6-2"
+OUTPUT: 
+{
+   "amount": 10,
+   "bet_name": "Hard Eight",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 6,
+   "rollDie2": 2
+}
