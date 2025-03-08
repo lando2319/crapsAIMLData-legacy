@@ -1,0 +1,136 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+# Hop Bets are betting on dice combinations
+
+Hard means the same number on both dice
+so a Hard Four is 2-2
+
+### Here is a list of all the Individual Hop Bets
+
+- 3-1 Hopping or 1-3 Hopping, also known as, 'easy 4 hopping'
+- Hard Four Hopping
+
+- 4-1 Hopping or 1-4 Hopping
+- 3-2 Hopping or 2-3 Hopping
+
+- 4-2 Hopping or 2-4 Hopping
+- 5-1 Hopping or 1-5 Hopping
+- Hard Six Hopping
+
+- 6-1 Hopping or 1-6 Hopping
+- 5-2 Hopping or 2-5 Hopping
+- 4-3 Hopping or 3-4 Hopping
+
+- 5-3 Hopping or 3-5 Hopping
+- 6-2 Hopping or 2-6 Hopping
+- Hard Eight Hopping
+
+- 5-4 Hopping or 4-5 Hopping
+- 6-3 Hopping or 3-6 Hopping
+
+- 6-4 Hopping or 4-6 Hopping, also known as, 'easy 10 hopping'
+- Hard Ten Hopping
+
+### Here is a list of all the Combination Hop Bets
+
+- Fours Hopping
+- Fives Hopping
+- Sixes Hopping
+- Sevens Hopping
+- Eights Hopping
+- Nines Hopping
+- Tens Hopping
+
+- Easy Eights Hopping
+- Easy Sixes Hopping
+
+- All the Hardways Hopping
+
+
+Often times the query will involve a dice combination
+"What happens to my Hard Eight Hopping if the dice came 3-5"
+
+the bet_name is, "Hard Eight Hopping", rollDie1 is 3 and rollDie2 is 5
+
+"hop" or "hopping" can be used as bet names
+
+## These are example of how to parse Hop Bets
+
+INPUT: "Tell me about the Hop Bets"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Hop Bets",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "What is the Easy Four Hopping"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Easy Four Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+INPUT: "If I have a Hard Ten Hopping and an 8 rolls what happens"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Hard Ten Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
+Here is how to set rollDie1 and rollDie2 when roll is a hard number
+
+INPUT: "What happens if I bet on 1-3 Hopping and a 4 rolls hard"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "1-3 Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 4,
+   "rollDie1": 2,
+   "rollDie2": 2
+}
+
+INPUT: "If I have a $10 Hard Eight Hopping and the dice roll 8 as 6-2 what happens"
+OUTPUT: 
+{
+   "amount": 10,
+   "bet_name": "Hard Eight Hopping",
+   "odds": 0,
+   "point": 0,
+   "roll": 8,
+   "rollDie1": 6,
+   "rollDie2": 2
+}
+
+INPUT: "If I bet on the $2 Easy Sixes and 6 rolls as hard, do I win"
+OUTPUT: 
+{
+   "amount": 2,
+   "bet_name": "Easy Sixes",
+   "odds": 0,
+   "point": 0,
+   "roll": 6,
+   "rollDie1": 3,
+   "rollDie2": 3
+}
