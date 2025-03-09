@@ -298,6 +298,42 @@
             "ROLL",
             "NONE"
         ]
+    },
+    {
+        "tokens": [
+            "HOW",
+            "DO",
+            "THE",
+            "HARDWAY",
+            "BETS",
+            "WORK"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "NONE",
+            "BET_NAME",
+            "NONE",
+            "NONE"
+        ]
+    },
+    {
+        "tokens": [
+            "TELL",
+            "ME",
+            "ABOUT",
+            "THE",
+            "HOP",
+            "BETS"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "BET_NAME",
+            "BET_NAME"
+        ]
     }
 
 ]

@@ -21,8 +21,14 @@ module.exports.betPhrases = [
 ];
 
 module.exports.generalBetNames = [
-    "Hop Bets",
-    "Hardways"
+    {
+        slug: "hardways",
+        name: "Hardways"
+    },
+    {
+        slug: "hopbets",
+        name: "Hop Bets"
+    },
 ]
 
 module.exports.generalBetPhrases = [

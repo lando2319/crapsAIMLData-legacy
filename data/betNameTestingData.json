@@ -22,5 +22,13 @@
     {
         "text":"BUY BET ON 4",
         "label":"buyBet4"
+    },
+    {
+        "text":"HARDWAYS",
+        "label":"hardways"
+    },
+    {
+        "text":"HOP BETS",
+        "label":"hopbets"
     }
 ]

@@ -18,6 +18,15 @@ function generateBetNames(gameElements, loggit) {
         });
     });
 
+    gameElements.generalBetNames.forEach(betNamePkg => {
+        logThis("Generating General Bet Names for " + betNamePkg.name, loggit)
+
+        jsonToGo.push({
+            "text": betNamePkg.name.toUpperCase(),
+            "label": betNamePkg.slug
+        });
+    });
+
     return jsonToGo;
 };
 
@@ -108,8 +117,8 @@ function generateWordTagging(gameElements, loggit) {
     gameElements.generalBetPhrases.forEach(betPhrase => {
         betPhrase = betPhrase.toUpperCase();
 
-        gameElements.generalBetNames.forEach(betName => {
-            var entry = genearateTokensAndLabels(betPhrase, betName, "", "", "", "", "", 0);
+        gameElements.generalBetNames.forEach(betNamePkg => {
+            var entry = genearateTokensAndLabels(betPhrase, betNamePkg.name, "", "", "", "", "", 0);
             jsonToGo.push(entry);
         })
     })
