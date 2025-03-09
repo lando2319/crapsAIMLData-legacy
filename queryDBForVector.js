@@ -35,7 +35,20 @@ const retriever = defineFirestoreRetriever(ai, {
     distanceMeasure: 'COSINE'
 });
 
+function cosineSimilarity(vecA, vecB) {
+    let dotProduct = 0;
+    let normA = 0;
+    let normB = 0;
+    for (let i = 0; i < vecA.length; i++) {
+        dotProduct += vecA[i] * vecB[i];
+        normA += vecA[i] * vecA[i];
+        normB += vecB[i] * vecB[i];
+    }
+    return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+}
+
 var question = "How much does a $12 Horn Bet pay if 12 rolls";
+// var question = "there once was a sentence that didn't relate to anything else and was deemed to be too different";
 
 (async () => {
     try {
@@ -45,15 +58,28 @@ var question = "How much does a $12 Horn Bet pay if 12 rolls";
             options: {
                 limit: 3,
                 where: { confirmed: true },
-                // k: 2, // These seem to do very little
-                // preRerankK: 4,
-                // scoreThreshold: 1
+                // k: 10, // These seem to do very little
+                // preRerankK: 10,
+                // scoreThreshold: 0
             },
         });
 
-        docs.forEach(doc => {
-            console.log(doc);
-        })
+        const queryEmbedding = await ai.embed({
+            embedder: textEmbeddingGecko001,
+            content: question
+        });
+
+        for (const doc of docs) {
+            const candidateText = doc.content.map(c => c.text).join(" ");
+            const candidateEmbedding = await ai.embed({
+                embedder: textEmbeddingGecko001,
+                content: candidateText
+            });
+
+            const similarity = cosineSimilarity(queryEmbedding, candidateEmbedding);
+            console.log("Candidate Text:", candidateText);
+            console.log("Similarity:", similarity);
+        }
 
         console.log("DONE");
         process.exit(0);
