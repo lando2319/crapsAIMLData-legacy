@@ -1,0 +1,1141 @@
+{
+	"info": {
+		"_postman_id": "b5735160-d3c7-4c75-84f8-ec61e232e289",
+		"name": "Pass Line Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27289935"
+	},
+	"item": [
+		{
+			"name": "\"How does the Pass Line work\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Pass Line work\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Pass Line work\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Pass Line work if 6 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Pass Line work if 6 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Pass Line work if 6 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Pass Line work if 2 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Pass Line work if 2 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(2);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Pass Line work if 2 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Pass Line work if 7 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Pass Line work if 7 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Pass Line work if 7 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Pass Line work if 8 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Pass Line work if 8 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(8);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Pass Line work if 8 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If the Point is 4 and a 6 rolls what happens to my Pass Line bet\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If the Point is 4 and a 6 rolls what happens to my Pass Line bet\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If the Point is 4 and a 6 rolls what happens to my Pass Line bet\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If the Point is 4 and a 4 rolls what happens to my Pass Line bet\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If the Point is 4 and a 4 rolls what happens to my Pass Line bet\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If the Point is 4 and a 4 rolls what happens to my Pass Line bet\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If the Point is 4 and a 4 rolls what happens to my $5 Pass Line with 10 odds\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If the Point is 4 and a 4 rolls what happens to my $5 Pass Line with 10 odds\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If the Point is 4 and a 4 rolls what happens to my $5 Pass Line with 10 odds\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If the Point is 4 and a 7 rolls what happens to my Pass Line\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If the Point is 4 and a 7 rolls what happens to my Pass Line\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If the Point is 4 and a 7 rolls what happens to my Pass Line\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 6 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 6 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 6 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 7 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 7 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 7 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 4 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 4 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Pass Line Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Pass Line\");",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Pass Line Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to my $5 Pass Line with $10 odds with the Point is 4 if 4 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How much does a $4 Horn Bet pay if 12 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How much does a $4 Horn Bet pay if 12 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Horn Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Horn Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Horn Bet\");",
+							"});",
+							"",
+							"pm.test(\"Horn Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Horn Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Horn Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(12);",
+							"});",
+							"",
+							"pm.test(\"Horn Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Horn Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to a Pass Line when a 8 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

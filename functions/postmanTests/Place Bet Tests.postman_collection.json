@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "78ccdc6e-f620-44b9-acea-382ce08a8ab9",
+		"name": "Place Bet Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27289935"
+	},
+	"item": [
+		{
+			"name": "\"How does the Place Bet work\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Place Bet work\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Place Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Place Bet\");",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Place Bet work\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If the Place Bet is on the 4 and a 6 rolls what happens\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If the Place Bet is on the 4 and a 6 rolls what happens\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Place Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Place Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If the Place Bet is on the 4 and a 6 rolls what happens\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If I have a Place Bet on 4 and a 4 rolls what happens\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If I have a Place Bet on 4 and a 4 rolls what happens\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Place Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Place Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If I have a Place Bet on 4 and a 4 rolls what happens\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If I have a Place Bet on 4 and a 7 rolls what happens\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If I have a Place Bet on 4 and a 7 rolls what happens\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Place Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Place Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Place Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If I have a Place Bet on 4 and a 7 rolls what happens\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

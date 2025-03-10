@@ -1,0 +1,967 @@
+{
+	"info": {
+		"_postman_id": "f223a302-5637-4e3f-8c8c-54f0b2460529",
+		"name": "Don't Come Bet Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27289935"
+	},
+	"item": [
+		{
+			"name": "\"How does the Don't Come Bet work\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Don't Come Bet work\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Don't Come Bet work\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Don't Come Bet work if 6 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Come Bet work if 6 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Don't Come Bet work if 6 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Don't Come Bet work if 2 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Come Bet work if 2 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(2);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Don't Come Bet work if 2 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Don't Come Bet work if 7 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Come Bet work if 7 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Don't Come Bet work if 7 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"How does the Don't Come Bet work if 12 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How does the Don't Come Bet work if 12 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(12);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How does the Don't Come Bet work if 12 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If the Don't Come Bet is on the 4 and a 6 rolls what happens\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If the Don't Come Bet is on the 4 and a 6 rolls what happens\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": \"If the Don't Come Bet is on the 4 and a 6 rolls what happens\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If I have a Don't Come Bet on 4 and a 4 rolls what happens\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If I have a Don't Come Bet on 4 and a 4 rolls what happens\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If I have a Don't Come Bet on 4 and a 4 rolls what happens\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"If I have a Don't Come Bet on 4 and a 7 rolls what happens\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"If I have a Come Bet on 4 and a 7 rolls what happens\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"If I have a Don't Come Bet on 4 and a 7 rolls what happens\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"What happens to my $5 Don't Come Bet on 4 with $10 odds if 6 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"What happens to my $5 Don't Come Bet on 4 with $10 odds if 6 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(6);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to my $5 Don't Come Bet on 4 with $10 odds if 6 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"What happens to my $5 Don't Come Bet on 4 with $10 odds if 7 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"What happens to my $5 Don't Come Bet on 4 with $10 odds if 7 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(7);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to my $5 Come Bet on 4 with $10 odds if 7 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"What happens to my $5 Don't Come Bet on 4 with $10 odds if 4 rolls\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"What happens to my $5 Don't Come Bet on 4 with $10 odds if 4 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse amount\", function () {",
+							"    pm.expect(jsonData.result.amount).to.eql(5);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse bet_name\", function () {",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Don't Come Bet on 4\");",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse odds\", function () {",
+							"    pm.expect(jsonData.result.odds).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse point\", function () {",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse roll\", function () {",
+							"    pm.expect(jsonData.result.roll).to.eql(4);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie1\", function () {",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"});",
+							"",
+							"pm.test(\"Don't Come Bet Bet should parse rollDie2\", function () {",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to my $5 Don't Come Bet on 4 with $10 odds if 4 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestionClean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

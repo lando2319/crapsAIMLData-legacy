@@ -12,17 +12,15 @@ Function URL (helloWorld(us-central1)): https://helloworld-4fifjrvc3a-uc.a.run.a
 
 
 LEFT OFF HERE
-VectorDB see file queryDBForVector.js
-// see about feeding this result back into the query
-// as shown on docs, at least see it go, see how much it changes it
-
 // - setup the embedding/cosine check on the API endpoint
-// - determine through trial and error, how high the number should be
-// - for MVP just log the results if it meets threshold
-//      later I'll serve it verbatium or via LLM
+// - any match over .9 log
+//      - have a return with answers
+//      - THEN comment out
+//      - make sure clientside prioritizes the vector results
 
 // - clear out the db
 //      have just a few choice non-calculatable questions
+//      MUST REPEAT THE QUESTION IN THE ANSWER
 
 
 

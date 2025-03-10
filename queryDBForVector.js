@@ -47,7 +47,8 @@ function cosineSimilarity(vecA, vecB) {
     return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-var question = "How much does a $12 Horn Bet pay if 12 rolls";
+var question = "What's the best value bet on the table";
+// var question = "How much does a $12 Horn Bet pay if 12 rolls";
 // var question = "there once was a sentence that didn't relate to anything else and was deemed to be too different";
 
 (async () => {
@@ -56,7 +57,7 @@ var question = "How much does a $12 Horn Bet pay if 12 rolls";
             retriever,
             query: question,
             options: {
-                limit: 3,
+                limit: 1,
                 where: { confirmed: true },
                 // k: 10, // These seem to do very little
                 // preRerankK: 10,
@@ -69,17 +70,20 @@ var question = "How much does a $12 Horn Bet pay if 12 rolls";
             content: question
         });
 
-        for (const doc of docs) {
-            const candidateText = doc.content.map(c => c.text).join(" ");
-            const candidateEmbedding = await ai.embed({
-                embedder: textEmbeddingGecko001,
-                content: candidateText
-            });
+        var doc = docs[0];
 
-            const similarity = cosineSimilarity(queryEmbedding, candidateEmbedding);
-            console.log("Candidate Text:", candidateText);
-            console.log("Similarity:", similarity);
-        }
+        const candidateText = doc.content.map(c => c.text).join(" ");
+        const candidateEmbedding = await ai.embed({
+            embedder: textEmbeddingGecko001,
+            content: candidateText
+        });
+
+        const similarity = cosineSimilarity(queryEmbedding, candidateEmbedding);
+        console.log("Candidate Text:", candidateText);
+        console.log("Similarity:", similarity);
+
+        console.log("CrapsAI Says:");
+        console.log(doc.metadata.answer);
 
         console.log("DONE");
         process.exit(0);

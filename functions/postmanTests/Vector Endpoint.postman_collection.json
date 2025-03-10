@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "9a4d2dad-edd0-4c54-bb1a-b1448bf762ac",
+		"name": "Vector Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27289935"
+	},
+	"item": [
+		{
+			"name": "parseQuestion",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const requestData = {",
+							"  data: \"How much does a $20 Horn Bet pay if 12 rolls\"",
+							"};",
+							"",
+							"pm.request.body.raw = JSON.stringify(requestData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Horn Bet roll\", function () {",
+							"    var jsonData = pm.response.json();",
+							"",
+							"    var expectation = {",
+							"        \"result\": {",
+							"            \"amount\": 20,",
+							"            \"bet_name\": \"Horn Bet\",",
+							"            \"odds\": 0,",
+							"            \"point\": 0,",
+							"            \"roll\": 12,",
+							"            \"rollDie1\": 0,",
+							"            \"rollDie2\": 0",
+							"        }",
+							"    };",
+							"",
+							"    pm.expect(jsonData.result.amount).to.eql(20);",
+							"    pm.expect(jsonData.result.bet_name).to.eql(\"Horn Bet\");",
+							"    pm.expect(jsonData.result.odds).to.eql(0);",
+							"    pm.expect(jsonData.result.point).to.eql(0);",
+							"    pm.expect(jsonData.result.roll).to.eql(12);",
+							"    pm.expect(jsonData.result.rollDie1).to.eql(0);",
+							"    pm.expect(jsonData.result.rollDie2).to.eql(0);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"What happens to a Pass Line when a 8 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/crapsai-72b89/us-central1/parseQuestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"crapsai-72b89",
+						"us-central1",
+						"parseQuestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parseQuestion Staging",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":\"How much is a $28 Horn Bet pay if 12 rolls\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-crapsai-72b89.cloudfunctions.net/parseQuestionClean",
+					"protocol": "https",
+					"host": [
+						"us-central1-crapsai-72b89",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"parseQuestionClean"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -71,7 +71,7 @@ const retriever = defineFirestoreRetriever(ai, {
     distanceMeasure: 'COSINE'
 });
 
-exports.parseAnswer = onFlow(
+exports.parseQuestion = onFlow(
     ai,
     {
         name: "parseAnswer",
@@ -79,56 +79,79 @@ exports.parseAnswer = onFlow(
     },
     async (inputData) => {
         try {
-            console.log("Incoming Question", inputData);
+            console.log("Starting Process: Incoming Question", inputData);
+
+            console.log("embedding question");
+            const embedding = await ai.embed({
+                embedder: textEmbeddingGecko001,
+                content: inputData
+            });
+
+            console.log("successfully embedded question, retrieving question from vector database");
+
+            const docs = await ai.retrieve({
+                retriever,
+                query: inputData,
+                options: {
+                    limit: 1,
+                    where: { confirmed: true }
+                },
+            });
+
+            console.log("successfully retrieved question from vector database");
+
+            if (docs.length > 0) {
+                var doc = docs[0];
+
+                console.log("embedding the text from the vectorDB result");
+                const candidateText = doc.content.map(c => c.text).join(" ");
+                const candidateEmbedding = await ai.embed({
+                    embedder: textEmbeddingGecko001,
+                    content: candidateText
+                });
+                console.log("Successfully embedded the text from the vectorDB result, checking similarity");
+
+                const similarity = cosineSimilarity(embedding, candidateEmbedding);
+
+                console.log("Candidate Text:", candidateText);
+                console.log("Similarity:", similarity);
+
+                var matcheText = "";
+                if (similarity > 0.9) {
+                    matcheText = "OVER THRESHOLD";
+                }
+
+                console.log(matcheText, "VectorDB Says:", doc.metadata?.answer);
+            }
+
+            console.log("Parsing question with ai.generate");
             var { output: parsedOutput } = await ai.generate({
                 model: gemini15Flash,
                 prompt: inputData,
                 output: { schema: ParseSchema }
             })
 
-            console.log("ai Parsed as", parsedOutput);
+            console.log("Successfully Parsed question as", parsedOutput);
 
+            console.log("Cleaning Data");
             var cleanData = postProcess.run(inputData, parsedOutput, "postProcess");
+            console.log("Successfully Cleaned Data as", cleanData);
 
+            console.log("Adding question to firestore");
 
-            // OFF DURING QA FOR GENKIT
+            var dbResponse = await firestore.collection("questions").add({
+                "question": inputData,
+                "embedding": FieldValue.vector(embedding),
+                "parsedOutput": parsedOutput,
+                "cleanedOutput": cleanData
+            });
 
-            // console.log("ai retrieving question");
-            // const docs = await ai.retrieve({
-            //     retriever,
-            //     query: inputData,
-            //     options: {
-            //         limit: 3,
-            //         where: { confirmed: true }
-            //     },
-            // });
-            // console.log("ai retrieved question");
+            cleanData.firestoreID = dbResponse.id;
 
-            // docs.forEach(doc => {
-            //     console.log(doc.content);
-            // })
+            console.log("Successfully added question to firestore", cleanData.firestoreID);
 
-            // console.log("ai successfully retrieved question, embedding question");
+            console.log("Finished Process Returning cleanData");
 
-            // const embedding = await ai.embed({
-            //     embedder: textEmbeddingGecko001,
-            //     content: inputData
-            // });
-
-            // console.log("ai successfully embedded question, adding to firestore");
-
-            // var dbResponse = await firestore.collection("questions").add({
-            //     "question": inputData,
-            //     "embedding": FieldValue.vector(embedding),
-            //     "parsedOutput": parsedOutput,
-            //     "confirmed": true
-            // });
-
-            // parsedOutput.firestoreID = dbResponse.id;
-
-            // console.log("ai successfully added question to firestore", parsedOutput.firestoreID);
-
-            // return parsedOutput;
             return cleanData;
         } catch (err) {
             console.error(err)
@@ -140,8 +163,45 @@ exports.parseAnswer = onFlow(
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
 
-exports.helloWorld = onRequest((request, response) => {
-    logger.info("Hello logs!", { structuredData: true });
-    response.send("Hello from Firebase!");
-});
+exports.parseQuestionClean = onFlow(
+    ai,
+    {
+        name: "parseQuestionClean",
+        authPolicy: noAuth()
+    },
+    async (inputData) => {
+        try {
+            console.log("Starting Process: Incoming Question", inputData);
+            console.log("Parsing question with ai.generate");
+            var { output: parsedOutput } = await ai.generate({
+                model: gemini15Flash,
+                prompt: inputData,
+                output: { schema: ParseSchema }
+            })
 
+            console.log("Successfully Parsed question as", parsedOutput);
+
+            console.log("Cleaning Data");
+            var cleanData = postProcess.run(inputData, parsedOutput, "postProcess");
+            console.log("Successfully Cleaned Data as", cleanData);
+
+            console.log("Finished Process Returning cleanData");
+            return cleanData;
+        } catch (err) {
+            console.error(err)
+            return err
+        }
+    }
+)
+
+function cosineSimilarity(vecA, vecB) {
+    let dotProduct = 0;
+    let normA = 0;
+    let normB = 0;
+    for (let i = 0; i < vecA.length; i++) {
+        dotProduct += vecA[i] * vecB[i];
+        normA += vecA[i] * vecA[i];
+        normB += vecB[i] * vecB[i];
+    }
+    return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+}
