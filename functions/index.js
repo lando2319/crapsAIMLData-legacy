@@ -122,6 +122,9 @@ exports.parseQuestion = onFlow(
                 }
 
                 console.log(matcheText, "VectorDB Says:", doc.metadata?.answer);
+
+                // READY TO TURN ON, clientside will show 'answers'
+                // return buildVectorResponseData(doc.metadata)
             }
 
             console.log("Parsing question with ai.generate");
@@ -152,6 +155,10 @@ exports.parseQuestion = onFlow(
 
             console.log("Finished Process Returning cleanData");
 
+            cleanData.answers = [];
+            cleanData.supportImages = [];
+            cleanData.followupQuestions = [];
+
             return cleanData;
         } catch (err) {
             console.error(err)
@@ -159,6 +166,24 @@ exports.parseQuestion = onFlow(
         }
     }
 )
+
+function buildVectorResponseData(vectorData) {
+    var data = {
+        bet_name: "",
+        amount: 0,
+        roll: 0,
+        rollDie1: 0,
+        rollDie2: 0,
+        odds: 0,
+        point: 0
+    }
+
+    data.answers = vectorData.answers;
+    data.supportImages = vectorData.supportImages;
+    data.followupQuestions = vectorData.followupQuestions;
+
+    return data
+}
 
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
