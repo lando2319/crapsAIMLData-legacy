@@ -12,15 +12,7 @@ Function URL (helloWorld(us-central1)): https://helloworld-4fifjrvc3a-uc.a.run.a
 
 
 LEFT OFF HERE
-// - setup the embedding/cosine check on the API endpoint
-// - any match over .9 log
-//      - have a return with answers
-//      - THEN comment out
-//      - make sure clientside prioritizes the vector results
-
-// - clear out the db
-//      have just a few choice non-calculatable questions
-//      MUST REPEAT THE QUESTION IN THE ANSWER
+- APP CHECK
 
 
 
@@ -48,12 +40,6 @@ LEFT OFF HERE
 
 
 
-- App Check
-- Kill Switch
-- Vector DB Saving, retrieving, and logging
-- Decision Tree
-- Validate
 
-- Are we doing preplanned answers for V0
 
 
