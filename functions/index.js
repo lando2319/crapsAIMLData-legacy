@@ -75,7 +75,8 @@ exports.parseQuestion = onFlow(
     ai,
     {
         name: "parseAnswer",
-        authPolicy: noAuth()
+        authPolicy: noAuth(),
+        enforceAppCheck:true
     },
     async (inputData) => {
         try {
@@ -192,7 +193,8 @@ exports.parseQuestionClean = onFlow(
     ai,
     {
         name: "parseQuestionClean",
-        authPolicy: noAuth()
+        authPolicy: noAuth(),
+        enforceAppCheck:true
     },
     async (inputData) => {
         try {
