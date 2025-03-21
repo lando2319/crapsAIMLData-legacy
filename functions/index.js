@@ -7,7 +7,7 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-const { onRequest } = require("firebase-functions/v2/https");
+const { onRequest, onCall } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 
 const { onFlow, noAuth } = require("@genkit-ai/firebase/functions");
@@ -74,7 +74,7 @@ const retriever = defineFirestoreRetriever(ai, {
 exports.parseQuestion = onFlow(
     ai,
     {
-        name: "parseAnswer",
+        name: "parseQuestion",
         authPolicy: noAuth(),
         enforceAppCheck:true
     },
@@ -152,14 +152,7 @@ exports.parseQuestion = onFlow(
 
             cleanData.firestoreID = dbResponse.id;
 
-            console.log("Successfully added question to firestore", cleanData.firestoreID);
-
-            console.log("Finished Process Returning cleanData");
-
-            cleanData.answers = [];
-            cleanData.supportImages = [];
-            cleanData.followupQuestions = [];
-
+            console.log("Successfully added question to firestore", cleanData.firestoreID, "Finished Process Returning cleanData");
             return cleanData;
         } catch (err) {
             console.error(err)

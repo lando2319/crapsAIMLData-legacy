@@ -65,9 +65,14 @@ function run(inputText, responseData, loggit) {
         if (die2Check.match) {
             numsInText = die2Check.newArray;
         }
-
-        return cleanedData;
     };
+
+    cleanedData.firestoreID = "";
+    cleanedData.answers = [];
+    cleanedData.supportImages = [];
+    cleanedData.followupQuestions = [];
+
+    return cleanedData;
 };
 
 function replaceMatch(hitTerm, incomingArray, loggit) {
