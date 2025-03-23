@@ -11,11 +11,9 @@ function generateBetNames(gameElements, loggit) {
         });
     });
 
-    gameElements.nonBets.forEach(nonBet => {
-        jsonToGo.push({
-            "text": nonBet.toUpperCase(),
-            "label": "no_bet"
-        });
+    jsonToGo.push({
+        "text": "",
+        "label": "no_bet"
     });
 
     gameElements.generalBetNames.forEach(betNamePkg => {

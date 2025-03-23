@@ -37,13 +37,6 @@ module.exports.generalBetPhrases = [
     "Tell me about the _betName_",
 ];
 
-module.exports.nonBets = [
-    "hot dog",
-    "Hamburger",
-    "Chicken Sandwich",
-    "Ice Cream",
-];
-
 // I'm going to need to be able to capture the point number
 module.exports.betNames = [
     {
