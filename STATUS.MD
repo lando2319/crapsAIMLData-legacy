@@ -12,12 +12,7 @@
 
 
 LEFT OFF HERE
-- Read through the rest of ChatGPTs suggestions
-- Commit
-- See what the flow is on iOS immediately after getting a response
-- Create, 'known hallucinations' testing file
-    - Ensure we handle it the best we can
-    - All answers in range of what's sensible
+- FINAL PUSH
 
 
 

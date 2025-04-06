@@ -17,12 +17,16 @@ describe("Testing generateJSON", function () {
 
         var expecation = {
             "amount":0,
+            "answers": [],
             "bet_name":"Pass Line",
+            "firestoreID": "",
+            "followupQuestions": [],
             "odds":0,
             "point":0,
             "roll":2,
             "rollDie1":0,
-            "rollDie2":0
+            "rollDie2":0,
+            "supportImages": []
         };
 
         var loggit = "";

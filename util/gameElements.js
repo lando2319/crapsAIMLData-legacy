@@ -18,6 +18,7 @@ module.exports.betPhrases = [
     "If I have a _amount_ _betName_ _odds_ what happens if _roll_ rolls",
     "Do a _amount_ _betName_ _odds_ win on _roll_",
     "What happens to my _amount_ _betName_ if the dice roll _roll_ as _die1_ - _die2_",
+    "How much do the odds pay on _betName_ when the Point is _point_",
 ];
 
 module.exports.generalBetNames = [

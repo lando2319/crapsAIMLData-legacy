@@ -93,9 +93,7 @@ function generateWordTagging(gameElements, loggit) {
                                     });
                                 }
                             } else if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
-                                ["4", "5", "6", "8", "9", "10"].forEach(point => {
-                                    applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo);
-                                })
+                                applyPoints(betPhraseTemplate, betNamePkg, betAmount, roll, jsonToGo)
                             } else {
                                 applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, "", jsonToGo);
                             }
@@ -105,6 +103,8 @@ function generateWordTagging(gameElements, loggit) {
                         jsonToGo.push(entry);
                     }
                 }
+            } else if (betPhraseTemplate.includes("_POINT_") && isLineBet) {
+                applyPoints(betPhraseTemplate, betNamePkg, "", "", jsonToGo)
             } else {
                 var entry = genearateTokensAndLabels(betPhraseTemplate, betNamePkg.name, "", "", "", "", "", 0);
                 jsonToGo.push(entry);
@@ -122,6 +122,12 @@ function generateWordTagging(gameElements, loggit) {
     })
 
     return jsonToGo;
+}
+
+function applyPoints(betPhraseTemplate, betNamePkg, betAmount, roll, jsonToGo) {
+    ["4", "5", "6", "8", "9", "10"].forEach(point => {
+        applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo);
+    })
 }
 
 function applyOdds(betPhraseTemplate, betNamePkg, betAmount, roll, point, jsonToGo) {

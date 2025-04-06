@@ -181,4 +181,115 @@ describe("Testing generateJSON", function () {
         assert.deepEqual(entry.tokens, ["2", "-", "4"]);
         assert.deepEqual(entry.labels, ["DIE", "NONE", "DIE"]);
     })
+
+    it('With a phrase ending with, "when the Point is Five" should get point token for each point number', function () {
+        var loggit = "";
+        var testGameElements = {
+            betPhrases: [
+                "How much do the odds pay on _betName_ when the Point is _point_"
+            ],
+            betNames:[
+                {
+                    slug: "passLine",
+                    name: "Pass Line Bet",
+                    nickname: "The Pass Line",
+                    hasOdds: true,
+                    min: 5
+                }
+            ],
+            generalBetPhrases:[]
+        }
+        
+        var jsonToGo = generateJSON.generateWordTagging(testGameElements, loggit);
+
+        var expecationLine1 = {
+            "labels": [
+                "NONE",
+                "NONE",
+                "NONE",
+                "NONE",
+                "NONE",
+                "NONE",
+                "NONE",
+                "BET_NAME",
+                "BET_NAME",
+                "BET_NAME",
+                "NONE",
+                "NONE",
+                "NONE",
+                "NONE",
+                "POINT",
+            ],
+            "tokens": [
+                "HOW",
+                "MUCH",
+                "DO",
+                "THE",
+                "ODDS",
+                "PAY",
+                "ON",
+                "PASS",
+                "LINE",
+                "BET",
+                "WHEN",
+                "THE",
+                "POINT",
+                "IS",
+                "4"
+            ]
+        }
+
+        assert.deepEqual(jsonToGo[0], expecationLine1);
+        assert.deepEqual(jsonToGo[1].tokens[14], "5");
+        assert.deepEqual(jsonToGo[2].tokens[14], "6");
+        assert.deepEqual(jsonToGo[3].tokens[14], "8");
+        assert.deepEqual(jsonToGo[4].tokens[14], "9");
+        assert.deepEqual(jsonToGo[5].tokens[14], "10");
+    })
+
+    it('With the phrase, "How does the Pass Line Bet work" should only get one instance with proper tokens and labels', function () {
+        var loggit = "";
+        var testGameElements = {
+            betPhrases: [
+                "How does the _betName_ work"
+            ],
+            betNames:[
+                {
+                    slug: "passLine",
+                    name: "Pass Line Bet",
+                    nickname: "The Pass Line",
+                    hasOdds: true,
+                    min: 5
+                }
+            ],
+            generalBetPhrases:[]
+        }
+        
+        var jsonToGo = generateJSON.generateWordTagging(testGameElements, loggit);
+
+        var expecation = [
+            {
+                "tokens": [
+                    "HOW",
+                    "DOES",
+                    "THE",
+                    "PASS",
+                    "LINE",
+                    "BET",
+                    "WORK"
+                ],
+                "labels": [
+                    "NONE",
+                    "NONE",
+                    "NONE",
+                    "BET_NAME",
+                    "BET_NAME",
+                    "BET_NAME",
+                    "NONE"
+                ]
+            }
+        ]
+
+        assert.deepEqual(jsonToGo, expecation);
+    })
 })
