@@ -334,6 +334,30 @@
             "BET_NAME",
             "BET_NAME"
         ]
+    },
+    {
+        "tokens": [
+            "HOW",
+            "MUCH",
+            "DO",
+            "ODDS",
+            "PAY",
+            "WITH",
+            "POINT",
+            "OF",
+            "FIVE"
+        ],
+        "labels": [
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "NONE",
+            "POINT"
+        ]
     }
 
 ]
