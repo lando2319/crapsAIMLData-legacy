@@ -12,7 +12,11 @@
 
 
 LEFT OFF HERE
+- Prep iOS
+    - Proper endpoint
+    - Proper Initial Question
 - FINAL PUSH
+- Work the final trello cards
 
 
 
