@@ -1,0 +1,23 @@
+---
+model: googleai/gemini-1.5-flash
+output:
+  schema:
+    ParseSchema
+---
+
+## Here are some more challenging prompts
+
+## The user is asking about Pass Line Bet and the, 'on 5' refers to the point
+
+INPUT: "What do the odds pay on 5"
+OUTPUT: 
+{
+   "amount": 0,
+   "bet_name": "Pass Line",
+   "odds": 0,
+   "point": 5,
+   "roll": 0,
+   "rollDie1": 0,
+   "rollDie2": 0
+}
+
