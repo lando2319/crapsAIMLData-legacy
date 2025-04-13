@@ -39,14 +39,14 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my Horn High Ace Deuce if a 4 rolls"
+INPUT: "What happens to my Horn High Ace Deuce if a 7 rolls"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Horn High Ace Deuce",
    "odds": 0,
    "point": 0,
-   "roll": 4,
+   "roll": 7,
    "rollDie1": 0,
    "rollDie2": 0
 }

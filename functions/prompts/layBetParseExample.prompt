@@ -19,26 +19,26 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "If I have a Lay Bet on the 4 and a 6 rolls what happens"
+INPUT: "If I have a Lay Bet on the 4 and a 8 rolls what happens"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Lay Bet on 4",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 8,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $40 Lay Bet on 4 and a 6 rolls"
+INPUT: "What happens to my $42 Lay Bet on 10 and a 5 rolls"
 OUTPUT: 
 {
-   "amount": 40,
-   "bet_name": "Lay Bet on 4",
+   "amount": 42,
+   "bet_name": "Lay Bet on 10",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 5,
    "rollDie1": 0,
    "rollDie2": 0
 }

@@ -31,14 +31,14 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "if I have a $18 Three Way Craps Bet and a 9 rolls what happens to my bet"
+INPUT: "if I have a $18 Three Way Craps Bet and a 10 rolls what happens to my bet"
 OUTPUT: 
 {
    "amount": 18,
    "bet_name": "Three Way Craps",
    "odds": 0,
    "point": 0,
-   "roll": 9,
+   "roll": 10,
    "rollDie1": 0,
    "rollDie2": 0
 }

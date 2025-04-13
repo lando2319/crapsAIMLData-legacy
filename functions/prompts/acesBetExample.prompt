@@ -19,26 +19,26 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my Aces if a 6 rolls"
+INPUT: "What happens to my Aces if a 10 rolls"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Aces",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 10,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $20 Aces Bet if a 6 rolls"
+INPUT: "What happens to my $21 Aces Bet if a 3 rolls"
 OUTPUT: 
 {
-   "amount": 20,
+   "amount": 21,
    "bet_name": "Aces",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 3,
    "rollDie1": 0,
    "rollDie2": 0
 }

@@ -19,48 +19,48 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "How does the Don't Come Bet work if a 6 rolls"
+INPUT: "How does the Don't Come Bet work if a 9 rolls"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Don't Come Bet",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 9,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "If the Don't Come Bet is on the 4 and a 6 rolls what happens"
+INPUT: "If the Don't Come Bet is on the 9 and a 5 rolls what happens"
 OUTPUT: 
 {
    "amount": 0,
-   "bet_name": "Don't Come Bet on 4",
+   "bet_name": "Don't Come Bet on 9",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 5,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Don't Come Bet on 4 with $10 odds if 6 rolls"
+INPUT: "What happens to my $6 Don't Come Bet on 10 with $12 odds if 6 rolls"
 OUTPUT: 
 {
-   "amount": 5,
-   "bet_name": "Don't Come Bet on 4",
-   "odds": 10,
+   "amount": 6,
+   "bet_name": "Don't Come Bet on 10",
+   "odds": 12,
    "point": 0,
    "roll": 6,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Don't Come Bet on 4 with $10 odds if 7 rolls"
+INPUT: "What happens to my $5 Don't Come Bet on 8 with $15 odds if 7 rolls"
 OUTPUT: 
 {
    "amount": 5,
-   "bet_name": "Don't Come Bet on 4",
-   "odds": 10,
+   "bet_name": "Don't Come Bet on 8",
+   "odds": 15,
    "point": 0,
    "roll": 7,
    "rollDie1": 0,

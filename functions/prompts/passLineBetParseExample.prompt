@@ -55,13 +55,13 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What does a $10 Pass Line Bet with $50 odds with a Point of 5 if 7 rolls"
+INPUT: "What does a $10 Pass Line Bet with $50 odds with a Point of 9 if 7 rolls"
 OUTPUT: 
 {
    "amount": 10,
    "bet_name": "Pass Line",
    "odds": 50,
-   "point": 5,
+   "point": 9,
    "roll": 7,
    "rollDie1": 0,
    "rollDie2": 0

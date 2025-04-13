@@ -32,14 +32,14 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "If I have a $5 Any Seven Bet and a 6 rolls does it win"
+INPUT: "If I have a $5 Any Seven Bet and a 2 rolls does it win"
 OUTPUT: 
 {
    "amount": 5,
    "bet_name": "Any Seven",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 2,
    "rollDie1": 0,
    "rollDie2": 0
 }

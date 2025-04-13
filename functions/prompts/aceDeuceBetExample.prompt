@@ -31,14 +31,14 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $20 Ace Deuce Bet if a 6 rolls"
+INPUT: "What happens to my $20 Ace Deuce Bet if a 8 rolls"
 OUTPUT: 
 {
    "amount": 20,
    "bet_name": "Ace Deuce",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 8,
    "rollDie1": 0,
    "rollDie2": 0
 }

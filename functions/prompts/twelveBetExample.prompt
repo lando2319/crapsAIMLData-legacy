@@ -19,14 +19,14 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my Twelve if a 4 rolls"
+INPUT: "What happens to my Twelve if a 3 rolls"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Twelve",
    "odds": 0,
    "point": 0,
-   "roll": 4,
+   "roll": 3,
    "rollDie1": 0,
    "rollDie2": 0
 }

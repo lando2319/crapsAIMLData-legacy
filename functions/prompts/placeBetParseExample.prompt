@@ -19,47 +19,47 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "How does the Place Bet work if a 6 rolls"
+INPUT: "How does the Place Bet work if a 9 rolls"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Place Bet",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 9,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "If the Place Bet is on the 4 and a 6 rolls what happens"
+INPUT: "If the Place Bet is on the 4 and a 4 rolls what happens"
 OUTPUT: 
 {
    "amount": 0,
    "bet_name": "Place Bet on 4",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 4,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Place Bet on 4 and a 6 rolls"
+INPUT: "What happens to my $5 Place Bet on 5 and a 8 rolls"
 OUTPUT: 
 {
    "amount": 5,
-   "bet_name": "Place Bet on 4",
+   "bet_name": "Place Bet on 5",
    "odds": 0,
    "point": 0,
-   "roll": 6,
+   "roll": 8,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Place Bet on 4 if 7 rolls"
+INPUT: "What happens to my $5 Place Bet on 8 if 7 rolls"
 OUTPUT: 
 {
    "amount": 5,
-   "bet_name": "Place Bet on 4",
+   "bet_name": "Place Bet on 8",
    "odds": 0,
    "point": 0,
    "roll": 7,

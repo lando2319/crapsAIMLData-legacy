@@ -43,24 +43,24 @@ OUTPUT:
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Come Bet on 4 with $10 odds if 6 rolls"
+INPUT: "What happens to my $5 Come Bet on 6 with $15 odds if 6 rolls"
 OUTPUT: 
 {
    "amount": 5,
-   "bet_name": "Come Bet on 4",
-   "odds": 10,
+   "bet_name": "Come Bet on 6",
+   "odds": 15,
    "point": 0,
    "roll": 6,
    "rollDie1": 0,
    "rollDie2": 0
 }
 
-INPUT: "What happens to my $5 Come Bet on 4 with $10 odds if 7 rolls"
+INPUT: "What happens to my $7 Come Bet on 9 with $12 odds if 7 rolls"
 OUTPUT: 
 {
-   "amount": 5,
-   "bet_name": "Come Bet on 4",
-   "odds": 10,
+   "amount": 7,
+   "bet_name": "Come Bet on 9",
+   "odds": 12,
    "point": 0,
    "roll": 7,
    "rollDie1": 0,
