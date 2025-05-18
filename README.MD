@@ -1,5 +1,7 @@
 # Craps AI Training Data
 
+# LEGACY
+This is a legacy approach, I'm keeping it for posterity
 
 ## TWO MODELS
 
